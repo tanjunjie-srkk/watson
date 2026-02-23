@@ -720,7 +720,6 @@ with st.sidebar:
     page = st.radio(
         "nav",
         [
-            "🏠 Dashboard",
             "📤 Document Processing",
             "🔍 OCR Viewer",
             "📊 Extraction Viewer",
@@ -769,77 +768,9 @@ if "doc_status" not in st.session_state:
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# PAGE: DASHBOARD
-# ═══════════════════════════════════════════════════════════════════════════
-if page == "🏠 Dashboard":
-
-    extraction_dir = Path(__file__).resolve().parent / "extraction_output"
-    ocr_dir = Path(__file__).resolve().parent / "ocr_output"
-    docs_dir = Path(__file__).resolve().parent / "docs"
-
-    num_extracted = len(list(extraction_dir.glob("*_extracted.json"))) if extraction_dir.exists() else 0
-    num_ocr = len(list(ocr_dir.glob("*.json"))) if ocr_dir.exists() else 0
-    num_pdfs = len(list(docs_dir.glob("*.pdf"))) if docs_dir.exists() else 0
-
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("📄 Source PDFs", num_pdfs)
-    c2.metric("🔍 OCR Processed", num_ocr)
-    c3.metric("📊 Extractions", num_extracted)
-    c4.metric("🏷️ Doc Types", len(AGENT_REGISTRY))
-
-    st.divider()
-    st.markdown("### 🔄 Processing Pipeline")
-
-    col_l, col_r = st.columns([3, 2])
-    with col_l:
-        st.markdown("""
-        <div class="pipeline-step"><strong>Step 1 — PDF to Images</strong><br/><span style="color:#718096;">Upload PDF → Convert each page to high-resolution PNG (300 DPI)</span></div>
-        <div class="pipeline-step"><strong>Step 2 — AI-Powered OCR</strong><br/><span style="color:#718096;">GPT vision model reads every character with confidence scoring</span></div>
-        <div class="pipeline-step"><strong>Step 3 — Document Classification</strong><br/><span style="color:#718096;">AI classifies: Invoice, Utility Bill, Bank Statement, Travel, etc.</span></div>
-        <div class="pipeline-step"><strong>Step 4 — Structured Extraction</strong><br/><span style="color:#718096;">Type-specific agent extracts vendor, amounts, line items, dates</span></div>
-        <div class="pipeline-step"><strong>Step 5 — Bank Matching</strong><br/><span style="color:#718096;">Reconcile extracted invoices vs bank entries (exact + near matches)</span></div>
-        """, unsafe_allow_html=True)
-
-    with col_r:
-        st.markdown("#### 📋 Supported Document Types")
-        for dtype, (icon, desc) in {
-            "commercial_invoice": ("🧾", "Product invoices, PO numbers, shipping"),
-            "credit_note": ("💳", "Credit notes, refund documents"),
-            "travel": ("✈️", "Flight tickets, travel invoices"),
-            "rental": ("🏢", "Mall rent, lease, service charges"),
-            "hotel": ("🏨", "Hotel folios, room charges"),
-            "utility": ("⚡", "Electricity, water, gas, telecom"),
-            "soa": ("📑", "Statements of account, aging reports"),
-            "bank_statement": ("🏦", "Bank transaction listings"),
-        }.items():
-            st.markdown(f"**{icon} {dtype.replace('_',' ').title()}** — {desc}")
-
-    st.divider()
-    st.markdown("### 📂 Recently Processed Documents")
-
-    if extraction_dir.exists():
-        files = sorted(extraction_dir.glob("*_extracted.json"), key=lambda p: p.stat().st_mtime, reverse=True)[:8]
-        if files:
-            cols = st.columns(4)
-            for i, f in enumerate(files):
-                with cols[i % 4]:
-                    d = load_json_file(f)
-                    dt = d.get("document_type", "Unknown") if isinstance(d, dict) else "Unknown"
-                    vn = d.get("vendor_name") or "N/A" if isinstance(d, dict) else "N/A"
-                    gt = (d.get("grand_total") or d.get("total_amount") or "N/A") if isinstance(d, dict) else "N/A"
-                    st.markdown(f"""<div class="info-card">
-                        <div class="card-title">{f.stem}</div>
-                        <div class="card-subtitle">{dt}</div>
-                        <div style="font-size:0.85rem;margin-top:0.4rem;"><strong>Vendor:</strong> {str(vn)[:35]}<br/><strong>Total:</strong> {gt}</div>
-                    </div>""", unsafe_allow_html=True)
-        else:
-            st.info("No extracted documents yet. Go to **Document Processing** to get started.")
-
-
-# ═══════════════════════════════════════════════════════════════════════════
 # PAGE: DOCUMENT PROCESSING
 # ═══════════════════════════════════════════════════════════════════════════
-elif page == "📤 Document Processing":
+if page == "📤 Document Processing":
 
     st.markdown("### 📤 Document Processing Pipeline")
     st.markdown("Upload a PDF to run the full AI pipeline: **PDF → Images → OCR → Classification → Extraction**")
