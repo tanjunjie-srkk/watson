@@ -1,0 +1,41 @@
+{
+  "document_type": "Rental Invoice",
+  "vendor_name": "MTRUSTEE BERHAD AS TRUSTEE OF CAPITALAND MALAYSIA TRUST",
+  "invoice_number": "1399IV25040805",
+  "invoice_date": "01-Apr-25",
+  "due_date": "01-Apr-25",
+  "currency": "MYR",
+  "currency_note": "All monetary values are in MYR",
+  "bill_to": "WATSON'S PERSONAL CARE STORES SDN BHD\nARENA WATSON'S\nLEVEL 7, THE EXCHANGE 106,\nLINGKARAN TRX, TUN RAZAK EXCHANGE,\nKuala Lumpur, Malaysia, 55188\nAttention:  CHRISTINE LEONG",
+  "property_name": "East Coast Mall",
+  "unit_number": "GF-S13A",
+  "trade_name": "WATSON'S PERSONAL CARE STORES SDN BHD",
+  "tenancy_period": "4/1/2025 12:00:00 AM - 4/30/2025 12:00:00 AM",
+  "line_items": [
+    {
+      "description": "StorageSpace/Room Rental/ Fee - 01-Apr-25 to 30-Apr-25\nLocation : East Coast Mall, GF-S13A\nStorage for Period 4/1/2025 12:00:00 AM - 4/30/2025 12:00:00 AM",
+      "period_from": "01-Apr-25",
+      "period_to": "30-Apr-25",
+      "tax": "0.00",
+      "amount": "1,140.00",
+      "low_confidence": false
+    }
+  ],
+  "subtotal": "1,140.00",
+  "tax_total": "0.00",
+  "grand_total": "1,140.00",
+  "amount_in_words": null,
+  "payment_info": {
+    "bank_name": "RHB BANK BERHAD",
+    "account_name": "MTB-CLMT-CCM A/C",
+    "account_number": "21413800129750",
+    "swift_code": "RHBBMYKLXXX"
+  },
+  "additional_fields": {
+    "Contract No": "139940000624",
+    "Co Reg.": "198701004362",
+    "SST Reg. No.": "W10-1808-32000970",
+    "Location": "East Coast Mall, GF-S13A",
+    "Page": "Page 1 of 1"
+  }
+}

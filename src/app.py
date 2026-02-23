@@ -163,6 +163,46 @@ def load_json_file(path: Path) -> dict | list | str:
         return f"Error: {e}"
 
 
+def display_processing_file_preview(file_path: Path):
+    """Preview a source document file from docs/database."""
+    if not file_path.exists() or not file_path.is_file():
+        st.error("Selected document file was not found.")
+        return
+
+    suffix = file_path.suffix.lower()
+    st.caption(f"File: {file_path.name}")
+
+    if suffix == ".pdf":
+        pdf_bytes = file_path.read_bytes()
+        pdf_base64 = base64.b64encode(pdf_bytes).decode("utf-8")
+        st.markdown(
+            f'<iframe src="data:application/pdf;base64,{pdf_base64}" width="100%" height="800" type="application/pdf"></iframe>',
+            unsafe_allow_html=True,
+        )
+        st.download_button(
+            "⬇️ Download PDF",
+            data=pdf_bytes,
+            file_name=file_path.name,
+            mime="application/pdf",
+        )
+    elif suffix in {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tif", ".tiff"}:
+        st.image(str(file_path), use_container_width=True)
+        st.download_button(
+            "⬇️ Download Image",
+            data=file_path.read_bytes(),
+            file_name=file_path.name,
+            mime="application/octet-stream",
+        )
+    else:
+        st.info("Preview is not available for this file type. You can download the file below.")
+        st.download_button(
+            "⬇️ Download File",
+            data=file_path.read_bytes(),
+            file_name=file_path.name,
+            mime="application/octet-stream",
+        )
+
+
 def display_ocr_result(data: dict):
     """Display OCR output with confidence scoring and section breakdown."""
     pages = []
@@ -252,6 +292,7 @@ def display_extraction_result(data: dict, doc_type: str = "Unknown"):
 
     actual_type = data.get("document_type", doc_type)
     st.markdown(f"**Document Type:** `{actual_type}`")
+    currency_code = str(data.get("currency") or "").strip().upper()
 
     # Core fields
     st.markdown("#### 📋 Document Summary")
@@ -267,7 +308,15 @@ def display_extraction_result(data: dict, doc_type: str = "Unknown"):
         ("billing_period_from", "📅 Period From"), ("billing_period_to", "📅 Period To"),
         ("statement_period_from", "📅 Period From"), ("statement_period_to", "📅 Period To"),
     ]
-    displayed = [(label, str(data[key])) for key, label in core_fields if data.get(key) and str(data.get(key)) != "null"]
+    core_money_keys = {"total_amount", "grand_total"}
+    displayed = []
+    for key, label in core_fields:
+        if not data.get(key) or str(data.get(key)) == "null":
+            continue
+        value = data[key]
+        if key in core_money_keys:
+            value = _format_money_with_currency(value, currency_code)
+        displayed.append((label, str(value)))
 
     if displayed:
         cols = st.columns(min(len(displayed), 3))
@@ -289,6 +338,9 @@ def display_extraction_result(data: dict, doc_type: str = "Unknown"):
         st.markdown(f"#### 📦 {label} ({len(items)} rows)")
         df = pd.DataFrame(items)
         df.columns = [c.replace("_", " ").title() for c in df.columns]
+        for money_col in ("Unit Price", "Tax", "Amount"):
+            if money_col in df.columns:
+                df[money_col] = df[money_col].apply(lambda v: _format_money_with_currency(v, currency_code))
         df = df.dropna(axis=1, how="all")
         if "Low Confidence" in df.columns and not df["Low Confidence"].any():
             df = df.drop(columns=["Low Confidence"])
@@ -303,7 +355,19 @@ def display_extraction_result(data: dict, doc_type: str = "Unknown"):
         ("total_credits", "Total Credits"), ("previous_balance", "Prev Balance"),
         ("current_charges", "Current Charges"), ("payment_received", "Payment Recv"),
     ]
-    totals = [(lbl, data[k]) for k, lbl in total_fields if data.get(k)]
+    total_money_keys = {
+        "subtotal", "tax_total", "discount", "freight_charges", "grand_total",
+        "opening_balance", "closing_balance", "total_debits", "total_credits",
+        "previous_balance", "current_charges", "payment_received",
+    }
+    totals = []
+    for key, label in total_fields:
+        if not data.get(key):
+            continue
+        value = data[key]
+        if key in total_money_keys:
+            value = _format_money_with_currency(value, currency_code)
+        totals.append((label, value))
     if totals:
         st.markdown("#### 💰 Totals & Summary")
         cols = st.columns(min(len(totals), 4))
@@ -432,6 +496,24 @@ def _safe(d: dict, *keys, default=""):
     return cur if cur not in (None, "") else default
 
 
+def _format_money_with_currency(value: object, currency: str) -> str:
+    if value in (None, ""):
+        return ""
+
+    text = str(value).strip()
+    if not text:
+        return ""
+
+    currency_code = (currency or "").strip().upper()
+    if not currency_code:
+        return text
+
+    if text.upper().startswith(f"{currency_code} ") or text.upper() == currency_code:
+        return text
+
+    return f"{currency_code} {text}"
+
+
 def _parse_lot_no(data: dict) -> str:
     """Extract Lot No from bill_to or additional_fields."""
     bill_to = _safe(data, "bill_to")
@@ -534,6 +616,7 @@ def _doc_type_label(data: dict) -> str:
 def map_extraction_to_report_row(data: dict, index: int) -> dict:
     """Map a single extraction JSON to a report format row."""
     af = data.get("additional_fields", {}) or {}
+    currency_code = str(_safe(data, "currency") or "").strip().upper()
     kwh_before, kwh_after, total_units = _parse_kwh_readings(data)
 
     invoice_no = (
@@ -577,8 +660,11 @@ def map_extraction_to_report_row(data: dict, index: int) -> dict:
         "Contract No / Batch No": _safe(af, "Contract No") or _safe(af, "Batch No") or _safe(af, "Contract No / Batch No"),
         "Contract Account No": _safe(af, "Contract Account No"),
         "Description": _build_description(data),
-        "Jumlah perlu dibayar\n(Including tax)": _safe(data, "grand_total") or _safe(data, "total_amount"),
-        "Amaun Elektrik": _electricity_amount(data),
+        "Jumlah perlu dibayar\n(Including tax)": _format_money_with_currency(
+            _safe(data, "grand_total") or _safe(data, "total_amount"),
+            currency_code,
+        ),
+        "Amaun Elektrik": _format_money_with_currency(_electricity_amount(data), currency_code),
         "LHDN UUID": _safe(af, "LHDN UUID") or _safe(af, "e-Invoice UUID"),
         "Validate On": _safe(af, "Validate On") or _safe(af, "Validated On"),
         "Kwh Reading Before": kwh_before,
@@ -610,6 +696,117 @@ def load_all_extraction_rows() -> pd.DataFrame:
         if col not in df.columns:
             df[col] = ""
     return df
+
+
+def _team_from_doc_type(doc_type: str) -> str:
+    text = (doc_type or "").strip().lower()
+    if "rental" in text or "lease" in text:
+        return "rental"
+    return "sales"
+
+
+def _doc_team_map_path() -> Path:
+    return Path(__file__).resolve().parent / "docs" / "database" / "doc_teams.json"
+
+
+def load_doc_team_map() -> dict[str, str]:
+    path = _doc_team_map_path()
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(data, dict):
+            return {str(k): str(v).lower() for k, v in data.items()}
+    except Exception:
+        pass
+    return {}
+
+
+def save_doc_team_map(doc_team_map: dict[str, str]) -> None:
+    path = _doc_team_map_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(doc_team_map, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def infer_document_team(file_path: Path, doc_team_map: dict[str, str]) -> str:
+    mapped = doc_team_map.get(file_path.name)
+    if mapped in {"sales", "rental"}:
+        return mapped
+
+    extraction_dir = Path(__file__).resolve().parent / "extraction_output"
+    if extraction_dir.exists():
+        candidates = sorted(extraction_dir.glob(f"{file_path.stem}_extracted*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+        for candidate in candidates:
+            try:
+                data = json.loads(candidate.read_text(encoding="utf-8"))
+                if isinstance(data, dict):
+                    return _team_from_doc_type(str(data.get("document_type") or ""))
+            except Exception:
+                continue
+
+    name_l = file_path.name.lower()
+    if any(token in name_l for token in ["rental", "lease", "ll_"]):
+        return "rental"
+    return "sales"
+
+
+def load_extraction_repository_items() -> list[dict]:
+    """Build row data for Extraction Viewer repository layout."""
+    extraction_dir = Path(__file__).resolve().parent / "extraction_output"
+    if not extraction_dir.exists():
+        return []
+
+    items: list[dict] = []
+    files = sorted(extraction_dir.glob("*_extracted*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+    for f in files:
+        try:
+            data = json.loads(f.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if not isinstance(data, dict):
+            continue
+
+        additional = data.get("additional_fields", {}) or {}
+        invoice_id = (
+            data.get("invoice_number")
+            or data.get("document_number")
+            or data.get("statement_number")
+            or f.stem.replace("_extracted", "")
+        )
+        vendor = (
+            data.get("vendor_name")
+            or data.get("customer_name")
+            or data.get("account_holder")
+            or "-"
+        )
+        date_text = (
+            data.get("invoice_date")
+            or data.get("document_date")
+            or data.get("statement_date")
+            or "-"
+        )
+        currency_code = str(data.get("currency") or "").strip().upper()
+        total_raw = data.get("grand_total") or data.get("total_amount") or data.get("subtotal") or ""
+        total_text = _format_money_with_currency(total_raw, currency_code) if total_raw else "-"
+        team = _team_from_doc_type(str(data.get("document_type") or ""))
+
+        status_text = st.session_state["processing_doc_status"].get(f.name, "Ready for Review")
+
+        items.append(
+            {
+                "invoice_id": str(invoice_id),
+                "vendor": str(vendor),
+                "date": str(date_text),
+                "total": str(total_text),
+                "status": str(status_text),
+                "team": team,
+                "last_updated": datetime.fromtimestamp(f.stat().st_mtime).strftime("%Y-%m-%d"),
+                "source_file": f.name,
+                "data": data,
+            }
+        )
+
+    return items
 
 
 def _normalize_lease_id(lid: str) -> str:
@@ -715,6 +912,13 @@ with st.sidebar:
     )
     st.markdown("")
 
+    st.markdown('<div class="sidebar-section">Access</div>', unsafe_allow_html=True)
+    role_label = st.selectbox("Current Role", ["Admin", "Sales", "Rental"], key="current_role_label")
+    current_role = role_label.lower()
+
+    st.markdown("")
+    st.divider()
+
     # ── Navigation ────────────────────────────────────────────
     st.markdown('<div class="sidebar-section">Navigation</div>', unsafe_allow_html=True)
     page = st.radio(
@@ -765,6 +969,12 @@ for key in ("ocr_result", "extraction_result", "doc_type", "uploaded_images", "p
         st.session_state[key] = None
 if "doc_status" not in st.session_state:
     st.session_state["doc_status"] = {}  # {row_no: "verified"|"rejected"|"pending"}
+if "processing_doc_status" not in st.session_state:
+    st.session_state["processing_doc_status"] = {}
+if "processing_selected_doc" not in st.session_state:
+    st.session_state["processing_selected_doc"] = None
+if "extraction_selected_file" not in st.session_state:
+    st.session_state["extraction_selected_file"] = None
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -782,12 +992,32 @@ if page == "📤 Document Processing":
     with col_opt:
         force_type = st.selectbox("Force document type (optional)", ["Auto-detect"] + list(AGENT_REGISTRY.keys()))
         ocr_mode = st.radio("OCR Mode", ["Batch (all pages)", "Per-page"], index=0)
+        upload_team_choice = st.selectbox("Document Team", ["Auto", "Sales", "Rental"], index=0)
 
     if uploaded_file is not None:
+        uploaded_bytes = uploaded_file.getvalue()
+        app_dir = Path(__file__).resolve().parent
+        database_dir = app_dir / "docs" / "database"
+        database_dir.mkdir(parents=True, exist_ok=True)
+
+        database_path = database_dir / uploaded_file.name
+        if database_path.exists():
+            stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            database_path = database_dir / f"{database_path.stem}_{stamp}{database_path.suffix}"
+        database_path.write_bytes(uploaded_bytes)
+
+        doc_team_map = load_doc_team_map()
+        assigned_team = upload_team_choice.lower()
+        if assigned_team == "auto":
+            assigned_team = _team_from_doc_type(force_type if force_type != "Auto-detect" else "")
+        doc_team_map[database_path.name] = assigned_team
+        save_doc_team_map(doc_team_map)
+
         with tempfile.TemporaryDirectory() as tmp_dir:
             pdf_path = Path(tmp_dir) / uploaded_file.name
-            pdf_path.write_bytes(uploaded_file.getvalue())
+            pdf_path.write_bytes(uploaded_bytes)
             st.markdown(f"**📄 Uploaded:** `{uploaded_file.name}` ({uploaded_file.size / 1024:.1f} KB)")
+            st.caption(f"Stored in database: `{database_path.name}` | Team: `{assigned_team.title()}`")
 
             if st.button("🚀 Run Full Pipeline", type="primary", use_container_width=True):
                 with st.status("🔄 Processing document...", expanded=True) as status:
@@ -898,6 +1128,63 @@ if page == "📤 Document Processing":
                         data=json.dumps(extracted, ensure_ascii=False, indent=2),
                         file_name=f"{pdf_path.stem}_extracted.json", mime="application/json")
 
+    st.divider()
+
+    st.markdown("### Documents")
+    st.caption("Upload and manage document processing")
+
+    database_dir = Path(__file__).resolve().parent / "docs" / "database"
+    source_docs = (
+        sorted([p for p in database_dir.iterdir() if p.is_file()], key=lambda p: p.stat().st_mtime, reverse=True)
+        if database_dir.exists()
+        else []
+    )
+    doc_team_map = load_doc_team_map()
+    source_docs_with_team = [(p, infer_document_team(p, doc_team_map)) for p in source_docs]
+    visible_source_docs = (
+        source_docs_with_team
+        if current_role == "admin"
+        else [(p, team) for p, team in source_docs_with_team if team == current_role]
+    )
+
+    st.markdown(f"#### All Documents ({len(visible_source_docs)})")
+
+    if visible_source_docs:
+        h1, h2, h3, h4, h5, h6, h7 = st.columns([1.2, 3.2, 1.0, 1.0, 1.3, 1.7, 2.4])
+        h1.markdown("**Doc ID**")
+        h2.markdown("**File Name**")
+        h3.markdown("**Type**")
+        h4.markdown("**Size (MB)**")
+        h5.markdown("**Upload Date**")
+        h6.markdown("**Status**")
+        h7.markdown("**Actions**")
+
+        for idx, (file_path, _team) in enumerate(visible_source_docs, start=1):
+            display_file_name = file_path.name
+            file_type = file_path.suffix.replace(".", "").upper() or "FILE"
+            file_size_mb = file_path.stat().st_size / (1024 * 1024)
+            upload_date = datetime.fromtimestamp(file_path.stat().st_mtime).strftime("%Y-%m-%d")
+            status = st.session_state["processing_doc_status"].get(file_path.name, "Ready for Review")
+
+            c1, c2, c3, c4, c5, c6, c7 = st.columns([1.2, 3.2, 1.0, 1.0, 1.3, 1.7, 2.4])
+            c1.markdown(f"**DOC-{idx:04d}**")
+            c2.markdown(display_file_name)
+            c3.markdown(file_type)
+            c4.markdown(f"{file_size_mb:.1f}")
+            c5.markdown(upload_date)
+            c6.markdown(status)
+
+            if c7.button("View", key=f"view_doc_{file_path.name}", use_container_width=True):
+                st.session_state["processing_selected_doc"] = str(file_path)
+
+            if st.session_state.get("processing_selected_doc") == str(file_path):
+                st.markdown(f"##### Preview: {file_path.name}")
+                display_processing_file_preview(file_path)
+
+            st.markdown("---")
+
+    else:
+        st.info(f"No documents found for role: {current_role.title()}.")
 
 # ═══════════════════════════════════════════════════════════════════════════
 # PAGE: OCR VIEWER
@@ -930,27 +1217,71 @@ elif page == "🔍 OCR Viewer":
 elif page == "📊 Extraction Viewer":
 
     st.markdown("### 📊 Extraction Viewer")
-    st.markdown("View structured financial data extracted from documents.")
+    st.markdown("Invoice repository and details")
+    st.caption(f"Current access role: {current_role.title()}")
 
-    extraction_dir = Path(__file__).resolve().parent / "extraction_output"
-    if extraction_dir.exists():
-        ext_files = sorted(extraction_dir.glob("*_extracted.json"))
-        if ext_files:
-            sel = st.selectbox("Select extraction file", ext_files, format_func=lambda p: p.name)
-            if sel:
-                data = load_json_file(sel)
-                if isinstance(data, dict):
-                    tab_d, tab_j = st.tabs(["📊 Structured View", "📝 Raw JSON"])
-                    with tab_d:
-                        display_extraction_result(data, data.get("document_type", "Unknown"))
-                    with tab_j:
-                        st.json(data)
-                else:
-                    st.json(data)
-        else:
-            st.info("No extraction files found.")
+    repo_items = load_extraction_repository_items()
+    if not repo_items:
+        st.info("No extraction files found.")
     else:
-        st.info("Extraction output directory not found.")
+        search_query = st.text_input("", placeholder="Search invoice ID, vendor, or source file...", label_visibility="collapsed")
+        f1, f2 = st.columns([1, 1])
+        with f1:
+            all_statuses = sorted({item["status"] for item in repo_items if item["status"]})
+            status_filter = st.selectbox("Status", ["All Statuses"] + all_statuses)
+        with f2:
+            all_vendors = sorted({item["vendor"] for item in repo_items if item["vendor"] and item["vendor"] != "-"})
+            vendor_filter = st.selectbox("Vendor", ["All Vendors"] + all_vendors)
+
+        filtered_items = repo_items if current_role == "admin" else [item for item in repo_items if item.get("team") == current_role]
+
+        selected_file = st.session_state.get("extraction_selected_file")
+        if selected_file and all(item["source_file"] != selected_file for item in filtered_items):
+            st.session_state["extraction_selected_file"] = None
+
+        if search_query:
+            q = search_query.lower().strip()
+            filtered_items = [
+                item for item in filtered_items
+                if q in item["invoice_id"].lower()
+                or q in item["vendor"].lower()
+                or q in item["source_file"].lower()
+            ]
+        if status_filter != "All Statuses":
+            filtered_items = [item for item in filtered_items if item["status"] == status_filter]
+        if vendor_filter != "All Vendors":
+            filtered_items = [item for item in filtered_items if item["vendor"] == vendor_filter]
+
+        st.markdown(f"#### Invoices ({len(filtered_items)})")
+        h1, h2, h3, h4, h5, h6 = st.columns([2.3, 3.0, 1.5, 1.7, 2.0, 1.5])
+        h1.markdown("**Invoice ID**")
+        h2.markdown("**Vendor**")
+        h3.markdown("**Date**")
+        h4.markdown("**Total**")
+        h5.markdown("**Status**")
+        h6.markdown("**Last Updated**")
+
+        for item in filtered_items:
+            r1, r2, r3, r4, r5, r6 = st.columns([2.3, 3.0, 1.5, 1.7, 2.0, 1.5])
+            if r1.button(item["invoice_id"], key=f"ext_row_{item['source_file']}", use_container_width=True):
+                current = st.session_state.get("extraction_selected_file")
+                st.session_state["extraction_selected_file"] = None if current == item["source_file"] else item["source_file"]
+
+            r2.markdown(item["vendor"])
+            r3.markdown(item["date"])
+            r4.markdown(item["total"])
+            r5.markdown(item["status"])
+            r6.markdown(item["last_updated"])
+
+            if st.session_state.get("extraction_selected_file") == item["source_file"]:
+                st.markdown(f"##### Details: {item['invoice_id']} ({item['source_file']})")
+                detail_tab, raw_tab = st.tabs(["📊 Structured View", "📝 Raw JSON"])
+                with detail_tab:
+                    display_extraction_result(item["data"], item["data"].get("document_type", "Unknown"))
+                with raw_tab:
+                    st.json(item["data"])
+
+            st.markdown("---")
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -966,8 +1297,14 @@ elif page == "📋 Report Format":
 
     df = load_all_extraction_rows()
 
+    if not df.empty and current_role != "admin":
+        if current_role == "rental":
+            df = df[df["Types (Inv/CN)"].astype(str).str.lower().str.contains("rental|lease", regex=True)].copy()
+        elif current_role == "sales":
+            df = df[~df["Types (Inv/CN)"].astype(str).str.lower().str.contains("rental|lease", regex=True)].copy()
+
     if df.empty:
-        st.info("No extraction files found. Process some documents first.")
+        st.info(f"No extraction files available for role: {current_role.title()}.")
     else:
         # ── Summary metrics ──────────────────────────────────────────
         col1, col2, col3, col4 = st.columns(4)

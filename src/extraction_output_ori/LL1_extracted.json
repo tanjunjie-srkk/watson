@@ -33,14 +33,9 @@
   "grand_total": "37,387.25",
   "amount_in_words": "RINGGIT MALAYSIA THIRTY SEVEN THOUSAND THREE HUNDRED EIGHTY SEVEN AND TWENTY FIVE CENTS ONLY.",
   "additional_fields": {
-    "Invoice No": "RD 25005442",
     "Invoice Date": "02 Apr 2025",
     "Due Date": "07 May 2025",
     "Currency Code": "MYR",
-    "Tenancy Period": "01 Sep 2022  -  31 Aug 2025",
-    "Page": "1",
-    "Managed by": "IGB REIT MANAGEMENT SDN BHD (908168-A)",
-    "Attention": "",
-    "Payment Instruction": "Cheque should be crossed 'Account Payee Only' and made payable to MTrustee Bhd for IGB REIT TGM\nwithin THIRTY SIX (36) days from the date thereof."
+    "Tenancy Period": "01 Sep 2022  -  31 Aug 2025"
   }
 }

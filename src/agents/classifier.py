@@ -1,5 +1,7 @@
 """LLM-based document classifier. Reads OCR JSON and returns a document type label."""
 
+import re
+
 from agents import client, DEPLOYMENT
 
 CLASSIFIER_PROMPT = """
@@ -31,9 +33,85 @@ CLASSIFICATION HINTS:
 Return ONLY the category label as a single word. No JSON. No explanation.
 """
 
+VALID_LABELS = {
+    "commercial_invoice", "travel", "rental", "hotel",
+    "utility", "soa", "bank_statement", "credit_note", "unknown",
+}
+
+ALIAS_MAP = {
+    "invoice": "commercial_invoice",
+    "commercial invoice": "commercial_invoice",
+    "product invoice": "commercial_invoice",
+    "goods invoice": "commercial_invoice",
+    "tax invoice": "commercial_invoice",
+    "travel invoice": "travel",
+    "travel document": "travel",
+    "flight ticket": "travel",
+    "itinerary": "travel",
+    "rental invoice": "rental",
+    "lease invoice": "rental",
+    "rent invoice": "rental",
+    "hotel invoice": "hotel",
+    "hotel folio": "hotel",
+    "utility bill": "utility",
+    "electricity bill": "utility",
+    "water bill": "utility",
+    "gas bill": "utility",
+    "telecom bill": "utility",
+    "phone bill": "utility",
+    "internet bill": "utility",
+    "statement of account": "soa",
+    "account statement": "soa",
+    "aging report": "soa",
+    "bank statement": "bank_statement",
+    "credit note": "credit_note",
+    "credit memo": "credit_note",
+    "cn": "credit_note",
+}
+
+KEYWORD_RULES = [
+    ("credit_note", ["credit note", "credit memo", "refund note", "cn"]),
+    ("bank_statement", ["bank statement", "running balance", "debit", "credit", "account transactions"]),
+    ("soa", ["statement of account", "outstanding", "aging", "balance brought forward"]),
+    ("utility", ["utility", "electricity", "water", "gas", "telecom", "meter", "kwh", "tariff"]),
+    ("hotel", ["hotel", "folio", "check-in", "check out", "room charge", "guest"]),
+    ("travel", ["travel", "flight", "ticket", "itinerary", "passenger", "pnr", "routing"]),
+    ("rental", ["rental", "lease", "tenancy", "base rent", "service charge", "lot no"]),
+    ("commercial_invoice", ["commercial invoice", "tax invoice", "po number", "bill of lading", "barcode"]),
+]
+
+
+def _keyword_match_label(text: str) -> str:
+    lower_text = (text or "").lower()
+    for canonical, keywords in KEYWORD_RULES:
+        if any(keyword in lower_text for keyword in keywords):
+            return canonical
+    return "unknown"
+
+
+def _normalize_label(text: str) -> str:
+    raw = (text or "").strip().lower().strip('"').strip("'")
+    if raw in VALID_LABELS:
+        return raw
+
+    cleaned = re.sub(r"\s+", " ", re.sub(r"[_\-]+", " ", raw)).strip()
+    if cleaned in ALIAS_MAP:
+        return ALIAS_MAP[cleaned]
+
+    for canonical, keywords in KEYWORD_RULES:
+        if any(keyword in cleaned for keyword in keywords):
+            return canonical
+
+    return "unknown"
+
 
 def classify_document(ocr_json_str: str) -> str:
     """Classify the OCR output into a document type. Returns the category label string."""
+    ocr_excerpt = ocr_json_str[:12000]
+
+    # Fast deterministic fallback based on OCR text itself.
+    keyword_guess = _keyword_match_label(ocr_excerpt)
+
     try:
         completion = client.chat.completions.create(
             model=DEPLOYMENT,
@@ -47,15 +125,16 @@ def classify_document(ocr_json_str: str) -> str:
                     ),
                 },
             ],
-            temperature=0.0,
+            temperature=1.0,
             max_tokens=20,
         )
-        raw = (completion.choices[0].message.content or "").strip().lower().strip('"').strip("'")
-        # Normalize
-        valid = {
-            "commercial_invoice", "travel", "rental", "hotel",
-            "utility", "soa", "bank_statement", "credit_note", "unknown",
-        }
-        return raw if raw in valid else "unknown"
+        raw = completion.choices[0].message.content or ""
+        normalized = _normalize_label(raw)
+        if normalized != "unknown":
+            return normalized
+
+        # Fallback: if model returns extra text, use OCR keyword heuristic.
+        return keyword_guess
     except Exception:
-        return "unknown"
+        # Fallback even when LLM classification fails (auth/content filter/transient errors).
+        return keyword_guess

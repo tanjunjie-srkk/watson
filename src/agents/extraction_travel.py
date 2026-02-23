@@ -15,6 +15,8 @@ You receive OCR output (JSON). Extract all financially and operationally relevan
 6. If OCR confidence < 0.90, set "low_confidence": true.
 7. Include FULL multi-line descriptions (ticket type + routing + passenger) joined with "\\n".
 8. Extract flight/routing details into the "flights" array separately from line items.
+9. For ALL monetary fields, return number-only text (no currency code/symbol like MYR, USD, RM, $).
+10. Add one remark field `currency_note` describing the currency that all monetary values represent.
 
 ═══ OUTPUT SCHEMA ═══
 
@@ -26,6 +28,7 @@ Return ONLY valid JSON. No markdown. No explanations.
   "invoice_number": "<invoice/document number>",
   "invoice_date": "<date, original format>",
   "currency": "<e.g. MYR, USD>",
+  "currency_note": "<All monetary values are in XXX>",
   "bill_to": "<recipient name + address>",
   "attention": "<Attn person if present, or null>",
   "passengers": [
@@ -71,6 +74,7 @@ Place any other key-value pairs (payment terms, due date, booking number, consul
 - DO NOT calculate or verify totals.
 - DO NOT invent missing values.
 - DO NOT change number formatting.
+- DO NOT include currency code/symbol inside monetary fields.
 - DO NOT truncate descriptions.
 """
 

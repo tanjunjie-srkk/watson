@@ -1,0 +1,204 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "file_name": "Inv_1_page_1.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "AS WATSON RETAIL (HK) LIMITED\nCOMMERCIAL INVOICE\nPage 1 of 3",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "Attn :\nBill To : WATSONS PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106, LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\n\nMALAYSIA\n\nTel :\nFax :",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "Business Unit :\nWATSONS PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106, LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\n\nMALAYSIA\n\nTel :\nFax :",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "CI Number : 26001099\nCI Date : 28-JAN-2026\nPO Number : MY2501539\nBU PO Number : 18082166\nPayment Terms : TT 30 DAYS\nTrade Terms : CFR PORT KLANG\nBill of Lading : CNSHA0001458220\nDeparture Date : 25-JAN-2026\nCountry Of Origin : CHINA",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Outer Barcode | Batch No. | Product Description | Quantity | Unit Price | Amount",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Inner Barcode |  | SKU |  |  | ",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Product Barcode | Color - Size | Ratio / Assortment |  |  | ",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "04894532992539 |  | WATSONS SIDE SEALED COTTON PUFFS\nWATSONS SIDE SEALED COTTON PUFFS 189S SEA AW2022\nWATSONS OOB COTTON RELAUNCH | 6864 | 0.970 | 6,658.08",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "04894532992539 |  | WATSONS SIDE SEALED COTTON PUFFS\nWATSONS SIDE SEALED COTTON PUFFS 189S SEA AW2022\nWATSONS OOB COTTON RELAUNCH | 168 | 0.970 | 162.96",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "4894532992539 | - |  | 64850 |  | ",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "4894532992539 | - |  | 64850 |  | ",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "04894819091315 |  | WATSONS X BT21 SIDE SEALED COTTON PUFFS\nWATSONS X BT21 SIDE SEALED COTTON PUFFS 189S SEA AW2025\nWATSONS WATSONS X BT21 SIDE SEALED COTTON PUFFS | 17760 | 0.970 | 17,227.20",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "Please direct all correspondence to :\n15/F TWO HARBOURFRONT, 22 TAK FUNG STREET, HUNG HOM, KOWLOON, HONG KONG",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "file_name": "Inv_1_page_2.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "AS WATSON RETAIL (HK) LIMITED\nCOMMERCIAL INVOICE\nPage 2 of 3",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "Attn :\nBill To : WATSONS PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106, LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\n\nMALAYSIA\n\nTel :\nFax :",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "Business Unit :\nWATSONS PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106, LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\n\nMALAYSIA\n\nTel :\nFax :",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "CI Number : 26001099\nCI Date : 28-JAN-2026\nPO Number : MY2501539\nBU PO Number : 18082166\nPayment Terms : TT 30 DAYS\nTrade Terms : CFR PORT KLANG\nBill of Lading : CNSHA0001458220\nDeparture Date : 25-JAN-2026\nCountry Of Origin : CHINA",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Outer Barcode | Batch No. | Product Description | Quantity | Unit Price | Amount",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Inner Barcode |  | SKU |  |  | ",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Product Barcode | Color - Size | Ratio / Assortment |  |  | ",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "04894819091315 |  | WATSONS X BT21 SIDE SEALED COTTON PUFFS\nWATSONS X BT21 SIDE SEALED COTTON PUFFS 189S SEA AW2025\nWATSONS WATSONS X BT21 SIDE SEALED COTTON PUFFS | 6912 | 0.970 | 6,704.64",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "4894819901315 | - |  | 1024717 |  | ",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "Please direct all correspondence to :\n15/F TWO HARBOURFRONT, 22 TAK FUNG STREET, HUNG HOM, KOWLOON, HONG KONG",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "file_name": "Inv_1_page_3.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "AS WATSON RETAIL (HK) LIMITED\nCOMMERCIAL INVOICE\nPage 3 of 3",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "Attn :\nBill To : WATSONS PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106, LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\n\nMALAYSIA\n\nTel :\nFax :",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "Business Unit :\nWATSONS PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106, LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\n\nMALAYSIA\n\nTel :\nFax :",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "CI Number : 26001099\nCI Date : 28-JAN-2026\nPO Number : MY2501539\nBU PO Number : 18082166\nPayment Terms : TT 30 DAYS\nTrade Terms : CFR PORT KLANG\nBill of Lading : CNSHA0001458220\nDeparture Date : 25-JAN-2026\nCountry Of Origin : CHINA",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Outer Barcode | Batch No. | Product Description | Quantity | Unit Price | Amount",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Inner Barcode |  | SKU |  |  | ",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Product Barcode | Color - Size | Ratio / Assortment |  |  | ",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "4894819901315 | - |  | 1024717 |  | ",
+          "confidence": 1.0
+        },
+        {
+          "type": "subtotal",
+          "content": "Subtotal : USD 30,752.88\nFreight Charges : USD 538.97\nGrand Total : USD 31,291.85",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Payment Instructions :-\nBanker : THE HONGKONG AND SHANGHAI BANKING CORPORATION LIMITED\n1 QUEENS ROAD CENTRAL, CENTRAL AND WESTERN DISTRICT, CENTRAL, HONG KONG\nA/c Name : INTERNATIONAL BUYING-A DIVISION OF AS WATSON RETAIL (HK) LIMITED\nA/c Number : 808-480685-201",
+          "confidence": 1.0
+        },
+        {
+          "type": "signature",
+          "content": "AS Watson Retail (HK) Limited\n\nThis is a computer generated output and does not require signature",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "Please direct all correspondence to :\n15/F TWO HARBOURFRONT, 22 TAK FUNG STREET, HUNG HOM, KOWLOON, HONG KONG",
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_pages": 3,
+    "languages_detected": [
+      "en"
+    ],
+    "image_quality": "clear"
+  }
+}

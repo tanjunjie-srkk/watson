@@ -1,100 +1,98 @@
 {
   "document_type": "Utility Bill",
   "vendor_name": "IOI Mall Damansara Sdn Bhd",
-  "invoice_number": "2810003305",
-  "invoice_date": "04/04/2025",
-  "due_date": "10/04/2025",
-  "currency": "RM",
-  "bill_to": "WATSON'S PERSONAL CARE STORES SDN BHD\nWATSONS\nSUITE 7-01, LEVEL 7, MENARA EXCHANGE 106\nLINGKARAN TRX, TUN RAZAK EXCHANGE\n55188 KUALA LUMPUR\nLot No. : CC71-3\nAttn : ACCOUNT DEPT",
-  "account_number": null,
-  "billing_period_from": "01/03/2025",
-  "billing_period_to": "31/03/2025",
-  "service_address": null,
+  "document_number": "2810003305",
+  "document_date": "04/04/2025",
+  "currency": "MYR",
+  "total_amount": "3,474.41",
+  "bill_to": "WATSON'S PERSONAL CARE STORES SDN BHD\nWATSONS\nSUITE 7-01, LEVEL 7, MENARA EXCHANGE 106\nLINGKARAN TRX, TUN RAZAK EXCHANGE\n55188 KUALA LUMPUR\nLot No. : CC71-3\n\nAttn : ACCOUNT DEPT",
   "line_items": [
     {
+      "item_number": null,
       "description": "Electricity Charge",
       "quantity": null,
-      "unit_rate": null,
+      "unit_price": null,
+      "Reference / Supporting Information": "From: 01/03/2025\nTo: 31/03/2025",
       "tax": null,
-      "amount": "3,247.81",
-      "low_confidence": false
+      "amount": "3,247.81"
     },
     {
-      "description": "Meter ID 6780436 | Meter Readings 77,219.000-77,980.000",
+      "item_number": null,
+      "description": "Meter ID: 6780436\nMeter Readings: 77,219.000-\n77,980.000",
       "quantity": "200.000",
-      "unit_rate": "0.4350",
+      "unit_price": "0.4350",
+      "Reference / Supporting Information": null,
       "tax": null,
-      "amount": "87.00",
-      "low_confidence": false
+      "amount": "87.00"
     },
     {
-      "description": "Meter ID 6780436 | Meter Readings 77,219.000-77,980.000",
+      "item_number": null,
+      "description": "Meter ID: 6780436\nMeter Readings: 77,219.000-\n77,980.000",
       "quantity": "561.000",
-      "unit_rate": "0.5090",
+      "unit_price": "0.5090",
+      "Reference / Supporting Information": null,
       "tax": null,
-      "amount": "285.55",
-      "low_confidence": false
+      "amount": "285.55"
     },
     {
-      "description": "Meter ID 6780476 | Meter Readings 147,577.000-150,107.000",
+      "item_number": null,
+      "description": "Meter ID: 6780476\nMeter Readings: 147,577.000-\n150,107.000",
       "quantity": "200.000",
-      "unit_rate": "0.4350",
+      "unit_price": "0.4350",
+      "Reference / Supporting Information": null,
       "tax": null,
-      "amount": "87.00",
-      "low_confidence": false
+      "amount": "87.00"
     },
     {
-      "description": "Meter ID 6780476 | Meter Readings 147,577.000-150,107.000",
+      "item_number": null,
+      "description": "Meter ID: 6780476\nMeter Readings: 147,577.000-\n150,107.000",
       "quantity": "2,330.000",
-      "unit_rate": "0.5090",
+      "unit_price": "0.5090",
+      "Reference / Supporting Information": null,
       "tax": null,
-      "amount": "1,185.97",
-      "low_confidence": false
+      "amount": "1,185.97"
     },
     {
-      "description": "Meter ID 8492713 | Meter Readings 99,081.000-102,258.000",
+      "item_number": null,
+      "description": "Meter ID: 8492713\nMeter Readings: 99,081.000-\n102,258.000",
       "quantity": "200.000",
-      "unit_rate": "0.4350",
+      "unit_price": "0.4350",
+      "Reference / Supporting Information": null,
       "tax": null,
-      "amount": "87.00",
-      "low_confidence": false
+      "amount": "87.00"
     },
     {
-      "description": "Meter ID 8492713 | Meter Readings 99,081.000-102,258.000",
+      "item_number": null,
+      "description": "Meter ID: 8492713\nMeter Readings: 99,081.000-\n102,258.000",
       "quantity": "2,977.000",
-      "unit_rate": "0.5090",
+      "unit_price": "0.5090",
+      "Reference / Supporting Information": null,
       "tax": null,
-      "amount": "1,515.29",
-      "low_confidence": false
+      "amount": "1,515.29"
     }
   ],
   "subtotal": "3,247.81",
   "tax_total": "0.00",
-  "surcharges": [
-    {
-      "label": "Feed In Tariff 1.6%",
-      "amount": "51.96"
-    },
-    {
-      "label": "ICPT",
-      "amount": "174.64"
-    }
-  ],
-  "previous_balance": null,
-  "payment_received": null,
-  "adjustments": null,
-  "current_charges": null,
+  "discount": null,
+  "freight_charges": null,
   "grand_total": "3,474.41",
   "amount_in_words": "Ringgit Malaysia Three Thousand Four Hundred Seventy Four and Forty One Cents Only",
-  "payment_info": {
-    "bank_name": "United Overseas Bank Malaysia (Puchong)",
-    "account_name": "IOI MALL DAMANSARA SDN BHD",
-    "account_number": "100870211"
-  },
   "additional_fields": {
-    "Lease ID": "10003462",
     "Company Reg. No.": "202401006710",
     "TIN No.": "C 58550375030",
+    "Invoice Date": "04/04/2025",
+    "Due Date": "10/04/2025",
+    "Lease ID": "10003462",
+    "Sub Total Charges (RM)": "3,247.81",
+    "SST@0% (RM)": "0.00",
+    "Feed In Tariff 1.6% (RM)": "51.96",
+    "ICPT (RM)": "174.64",
+    "Total Amount (RM)": "3,474.41",
+    "Account Name": "IOI MALL DAMANSARA SDN BHD",
+    "Account No": "100870211",
+    "Bank Name": "United Overseas Bank Malaysia (Puchong)",
+    "SWIFT Code": "UOBMYKLXXX",
+    "Payment Advice Recipient Email": "arfinanceioimalls@ioiproperties.com.my",
     "SST Reg No": "W10-2503-32000128"
   }
 }

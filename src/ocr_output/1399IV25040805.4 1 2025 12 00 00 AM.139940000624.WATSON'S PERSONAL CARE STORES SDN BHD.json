@@ -1,0 +1,97 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "file_name": "1399IV25040805.4 1 2025 12 00 00 AM.139940000624.WATSON'S PERSONAL CARE STORES SDN BHD_page_1.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "CapitaLand",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "WATSON'S PERSONAL CARE STORES SDN BHD\nARENA WATSON'S\nLEVEL 7, THE EXCHANGE 106,\nLINGKARAN TRX, TUN RAZAK EXCHANGE,\nKuala Lumpur, Malaysia, 55188\nAttention:  CHRISTINE LEONG",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "MTRUSTEE BERHAD AS TRUSTEE OF CAPITALAND\nMALAYSIA TRUST\nUnit No 1-27, Level 27,\nNaza Tower\nNo. 10, Persiaran KLCC\nMalaysia 50088\nCo Reg.: 198701004362\nSST Reg. No.: W10-1808-32000970",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "Invoice No            1399IV25040805\nInvoice Date          01-Apr-25\nDue Date              01-Apr-25\nContract No           139940000624\nCustomer Ref No",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "TAX INVOICE",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "Page 1 of 1",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Description\nLocation : East Coast Mall, GF-S13A\nStorage for Period 4/1/2025 12:00:00 AM - 4/30/2025 12:00:00 AM",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Item Description | Amount MYR | Tax Rate % | Tax Amount MYR | Total MYR",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "StorageSpace/Room Rental/ Fee - 01-Apr-25 to 30-Apr-25 | 1,140.00 | 0.00 | 0.00 | 1,140.00",
+          "confidence": 1.0
+        },
+        {
+          "type": "subtotal",
+          "content": "Total | 1,140.00 |  |  | 1,140.00",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": " | Supplies Payable | SST Payable | Total Payable (SST Included)",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "Sales Exempt from SST , 0% | 1,140.00 | 0.00 | 1,140.00",
+          "confidence": 1.0
+        },
+        {
+          "type": "subtotal",
+          "content": "Total Amount | 1,140.00 | 0.00 | 1,140.00",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Please pay to the bank account number below:\n\nBank Account Name: MTB-CLMT-CCM A/C\nBank Account Number: 21413800129750\nBank Name: RHB BANK BERHAD\nSWIFT Code: RHBBMYKLXXX",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "Property correspondence address:\n\nMTrustee Berhad\nas Trustee of CapitaLand Malaysia Trust\nc/o East Coast Mall\nLevel 3, East Coast Mall,\nCentre Management Office\nJalan Putra Square 6, Putra Square\nMalaysia 25200\nTel: 609-565 8688 Fax: 609-565 8699\nEmail: ecm-cc@capitaland.com",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "Please quote invoice number when you make payment, otherwise payment will be offset on a first-in-first-out basis.\n\nTHIS IS A COMPUTER-GENERATED DOCUMENT. NO SIGNATURE IS REQUIRED.",
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_pages": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "image_quality": "clear"
+  }
+}

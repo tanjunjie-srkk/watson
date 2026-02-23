@@ -1,6 +1,6 @@
 {
   "document_type": "Invoice",
-  "vendor_name": "SEDUNIA travel",
+  "vendor_name": "Sedunia Travel Services Sdn. Bhd.",
   "document_number": "NITM10008788",
   "document_date": "27-JAN-26",
   "currency": "MYR",
@@ -38,22 +38,14 @@
       "unit_price": "20.00",
       "tax": null,
       "amount": "20.00"
-    },
-    {
-      "item_number": null,
-      "description": "SERVICE FEE\nPassenger(s): MUHAMMAD NAJIB BIN ROSDI / SAFUAN BIN SAIDI /\nXO: XOTM10010201, XOTM10010202",
-      "quantity": null,
-      "unit_price": "300.00",
-      "tax": null,
-      "amount": "300.00"
     }
   ],
-  "subtotal": null,
+  "subtotal": "300.00",
   "tax_total": null,
   "discount": null,
   "freight_charges": null,
   "grand_total": "300.00",
-  "amount_in_words": "Three Hundred Ringgits",
+  "amount_in_words": "MYR Three Hundred Ringgits",
   "additional_fields": {
     "Attn": "MS MISLINA",
     "Customer No.": "TW1007",
@@ -61,8 +53,8 @@
     "Due Date": "13-MAR-26",
     "Consultant": "Azrina Tarmizi",
     "Sales ID": "JO",
-    "Submit to Watson": "Submit to Watson (4/2/26)",
     "Less Amount Received": "0.00",
-    "Balance": "300.00"
+    "Balance": "300.00",
+    "XO": "XOTM10010201, XOTM10010202"
   }
 }

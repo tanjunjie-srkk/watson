@@ -1,0 +1,183 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "file_name": "600011068503-0226 RTL_page_1.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "Setia\nCity Mall\nGreat times\ninside and out",
+          "confidence": 0.95
+        },
+        {
+          "type": "header",
+          "content": "Greenhill Resources Sdn Bhd (813548-H)\nLevel 2\nCentre Management Office\nNo. 7, Persiaran Setia Dagang\nBandar Setia Alam, Sek U13, 40170 Shah Alam\nSelangor Darul Ehsan, Malaysia\nTel: +603-3375 8788 Fax:+603-3375 8799",
+          "confidence": 0.98
+        },
+        {
+          "type": "paragraph",
+          "content": "Watson's Personal Care Stores Sdn Bhd",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "Attn: Finance Department\nARENA WATSONS, LEVEL 7, THE\nEXCHANGE 106\nLINGKARAN TRX, TUN RAZAK\nEXCHANGE\n55188 KUALA LUMPUR\nWILAYAH PERSEKUTUAN",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "Lease ID: t0009558",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "Name: Watsons",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "Unit: UG-104,105&106",
+          "confidence": 0.95
+        },
+        {
+          "type": "key_value",
+          "content": "Invoice Number:600011068503",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "Invoice Date:1 February 2026",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "Due date: 7 February 2026",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "TAX INVOICE",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Details | From | To | Net RM (excl SST) | SST RM | Tax Rate | Total RM (incl SST)",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "Turnover Rent - Specialty | 01/12/2025 | 31/12/2025 | 20,766.52 | 1,661.32 | 8.00 | 22,427.84",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "ELEC 01 Dec to 31 Dec | 01/12/2025 | 31/12/2025 | 3,440.59 | 0.00 | 0.00 | 3,440.59",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "Base Rent - Specialty (2% ST EX:RM1126.67) | 01/02/2026 | 28/02/2026 | 56,333.60 | 3,380.02 | 6.00 | 59,713.62",
+          "confidence": 0.98
+        },
+        {
+          "type": "table_row",
+          "content": "Service Charge - Specialty (2% ST EX:RM184.98) | 01/02/2026 | 28/02/2026 | 9,248.80 | 554.93 | 6.00 | 9,803.73",
+          "confidence": 0.98
+        },
+        {
+          "type": "subtotal",
+          "content": "TOTAL TAX\nINVOICE | 89,789.51 | 5,596.27 | 95,385.78",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Interest shall be calculated from the date monies are due and which remain outstanding until and including the date of payment of such monies in full.",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "For Cheque Payment, please make your cheque payable to: Greenhill Resources Sdn Bhd and forward to the address above.",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Payments can also be made by direct transfer and our bank details are as follows:",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "Bank Name: | CIMB Islamic Bank Bhd",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "Bank Code: | 35",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "Branch Code: | 12906",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "Account Name: | Greenhill Resources Sdn Bhd",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "Account No: | 8600919049",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "Swift Code: | CIBBMYKL",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "This is a computer generated invoice. No signature is required.",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "Service Tax Registration Number: B16-1808-32000419",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "file_name": "600011068503-0226 RTL_page_2.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "Setia\nCity Mall\nGreat times\ninside and out",
+          "confidence": 0.95
+        },
+        {
+          "type": "header",
+          "content": "Greenhill Resources Sdn Bhd (813548-H)\nLevel 2\nCentre Management Office\nNo. 7, Persiaran Setia Dagang\nBandar Setia Alam, Sek U13, 40170 Shah Alam\nSelangor Darul Ehsan, Malaysia\nTel: +603-3375 8788 Fax:+603-3375 8799",
+          "confidence": 0.98
+        },
+        {
+          "type": "paragraph",
+          "content": "Date and Time of Validation: 2026-02-01T00:41:33Z",
+          "confidence": 0.9
+        },
+        {
+          "type": "footer",
+          "content": "Service Tax Registration Number: B16-1808-32000419",
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_pages": 2,
+    "languages_detected": [
+      "en"
+    ],
+    "image_quality": "clear"
+  }
+}

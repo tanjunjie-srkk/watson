@@ -1,28 +1,12 @@
 {
-  "document_type": "Commercial Invoice",
+  "document_type": "Invoice",
   "vendor_name": "ORIENT ESCAPE TRAVEL SDN BHD (137939-M)",
   "document_number": "BS92303",
   "document_date": "08/01/2026",
   "currency": "MYR",
   "total_amount": "1,410.08",
-  "bill_to": "WATSONS PERSONAL CARE STORES SDN BHD\nArena Watsons, Level 7,\nThe Exchange 106, Lingkaran TRX,\nTun Razak Exchange 55188 Kuala Lumpur Malaysia\n\nTel: 60327076688 Fax: 603-21432399\nEmail: finance.nontrade@watsons.com.my\n(W0003)",
+  "bill_to": "WATSONS PERSONAL CARE STORES SDN BHD\nArena Watsons, Level 7,\nThe Exchange 106, Lingkaran TRX,\nTun Razak Exchange 55188 Kuala Lumpur Malaysia\nTel: 60327076688 Fax: 603-21432399\nEmail: finance.nontrade@watsons.com.my\n(W0003)",
   "line_items": [
-    {
-      "item_number": "1",
-      "description": "SING/PEI/CHIN/MS\nTicket no: 232 6391652398",
-      "quantity": null,
-      "unit_price": "532.00",
-      "tax": "84.48",
-      "amount": "616.48"
-    },
-    {
-      "item_number": "2",
-      "description": "BINTI/SIDIKAH/SITI/NORFAIZA/MS\nTicket no: 232 6391652399",
-      "quantity": null,
-      "unit_price": "696.00",
-      "tax": "97.60",
-      "amount": "793.60"
-    },
     {
       "item_number": null,
       "description": "AIRFARE - ECONOMY CLASS",
@@ -53,7 +37,7 @@
   "discount": null,
   "freight_charges": null,
   "grand_total": "1,410.08",
-  "amount_in_words": "MYR One Thousand Four Hundred Ten And Cent Eight Only",
+  "amount_in_words": "One Thousand Four Hundred Ten\nAnd Cent Eight Only",
   "additional_fields": {
     "Payment": "30 DAYS",
     "Salesperson": "EVALOW",
@@ -63,11 +47,23 @@
     "Attn": "MS NUR SYAHIRAH",
     "Re": "BOOKED MS NUR SYAHIRAH | SING/PEI/CHIN/MS",
     "Passenger detail": "#Adult:      2        #Child:      0        #Infant:      0",
-    "Origin / Destination | Flight No | Date | Time | Pnr": "SIBU / KUALA LUMPUR | MH2715 | 18JAN | 1115 /1320 | FLDLUP\nKUALA LUMPUR / SIBU | MH2716 | 21JAN | 0825 /1030 | FLDLUP\nKOTA KINABALU / KUALA LUMPUR | MH2613 | 18JAN | 0950 /1220 | FLDNUG\nKUALA LUMPUR / KOTA KINABALU | MH2610 | 21JAN | 0935 /1215 | FLDNUG",
-    "Remarks": "",
-    "Maybank A/C": "0140-8431-9671",
+    "Pax 1": "SING/PEI/CHIN/MS | Ticket no 232 6391652398 | Fare 532.00 | Tax 84.48 | Total Fare 616.48",
+    "Pax 2": "BINTI/SIDIKAH/SITI/NORFAIZA/MS | Ticket no 232 6391652399 | Fare 696.00 | Tax 97.60 | Total Fare 793.60",
+    "Flight Segment 1": "SIBU / KUALA LUMPUR | MH2715 | 18JAN | 1115 /1320 | FLDLUP",
+    "Flight Segment 2": "KUALA LUMPUR / SIBU | MH2716 | 21JAN | 0825 /1030 | FLDLUP",
+    "Flight Segment 3": "KOTA KINABALU / KUALA LUMPUR | MH2613 | 18JAN | 0950 /1220 | FLDNUG",
+    "Flight Segment 4": "KUALA LUMPUR / KOTA KINABALU | MH2610 | 21JAN | 0935 /1215 | FLDNUG",
+    "Bank Details": "Maybank A/C :0140-8431-9671",
     "Printed on": "08/01/26",
-    "Print no": "0",
-    "Page": "1 / 1"
+    "Claim No.": "711548-26",
+    "Travel Request Date": "07-01-2026 (Wed)",
+    "Employee": "[43413442] AHMAD FUAD BIN YACOB",
+    "Company": "Watson's Personal Care Stores Sdn Bhd",
+    "Remarks": "TL meeting and Training at HQ",
+    "Claim No. (Second)": "711717-26",
+    "Employee (Second)": "[43001345] SING PEI CHIN",
+    "Expense Type": "[Admin] Air Flight Ticket - Return",
+    "Hotel / Airline Name": "Sibu-KL MH2715, KL-Sibu MH2716",
+    "Hotel Accommodation": "Capitol Hotel, KL"
   }
 }

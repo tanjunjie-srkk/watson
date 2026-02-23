@@ -22,6 +22,8 @@ You receive OCR output (JSON). Extract all financially relevant information.
    Do NOT put these in line_items — they belong in "surcharges".
 9. "subtotal" = the base charges BEFORE surcharges (e.g. "Sub Total Charges").
    "grand_total" = the final amount AFTER all surcharges and tax (e.g. "Total Amount").
+10. For ALL monetary fields, return number-only text (no currency code/symbol like MYR, USD, RM, $).
+11. Add one remark field `currency_note` describing the currency that all monetary values represent.
 
 ═══ OUTPUT SCHEMA ═══
 
@@ -34,6 +36,7 @@ Return ONLY valid JSON. No markdown. No explanations.
   "invoice_date": "<bill date, original format>",
   "due_date": "<payment due date or null>",
   "currency": "<e.g. MYR, RM>",
+  "currency_note": "<All monetary values are in XXX>",
   "bill_to": "<customer name + address>",
   "account_number": "<customer/subscriber account number>",
   "billing_period_from": "<billing period start or null>",
@@ -79,6 +82,7 @@ Place any other key-value pairs (meter readings, tariff type, contract number, d
 - DO NOT calculate or verify totals.
 - DO NOT invent missing values.
 - DO NOT change number formatting.
+- DO NOT include currency code/symbol inside monetary fields.
 - DO NOT truncate descriptions.
 """
 

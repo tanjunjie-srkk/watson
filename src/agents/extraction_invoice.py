@@ -15,6 +15,8 @@ You receive OCR output (JSON). Extract all financially relevant information into
 6. If a field is not found, set to null.
 7. If OCR confidence for a section < 0.90, set "low_confidence": true on the relevant item.
 8. Include the FULL multi-line product description (main name + variant + campaign) joined with "\\n".
+9. For ALL monetary fields, return number-only text (no currency code/symbol like MYR, USD, RM, $).
+10. Add one remark field `currency_note` describing the currency that all monetary values represent.
 
 ═══ OUTPUT SCHEMA ═══
 
@@ -28,6 +30,7 @@ Return ONLY valid JSON. No markdown. No explanations.
   "po_number": "<PO Number or null>",
   "bu_po_number": "<BU PO Number or null>",
   "currency": "<e.g. USD, MYR>",
+  "currency_note": "<All monetary values are in XXX>",
   "bill_to": "<full recipient name + address as single string>",
   "ship_to": "<shipping address if present, or null>",
   "payment_terms": "<e.g. TT 30 DAYS or null>",
@@ -60,6 +63,7 @@ Place any other key-value pairs found (bill of lading, departure date, country o
 - DO NOT calculate or verify totals.
 - DO NOT invent missing values.
 - DO NOT change number formatting.
+- DO NOT include currency code/symbol inside monetary fields.
 - DO NOT truncate descriptions.
 """
 

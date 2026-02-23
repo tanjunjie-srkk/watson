@@ -1,39 +1,47 @@
 {
-  "invoice_number": "NITM10008927",
-  "invoice_date": "04-FEB-26",
-  "po_number": null,
-  "bu_po_number": null,
-  "payment_terms": null,
-  "trade_terms": null,
-  "bill_of_lading": null,
-  "departure_date": null,
-  "country_of_origin": null,
+  "document_type": "Invoice",
+  "vendor_name": "SEDUNIA TRAVEL SERVICES SDN BHD.",
+  "document_number": "NITM10008927",
+  "document_date": "04-FEB-26",
   "currency": "MYR",
+  "total_amount": "696.00",
   "bill_to": "WATSON'S PERSONAL CARE STORES SDN BHD\nArena Watsons\nLevel 7, The Exchange 106,\nLingkaran TRX, Tun Razak Exchange,\n55188 Kuala Lumpur\n\nAttn:   MS LINA",
-  "business_unit": null,
   "line_items": [
     {
-      "barcode": null,
-      "product_description": "CORP - XO TICKET (DOM / DA)",
+      "item_number": "1",
+      "description": "CORP - XO TICKET (DOM / DA)\nRouting\nSUBANG / ALOR SETAR\nALOR SETAR / SUBANG\nTicket No.            Passenger\n918-CHGUB0001         DIKHWAN HADY/BIN DARNALIS MR\n\nDeparture        Arrival Date\n07FEB26 1340     07FEB26 1455      FY 1672\n07FEB26 2105     07FEB26 2215      FY 1675",
       "quantity": "1",
       "unit_price": "673.00",
+      "Reference / Supporting Information": null,
+      "tax": "",
       "amount": "673.00"
     },
     {
-      "barcode": null,
-      "product_description": "SERVICE FEE",
+      "item_number": "2",
+      "description": "SERVICE FEE\nDescription: SERVICE FEE\nPassenger(s): DIKHWAN HADY/BIN DARNALIS MR",
       "quantity": "1",
       "unit_price": "23.00",
+      "Reference / Supporting Information": null,
+      "tax": "",
       "amount": "23.00"
     }
   ],
   "subtotal": "696.00",
+  "tax_total": null,
+  "discount": null,
   "freight_charges": null,
   "grand_total": "696.00",
-  "payment_info": {
-    "bank_name": null,
-    "bank_address": null,
-    "account_name": null,
-    "account_number": null
+  "amount_in_words": "MYR Six Hundred And Ninety-Six Ringgits",
+  "additional_fields": {
+    "Issue Date": "04-FEB-26",
+    "Customer No.": "TW1007",
+    "Booking No.": "SO1000020849",
+    "Due Date": "20-MAR-26",
+    "Consultant": "Kelly Khor",
+    "Sales ID": "JO",
+    "XO": "XOTM10010390",
+    "LESS Amount Received": "MYR             0.00",
+    "Balance": "696.00",
+    "Website": "www.seduniatravel.com"
   }
 }

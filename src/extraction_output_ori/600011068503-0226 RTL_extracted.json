@@ -1,0 +1,74 @@
+{
+  "document_type": "Commercial Invoice",
+  "vendor_name": "Greenhill Resources Sdn Bhd (813548-H)",
+  "invoice_number": "600011068503",
+  "invoice_date": "1 February 2026",
+  "po_number": null,
+  "bu_po_number": null,
+  "currency": "MYR",
+  "bill_to": "Watson's Personal Care Stores Sdn Bhd\nAttn: Finance Department\nARENA WATSONS, LEVEL 7, THE\nEXCHANGE 106\nLINGKARAN TRX, TUN RAZAK\nEXCHANGE\n55188 KUALA LUMPUR\nWILAYAH PERSEKUTUAN",
+  "ship_to": null,
+  "payment_terms": null,
+  "trade_terms": null,
+  "line_items": [
+    {
+      "barcode": null,
+      "description": "Turnover Rent - Specialty",
+      "quantity": null,
+      "unit_price": null,
+      "discount": null,
+      "tax": "1,661.32",
+      "amount": "22,427.84",
+      "low_confidence": false
+    },
+    {
+      "barcode": null,
+      "description": "ELEC 01 Dec to 31 Dec",
+      "quantity": null,
+      "unit_price": null,
+      "discount": null,
+      "tax": "0.00",
+      "amount": "3,440.59",
+      "low_confidence": false
+    },
+    {
+      "barcode": null,
+      "description": "Base Rent - Specialty (2% ST EX:RM1126.67)",
+      "quantity": null,
+      "unit_price": null,
+      "discount": null,
+      "tax": "3,380.02",
+      "amount": "59,713.62",
+      "low_confidence": false
+    },
+    {
+      "barcode": null,
+      "description": "Service Charge - Specialty (2% ST EX:RM184.98)",
+      "quantity": null,
+      "unit_price": null,
+      "discount": null,
+      "tax": "554.93",
+      "amount": "9,803.73",
+      "low_confidence": false
+    }
+  ],
+  "subtotal": "89,789.51",
+  "tax_total": "5,596.27",
+  "freight_charges": null,
+  "grand_total": "95,385.78",
+  "amount_in_words": null,
+  "additional_fields": {
+    "Lease ID": "t0009558",
+    "Name": "Watsons",
+    "Unit": "UG-104,105&106",
+    "Due date": "7 February 2026",
+    "Service Tax Registration Number": "B16-1808-32000419",
+    "Bank Name": "CIMB Islamic Bank Bhd",
+    "Bank Code": "35",
+    "Branch Code": "12906",
+    "Account Name": "Greenhill Resources Sdn Bhd",
+    "Account No": "8600919049",
+    "Swift Code": "CIBBMYKL",
+    "Date and Time of Validation": "2026-02-01T00:41:33Z"
+  }
+}

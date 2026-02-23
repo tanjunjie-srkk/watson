@@ -1,0 +1,303 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "file_name": "TNB_page_1.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "BIL ELEKTRIK ANDA",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "No. Akaun : 210020134303\nNo. Kontrak : 6000177279\nDeposit : RM4,820.00\nNo. Invois : 372214074",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "WATSON'S PERSONAL CARE STORES SDN. BHD.\nNO 122 BWH, JLN SEGAMAT\nLABIS\n85300 SEGAMAT\nJOHOR",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "TENAGA NASIONAL",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "TERIMA KASIH\nKerana\nMembayar Dalam\nTempoh 30 Hari\n\nTNB Careline\n1-300-88-5454",
+          "confidence": 1.0
+        },
+        {
+          "type": "subtotal",
+          "content": "Jumlah Perlu Dibayar : RM 2,344.02        Tarikh Bil : 20.01.2026",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Tunggakan RM -22.58\nCaj Semasa RM 2,366.60\nPenggenapan RM 0.00\nJumlah Bil RM 2,344.02\nBil Terdahulu RM 2,224.95\n(20.12.2025)\n\nBayar Sebelum\nTerima Kasih\n19.02.2026\n\nBayaran Akhir RM 2,224.95\n(16.01.2026)",
+          "confidence": 0.95
+        },
+        {
+          "type": "paragraph",
+          "content": "Jenis Bacaan : Bacaan Sebenar\nTempoh Bil : 21.12.2025 - 20.01.2026 (31 Hari)\nTarif : Bukan Domestik Am Voltan Rendah\nFaktor Prorata 1.00000",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "Pecahan Pengiraan Bil Anda:",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Jenis Caj | Tanpa ST | Dengan ST | Jumlah",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Jumlah Penggunaan Anda kWh | 5,102.00 | 0.00 | 5,102.00",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Caj Penjanaan | RM 1,379.07 | 0.00 | 1,379.07",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Tenaga (RM0.2703/kWh) A1(1.618kWh, -RM0.0642/kWh) mulai 01/12/25 | RM -116.20 | 0.00 | -116.20",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "AFA (3.292kWh, -RM0.0499/kWh) mulai 01/01/26 | RM -164.27 | 0.00 | -164.27",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Kapasiti (RM0.0883/kWh) | RM 450.51 | 0.00 | 450.51",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Caj Rangkaian (RM0.1482/kWh) | RM 756.12 | 0.00 | 756.12",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Caj Peruncitan | RM 20.00 | 0.00 | 20.00",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "Caj-caj lain Caj Penggunaan Bulan Semasa | RM 2,325.23 | 0.00 | 2,325.23",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "KWTBB (1.6%) | RM 41.37 |  | 41.37",
+          "confidence": 0.95
+        },
+        {
+          "type": "subtotal",
+          "content": "Caj Semasa RM 2,366.60",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "No. Meter | Faktor Meter | Bacaan Meter Dahulu | Semasa | Kegunaan | Unit",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "M 715457526E | 1.00000 | 520,642.00 | 525,744.00 | 5,102.00 | kWh",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "M 715457526E | 1.00000 | 0.00 | 0.00 | 0.00 | kW",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "M 715457526E | 1.00000 | 170,735.00 | 172,227.00 | 1,492.00 | kVArh",
+          "confidence": 0.95
+        },
+        {
+          "type": "footer",
+          "content": "21002013430300037221407400000000234402",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "WATSON'S PERSONAL CARE STORES SDN. BHD.\nNO 122 BWH, JLN SEGAMAT\nLABIS\n85300 SEGAMAT\nJOHOR",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Biller Code: 5454\nRef-1: 210020134303\n\nPelanggan boleh memajukan Nombor Pengenalan Cukai (TIN) bagi tujuan penerimaan e-Invois melalui e-mel ke:\ntnb_einvoice@myTNB.my",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "Aras 3, Tower D, TNB Platinum, No. 3, Jln Bkt Pantai, Bangsar, 59100 Kuala Lumpur\nNombor Pendaftaran ST W10-1808-31022372",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "file_name": "TNB_page_2.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "BIL ELEKTRIK ANDA",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "No. Akaun : 210083904009\nNo. Kontrak : 6000791664\nDeposit : RM4,900.00\nNo. Invois : 1242826768",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "WATSON'S PERSONAL CARE STORES SDN. BHD.\n72-A-G, LORONG BATU NILAM 4B\nBANDAR BUKIT TINGGI\n41200 KLANG\nSELANGOR",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "TENAGA NASIONAL",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "TERIMA KASIH\nKerana\nMembayar Dalam\nTempoh 30 Hari\n\nTNB Careline\n1-300-88-5454",
+          "confidence": 1.0
+        },
+        {
+          "type": "subtotal",
+          "content": "Jumlah Perlu Dibayar : RM 2,022.59        Tarikh Bil : 20.01.2026",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Tunggakan RM -72.86\nCaj Semasa RM 2,095.44\nPenggenapan RM 0.01\nJumlah Bil RM 2,022.59\nBil Terdahulu RM 1,829.23\n(21.12.2025)\n\nBayar Sebelum\nTerima Kasih\n19.02.2026\n\nBayaran Akhir RM 1,829.23\n(16.01.2026)",
+          "confidence": 0.95
+        },
+        {
+          "type": "paragraph",
+          "content": "Jenis Bacaan : Bacaan Sebenar\nTempoh Bil : 21.12.2025 - 20.01.2026 (31 Hari)\nTarif : Bukan Domestik Am Voltan Rendah\nFaktor Prorata 1.00000",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "Pecahan Pengiraan Bil Anda:",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Jenis Caj | Tanpa ST | Dengan ST | Jumlah",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Jumlah Penggunaan Anda kWh | 4,517.00 | 0.00 | 4,517.00",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Caj Penjanaan | RM 1,220.95 | 0.00 | 1,220.95",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Tenaga (RM0.2703/kWh) A1(1.748kWh, -RM0.0642/kWh) mulai 01/12/25 | RM -112.29 | 0.00 | -112.29",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "AFA (2.769kWh, -RM0.0499/kWh) mulai 01/01/26 | RM -138.12 | 0.00 | -138.12",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Kapasiti (RM0.0883/kWh) | RM 398.85 | 0.00 | 398.85",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Caj Rangkaian (RM0.1482/kWh) | RM 669.42 | 0.00 | 669.42",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Caj Peruncitan | RM 20.00 | 0.00 | 20.00",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "Caj-caj lain Caj Penggunaan Bulan Semasa | RM 2,058.81 | 0.00 | 2,058.81",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "KWTBB (1.6%) | RM 36.63 |  | 36.63",
+          "confidence": 0.95
+        },
+        {
+          "type": "subtotal",
+          "content": "Caj Semasa RM 2,095.44",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "No. Meter | Faktor Meter | Bacaan Meter Dahulu | Semasa | Kegunaan | Unit",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "M HOL1062112008498 | 1.00000 | 136,610.00 | 141,127.00 | 4,517.00 | kWh",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "M HOL1062112008498 | 1.00000 | 453.00 | 468.00 | 15.00 | kW",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "M HOL1062112008498 | 1.00000 | 39,279.00 | 40,670.00 | 1,391.00 | kVArh",
+          "confidence": 0.95
+        },
+        {
+          "type": "footer",
+          "content": "21008390400900124282676800000000202259",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "WATSON'S PERSONAL CARE STORES SDN. BHD.\n72-A-G, LORONG BATU NILAM 4B\nBANDAR BUKIT TINGGI\n41200 KLANG\nSELANGOR",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "For TNB Internal Use\nNo. MRU: 14306509\nNo. Sequence: 102\n\nBiller Code: 5454\nRef-1: 210083904009\n\nPelanggan boleh memajukan Nombor Pengenalan Cukai (TIN) bagi tujuan penerimaan e-Invois melalui e-mel ke:\ntnb_einvoice@myTNB.my",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "Aras 3, Tower D, TNB Platinum, No. 3, Jln Bkt Pantai, Bangsar, 59100 Kuala Lumpur\nNombor Pendaftaran ST W10-1808-31022372",
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_pages": 2,
+    "languages_detected": [
+      "en"
+    ],
+    "image_quality": "clear"
+  }
+}

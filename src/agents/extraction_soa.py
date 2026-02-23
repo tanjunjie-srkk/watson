@@ -14,6 +14,8 @@ You receive OCR output (JSON). Extract all financially relevant information.
 5. If a field is not found, set to null.
 6. If OCR confidence < 0.90, set "low_confidence": true.
 7. Preserve ALL detail — include full descriptions and references.
+8. For ALL monetary fields, return number-only text (no currency code/symbol like MYR, USD, RM, $).
+9. Add one remark field `currency_note` describing the currency that all monetary values represent.
 
 ═══ OUTPUT SCHEMA ═══
 
@@ -25,6 +27,7 @@ Return ONLY valid JSON. No markdown. No explanations.
   "statement_number": "<statement/document number or null>",
   "statement_date": "<date, original format>",
   "currency": "<e.g. MYR, USD>",
+  "currency_note": "<All monetary values are in XXX>",
   "customer_name": "<customer/debtor name>",
   "customer_address": "<customer address or null>",
   "customer_account": "<customer account/code or null>",
@@ -61,6 +64,7 @@ Place any other key-value pairs (credit limit, payment terms, contact person, et
 - DO NOT calculate or verify totals.
 - DO NOT invent missing values.
 - DO NOT change number formatting.
+- DO NOT include currency code/symbol inside monetary fields.
 - DO NOT truncate descriptions.
 """
 

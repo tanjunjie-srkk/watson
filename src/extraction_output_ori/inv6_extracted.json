@@ -1,0 +1,73 @@
+{
+  "document_type": "Commercial Invoice",
+  "vendor_name": "ORIENT ESCAPE TRAVEL SDN BHD (137939-M)",
+  "document_number": "BS92303",
+  "document_date": "08/01/2026",
+  "currency": "MYR",
+  "total_amount": "1,410.08",
+  "bill_to": "WATSONS PERSONAL CARE STORES SDN BHD\nArena Watsons, Level 7,\nThe Exchange 106, Lingkaran TRX,\nTun Razak Exchange 55188 Kuala Lumpur Malaysia\n\nTel: 60327076688 Fax: 603-21432399\nEmail: finance.nontrade@watsons.com.my\n(W0003)",
+  "line_items": [
+    {
+      "item_number": "1",
+      "description": "SING/PEI/CHIN/MS\nTicket no: 232 6391652398",
+      "quantity": null,
+      "unit_price": "532.00",
+      "tax": "84.48",
+      "amount": "616.48"
+    },
+    {
+      "item_number": "2",
+      "description": "BINTI/SIDIKAH/SITI/NORFAIZA/MS\nTicket no: 232 6391652399",
+      "quantity": null,
+      "unit_price": "696.00",
+      "tax": "97.60",
+      "amount": "793.60"
+    },
+    {
+      "item_number": null,
+      "description": "AIRFARE - ECONOMY CLASS",
+      "quantity": "1",
+      "unit_price": "1,198.00",
+      "tax": null,
+      "amount": "1,198.00"
+    },
+    {
+      "item_number": null,
+      "description": "DOMESTIC AIRPORT TAXES",
+      "quantity": "1",
+      "unit_price": "182.08",
+      "tax": null,
+      "amount": "182.08"
+    },
+    {
+      "item_number": null,
+      "description": "ACF",
+      "quantity": "2",
+      "unit_price": "15.00",
+      "tax": null,
+      "amount": "30.00"
+    }
+  ],
+  "subtotal": "1,410.08",
+  "tax_total": null,
+  "discount": null,
+  "freight_charges": null,
+  "grand_total": "1,410.08",
+  "amount_in_words": "MYR One Thousand Four Hundred Ten And Cent Eight Only",
+  "additional_fields": {
+    "Payment": "30 DAYS",
+    "Salesperson": "EVALOW",
+    "Tour code": "BS92303",
+    "Travel date": "",
+    "Due date": "07/02/2026",
+    "Attn": "MS NUR SYAHIRAH",
+    "Re": "BOOKED MS NUR SYAHIRAH | SING/PEI/CHIN/MS",
+    "Passenger detail": "#Adult:      2        #Child:      0        #Infant:      0",
+    "Origin / Destination | Flight No | Date | Time | Pnr": "SIBU / KUALA LUMPUR | MH2715 | 18JAN | 1115 /1320 | FLDLUP\nKUALA LUMPUR / SIBU | MH2716 | 21JAN | 0825 /1030 | FLDLUP\nKOTA KINABALU / KUALA LUMPUR | MH2613 | 18JAN | 0950 /1220 | FLDNUG\nKUALA LUMPUR / KOTA KINABALU | MH2610 | 21JAN | 0935 /1215 | FLDNUG",
+    "Remarks": "",
+    "Maybank A/C": "0140-8431-9671",
+    "Printed on": "08/01/26",
+    "Print no": "0",
+    "Page": "1 / 1"
+  }
+}

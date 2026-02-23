@@ -1,0 +1,39 @@
+{
+  "invoice_number": "NITM10008927",
+  "invoice_date": "04-FEB-26",
+  "po_number": null,
+  "bu_po_number": null,
+  "payment_terms": null,
+  "trade_terms": null,
+  "bill_of_lading": null,
+  "departure_date": null,
+  "country_of_origin": null,
+  "currency": "MYR",
+  "bill_to": "WATSON'S PERSONAL CARE STORES SDN BHD\nArena Watsons\nLevel 7, The Exchange 106,\nLingkaran TRX, Tun Razak Exchange,\n55188 Kuala Lumpur\n\nAttn:   MS LINA",
+  "business_unit": null,
+  "line_items": [
+    {
+      "barcode": null,
+      "product_description": "CORP - XO TICKET (DOM / DA)",
+      "quantity": "1",
+      "unit_price": "673.00",
+      "amount": "673.00"
+    },
+    {
+      "barcode": null,
+      "product_description": "SERVICE FEE",
+      "quantity": "1",
+      "unit_price": "23.00",
+      "amount": "23.00"
+    }
+  ],
+  "subtotal": "696.00",
+  "freight_charges": null,
+  "grand_total": "696.00",
+  "payment_info": {
+    "bank_name": null,
+    "bank_address": null,
+    "account_name": null,
+    "account_number": null
+  }
+}

@@ -5,7 +5,7 @@
   "document_date": "17/12/2025",
   "currency": "MYR",
   "total_amount": "39,135.36",
-  "bill_to": "S O L D  T O\nWATSON'S PERSONAL CARE STORE SDN BHD\nARENA WATSONS LEVEL 7\nTHE EXCHANGE 106, LINGKARAN TRX,\nTUN RAZAK EXCHANGE,\nKUALA LUMPUR\n55188",
+  "bill_to": "WATSON'S PERSONAL CARE STORE SDN BHD\nARENA WATSONS LEVEL 7\nTHE EXCHANGE 106, LINGKARAN TRX,\nTUN RAZAK EXCHANGE,\nKUALA LUMPUR\n55188",
   "line_items": [
     {
       "item_number": null,
@@ -17,7 +17,7 @@
       "amount": "39,135.36"
     }
   ],
-  "subtotal": null,
+  "subtotal": "39,135.36",
   "tax_total": null,
   "discount": null,
   "freight_charges": null,
@@ -30,7 +30,7 @@
     "FAX": "03-7954-9172",
     "MBB ACC": "514495137212",
     "CITIBANK ACC": "0116937018",
-    "S H I P  T O": "WATSON'S PERSONAL CARE STORES SDN BHD\nWATSON'S WAREHOUSE\nLOT 43470 & 101870\nJALAN SAPIR 33/7 SEKSYEN 33\nSHAH ALAM PREMIER INDUSTRIAL PARK\nSHAH ALAM\n40400",
+    "SHIP TO": "WATSON'S PERSONAL CARE STORES SDN BHD\nWATSON'S WAREHOUSE\nLOT 43470 & 101870\nJALAN SAPIR 33/7 SEKSYEN 33\nSHAH ALAM PREMIER INDUSTRIAL PARK\nSHAH ALAM\n40400",
     "CASH/CREDIT": "CREDIT (MYR)",
     "TERMS (DAYS)": "60",
     "Customer P.O.No": "18135262",
@@ -38,8 +38,7 @@
     "Customer TelNo": "60327076688",
     "Salesman Code": "BJ0102",
     "Order No": "2799567",
-    "TOTAL (RM)": "39,135.36",
-    "AMOUNT DUE (RM)": "39,135.36",
-    "Remarks": "Delivered By:Transporter Chop,Sign&Date\nReceived By: Customer Chop, Sign&Date"
+    "Remarks": "Delivered By:Transporter Chop,Sign&Date\nReceived By: Customer Chop, Sign&Date",
+    "Page": "Page 1 of 1"
   }
 }
