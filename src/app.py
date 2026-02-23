@@ -868,6 +868,26 @@ if page == "📤 Document Processing":
                         st.markdown("**Extraction Output**")
                         st.json(extracted)
 
+                save_base_name = pdf_path.stem
+                app_dir = Path(__file__).resolve().parent
+                ocr_output_dir = app_dir / "ocr_output"
+                extraction_output_dir = app_dir / "extraction_output"
+                ocr_output_dir.mkdir(parents=True, exist_ok=True)
+                extraction_output_dir.mkdir(parents=True, exist_ok=True)
+
+                ocr_output_path = ocr_output_dir / f"{save_base_name}.json"
+                extraction_output_path = extraction_output_dir / f"{save_base_name}_extracted.json"
+
+                with open(ocr_output_path, "w", encoding="utf-8") as f:
+                    json.dump(ocr_parsed, f, ensure_ascii=False, indent=2)
+                with open(extraction_output_path, "w", encoding="utf-8") as f:
+                    json.dump(extracted, f, ensure_ascii=False, indent=2)
+
+                st.success(
+                    f"Saved results to `{ocr_output_path.name}` and `{extraction_output_path.name}`. "
+                    "These are now available in OCR Viewer, Extraction Viewer, and Report Format."
+                )
+
                 dc1, dc2 = st.columns(2)
                 with dc1:
                     st.download_button("⬇️ Download OCR JSON",
