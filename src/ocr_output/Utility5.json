@@ -16,8 +16,13 @@
                 "confidence": 1.0
               },
               {
-                "type": "address",
-                "content": "IOI Mall Damansara Sdn Bhd\nCompany Reg. No.: 202401006710\nTIN No.: C 58550375030\n\nWATSON'S PERSONAL CARE STORES SDN BHD\nWATSONS\nSUITE 7-01, LEVEL 7, MENARA EXCHANGE 106\nLINGKARAN TRX, TUN RAZAK EXCHANGE\n55188 KUALA LUMPUR\nLot No. : CC71-3\n\nAttn : ACCOUNT DEPT",
+                "type": "paragraph",
+                "content": "IOI Mall Damansara Sdn Bhd\nCompany Reg. No.: 202401006710\nTIN No.: C 58550375030",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "WATSON'S PERSONAL CARE STORES SDN BHD\nWATSONS\nSUITE 7-01, LEVEL 7, MENARA EXCHANGE 106\nLINGKARAN TRX, TUN RAZAK EXCHANGE\n55188 KUALA LUMPUR\nLot No. : CC71-3\n\nAttn : ACCOUNT DEPT",
                 "confidence": 1.0
               },
               {
@@ -37,8 +42,8 @@
               },
               {
                 "type": "table_header",
-                "content": "Meter ID | Meter Readings | Usage | x | Rate | = | Charge (RM)",
-                "confidence": 1.0
+                "content": "Meter ID | Meter Readings | Usage |  | Rate |  | Charge (RM)",
+                "confidence": 0.98
               },
               {
                 "type": "table_row",
@@ -77,18 +82,18 @@
               },
               {
                 "type": "paragraph",
-                "content": "Note:\n1. Please make payment to the bank account details as follows:-\n   Account Name: IOI MALL DAMANSARA SDN BHD\n   Account No: 100870211\n   Bank Name: United Overseas Bank Malaysia (Puchong)\n   SWIFT Code: UOVBMYKLXXX\n   Payment Advice Recipient Email: arfinanceiomalls@ioiproperties.com.my\n2. Payment to be received in bank with value date not later than due date.\n3. Late payment interest will be charged on overdue invoices as stipulated in the agreement.",
+                "content": "Note:\n1. Please make payment to the bank account details as follows:-\n   Account Name: IOI MALL DAMANSARA SDN BHD\n   Account No: 100870211\n   Bank Name: United Overseas Bank Malaysia (Puchong)\n   SWIFT Code: UOBMYKLXXX\n   Payment Advice Recipient Email: arfinanceioimalls@ioiproperties.com.my\n2. Payment to be received in bank with value date not later than due date.\n3. Late payment interest will be charged on overdue invoices as stipulated in the agreement.",
                 "confidence": 1.0
               },
               {
                 "type": "paragraph",
-                "content": "IMPORTANT NOTES:\n1. Electricity: First 200kw/h @ RM0.435/unit and subsequent unit @ RM 0.509/unit.\n2. Feed in Tariff Charge is 1.6% of total electricity charge.\n3. ICPT Tariff category B: RM0.027 per kw/h.",
+                "content": "IMPORTANT NOTES:\n1. Electricity: First 200kw/h @ RM0.435/unit and subsequent unit @ RM 0.509/unit.\n2. Feed In Tariff Charge is 1.6% of total electricity charge.\n3. ICPT Tariff category B: RM0.027 per kw/h.",
                 "confidence": 1.0
               },
               {
                 "type": "footer",
                 "content": "THIS COMPUTER GENERATED INVOICE REQUIRES NO SIGNATURE\n\nIOI MALL DAMANSARA SDN BHD (Company Reg. No.: 202401006710 (1552560-P))\nManagement Office, LG-3A, Lower Ground Floor, No.2A Persiaran Suria, Tropicana Indah 47810 Petaling Jaya, Selangor 47810\nPetaling Jaya\nSST Reg No: W10-2503-32000128\nTel: 03-8328 8800 ext : 8841 / 8993 / 8941 / 8944 / 8936 / 8812 / 8839",
-                "confidence": 1.0
+                "confidence": 0.99
               }
             ]
           }
@@ -113,23 +118,33 @@
             "sections": [
               {
                 "type": "header",
-                "content": "iOiMALL\nDAMANSARA\n\nTAX INVOICE",
+                "content": "ioiMALL\nDAMANSARA",
+                "confidence": 1.0
+              },
+              {
+                "type": "header",
+                "content": "TAX INVOICE",
                 "confidence": 1.0
               },
               {
                 "type": "address",
-                "content": "IOI Mall Damansara Sdn Bhd\nCompany Reg. No.: 202401006710\nTIN No.: C 58550375030\n\nWATSON'S PERSONAL CARE STORES SDN BHD\nWATSONS\nSUITE 7-01, LEVEL 7, MENARA EXCHANGE 106\nLINGKARAN TRX, TUN RAZAK EXCHANGE\n55188 KUALA LUMPUR\nLot No. : CC71-3\n\nAttn : ACCOUNT DEPT",
-                "confidence": 1.0
+                "content": "IOI Mall Damansara Sdn Bhd\nCompany Reg. No.: 202401006710\nTIN No.: C 58550375030",
+                "confidence": 0.98
+              },
+              {
+                "type": "address",
+                "content": "WATSON'S PERSONAL CARE STORES SDN BHD\nWATSONS\nSUITE 7-01, LEVEL 7, MENARA EXCHANGE 106\nLINGKARAN TRX, TUN RAZAK EXCHANGE\n55188 KUALA LUMPUR\nLot No. : CC71-3\n\nAttn : ACCOUNT DEPT",
+                "confidence": 0.98
               },
               {
                 "type": "key_value",
-                "content": "Invoice No. : 2810003305\nInvoice Date : 04/04/2025\nDue Date : 10/04/2025\nLease ID : 10003462\n\nCustomer No :\nPage : 2/2",
-                "confidence": 1.0
+                "content": "Invoice No. : 2810003305\nInvoice Date : 04/04/2025\nDue Date : 10/04/2025\nLease ID : 10003462\n\nCustomer No : \nPage : 2/2",
+                "confidence": 0.98
               },
               {
                 "type": "subtotal",
                 "content": "Sub Total Charges (RM) : 3,247.81\nSST@0% (RM) : 0.00\n\nFeed In Tariff 1.6% (RM) : 51.96\n\nICPT (RM) : 174.64\n\nTotal Amount (RM) : 3,474.41",
-                "confidence": 1.0
+                "confidence": 0.98
               },
               {
                 "type": "paragraph",
@@ -138,23 +153,18 @@
               },
               {
                 "type": "paragraph",
-                "content": "Note:\n1. Please make payment to the bank account details as follows:-\n   Account Name: IOI MALL DAMANSARA SDN BHD\n   Account No: 100870211\n   Bank Name: United Overseas Bank Malaysia (Puchong)\n   SWIFT Code: UOVBMYKLXXX\n   Payment Advice Recipient Email: arfinanceioimalls@ioiproperties.com.my\n2. Payment to be received in bank with value date not later than due date.\n3. Late payment interest will be charged on overdue invoices as stipulated in the agreement.",
-                "confidence": 1.0
+                "content": "Note:\n1. Please make payment to the bank account details as follows:-\n   Account Name: IOI MALL DAMANSARA SDN BHD\n   Account No: 100870211\n   Bank Name: United Overseas Bank Malaysia (Puchong)\n   SWIFT Code: UOBBMYKLXXX\n   Payment Advice Recipient Email: arfinanceiomalls@ioiproperties.com.my\n2. Payment to be received in bank with value date not later than due date.\n3. Late payment interest will be charged on overdue invoices as stipulated in the agreement.",
+                "confidence": 0.98
               },
               {
                 "type": "paragraph",
                 "content": "IMPORTANT NOTES:\n1. Electricity: First 200kw/h @ RM0.435/unit and subsequent unit @ RM 0.509/unit.\n2. Feed In Tariff Charge is 1.6% of total electricity charge.\n3. ICPT Tariff category B: RM0.027 per kw/h.",
-                "confidence": 1.0
-              },
-              {
-                "type": "paragraph",
-                "content": "THIS COMPUTER GENERATED INVOICE REQUIRES NO SIGNATURE",
-                "confidence": 1.0
+                "confidence": 0.97
               },
               {
                 "type": "footer",
-                "content": "IOI MALL DAMANSARA SDN BHD (Company Reg. No.: 202401006710 (1552560-P))\nManagement Office, LG-3A, Lower Ground Floor, No.2A Persiaran Suria, Tropicana Indah 47810 Petaling Jaya, Selangor 47810\nPetaling Jaya\nSST Reg No: W10-2503-32000128\nTel: 03-8328 8800 ext : 8841 / 8993 / 8941 / 8944 / 8936 / 8812 / 8839",
-                "confidence": 1.0
+                "content": "THIS COMPUTER GENERATED INVOICE REQUIRES NO SIGNATURE\n\nIOI MALL DAMANSARA SDN BHD (Company Reg. No.: 202401006710 (1552560-P))\nManagement Office, LG-3A, Lower Ground Floor, No.2A Persiaran Suria, Tropicana Indah 47810 Petaling Jaya, Selangor 47810\nPetaling Jaya\nSST Reg No: W10-2503-32000128\nTel: 03-8328 8800 ext : 8841 / 8993 / 8941 / 8944 / 8936 / 8812 / 8839",
+                "confidence": 0.97
               }
             ]
           }

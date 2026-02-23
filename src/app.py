@@ -1227,9 +1227,15 @@ elif page == "📋 Report Format":
                 if extra in filtered.columns:
                     display_cols.append(extra)
             table_df = filtered[display_cols].copy()
-            table_df.insert(1, "Status", table_df["No"].apply(
-                lambda n: st.session_state["doc_status"].get(int(n), "pending").capitalize()
-            ))
+            if "No" in table_df.columns:
+                table_df.insert(1, "Status", table_df["No"].apply(
+                    lambda n: st.session_state["doc_status"].get(int(n), "pending").capitalize()
+                ))
+            else:
+                table_df.insert(0, "Status", "Pending")
+
+            if table_df.empty:
+                st.info("No records match the selected filters.")
             st.dataframe(table_df, use_container_width=True, hide_index=True)
 
             st.markdown("---")
@@ -1241,9 +1247,12 @@ elif page == "📋 Report Format":
                 if extra in filtered.columns:
                     display_cols.append(extra)
             export_df = filtered[display_cols].copy()
-            export_df.insert(1, "Status", export_df["No"].apply(
-                lambda n: st.session_state["doc_status"].get(int(n), "pending").capitalize()
-            ))
+            if "No" in export_df.columns:
+                export_df.insert(1, "Status", export_df["No"].apply(
+                    lambda n: st.session_state["doc_status"].get(int(n), "pending").capitalize()
+                ))
+            else:
+                export_df.insert(0, "Status", "Pending")
 
             st.markdown("#### 📥 Export Report")
             st.caption("Only verified & pending documents shown. Rejected documents are excluded from export.")

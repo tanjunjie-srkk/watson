@@ -4,6 +4,7 @@ import json
 import mimetypes
 import os
 from pathlib import Path
+from datetime import datetime, timezone
 
 from openai import AzureOpenAI, OpenAI
 
@@ -31,6 +32,53 @@ def _get_required_env(name: str) -> str:
       f"Missing required config value: {name}. Set it as an environment variable or Streamlit secret."
     )
   return value
+
+
+def _extract_usage_dict(completion: object) -> dict | None:
+  usage = getattr(completion, "usage", None)
+  if usage is None:
+    return None
+
+  if isinstance(usage, dict):
+    prompt_tokens = usage.get("prompt_tokens")
+    completion_tokens = usage.get("completion_tokens")
+    total_tokens = usage.get("total_tokens")
+  else:
+    prompt_tokens = getattr(usage, "prompt_tokens", None)
+    completion_tokens = getattr(usage, "completion_tokens", None)
+    total_tokens = getattr(usage, "total_tokens", None)
+
+  if prompt_tokens is None and completion_tokens is None and total_tokens is None:
+    return None
+
+  return {
+    "prompt_tokens": prompt_tokens,
+    "completion_tokens": completion_tokens,
+    "total_tokens": total_tokens,
+  }
+
+
+def _append_token_usage_log(entry: dict) -> None:
+  log_path = Path(__file__).resolve().parent / "ocr_output" / "token_usage_log.jsonl"
+  log_path.parent.mkdir(parents=True, exist_ok=True)
+  with open(log_path, "a", encoding="utf-8") as f:
+    f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
+
+def _log_token_usage(completion: object, request_mode: str, file_names: list[str]) -> None:
+  usage = _extract_usage_dict(completion)
+  if not usage:
+    return
+
+  entry = {
+    "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+    "request_mode": request_mode,
+    "model": deployment,
+    "file_count": len(file_names),
+    "file_names": file_names,
+    **usage,
+  }
+  _append_token_usage_log(entry)
 
 
 endpoint = _get_required_env("AZURE_OPENAI_ENDPOINT")
@@ -165,6 +213,11 @@ def ocr_image_with_chat_model(image_path: Path, user_prompt: str) -> str:
       ],
       temperature=1.0,
     )
+    _log_token_usage(
+      completion=completion,
+      request_mode="single_image",
+      file_names=[image_path.name],
+    )
     return completion.choices[0].message.content or ""
   except Exception as e:
     # Common cause: Azure content filter flags the *prompt* (often when referencing system messages).
@@ -203,6 +256,11 @@ def ocr_images_with_chat_model(image_paths: list[Path], user_prompt: str) -> str
         {"role": "user", "content": content},
       ],
       temperature=1.0,
+    )
+    _log_token_usage(
+      completion=completion,
+      request_mode="batch",
+      file_names=[p.name for p in image_paths],
     )
     return completion.choices[0].message.content or ""
   except Exception as e:

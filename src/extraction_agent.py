@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 from pathlib import Path
+from datetime import datetime, timezone
 
 from openai import AzureOpenAI
 
@@ -29,6 +30,52 @@ def _get_required_env(name: str) -> str:
             f"Missing required config value: {name}. Set it as an environment variable or Streamlit secret."
         )
     return value
+
+
+def _extract_usage_dict(completion: object) -> dict | None:
+    usage = getattr(completion, "usage", None)
+    if usage is None:
+        return None
+
+    if isinstance(usage, dict):
+        prompt_tokens = usage.get("prompt_tokens")
+        completion_tokens = usage.get("completion_tokens")
+        total_tokens = usage.get("total_tokens")
+    else:
+        prompt_tokens = getattr(usage, "prompt_tokens", None)
+        completion_tokens = getattr(usage, "completion_tokens", None)
+        total_tokens = getattr(usage, "total_tokens", None)
+
+    if prompt_tokens is None and completion_tokens is None and total_tokens is None:
+        return None
+
+    return {
+        "prompt_tokens": prompt_tokens,
+        "completion_tokens": completion_tokens,
+        "total_tokens": total_tokens,
+    }
+
+
+def _append_token_usage_log(entry: dict) -> None:
+    log_path = Path(__file__).resolve().parent / "extraction_output" / "token_usage_log.jsonl"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(log_path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
+
+def _log_token_usage(completion: object, ocr_payload_chars: int) -> None:
+    usage = _extract_usage_dict(completion)
+    if not usage:
+        return
+
+    entry = {
+        "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+        "request_mode": "extraction_from_ocr",
+        "model": deployment,
+        "ocr_payload_chars": ocr_payload_chars,
+        **usage,
+    }
+    _append_token_usage_log(entry)
 
 
 endpoint = _get_required_env("AZURE_OPENAI_ENDPOINT")
@@ -173,6 +220,7 @@ def extract_from_ocr(ocr_json_str: str) -> str:
             ],
             temperature=1.0,
         )
+        _log_token_usage(completion=completion, ocr_payload_chars=len(ocr_json_str))
         return completion.choices[0].message.content or ""
     except Exception as e:
         return json.dumps(

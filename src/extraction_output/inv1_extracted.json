@@ -1,53 +1,69 @@
 {
-  "invoice_number": "26001099",
-  "invoice_date": "28-JAN-2026",
-  "po_number": "MY2501539",
-  "bu_po_number": "18082166",
-  "payment_terms": "TT 30 DAYS",
-  "trade_terms": "CFR PORT KLANG",
-  "bill_of_lading": "CNSHA0001548220",
-  "departure_date": "25-JAN-2026",
-  "country_of_origin": "CHINA",
+  "document_type": "Commercial Invoice",
+  "vendor_name": "AS WATSON RETAIL (HK) LIMITED",
+  "document_number": "26001099",
+  "document_date": "28-JAN-2026",
   "currency": "USD",
-  "bill_to": "Attn :\nBill to : WATSONS PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\n\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\n\nMALAYSIA\n\nTel :\nFax :",
-  "business_unit": "Business Unit :\nWATSONS PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\n\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\n\nMALAYSIA\n\nTel :\nFax :",
+  "total_amount": "USD 31,291.85",
+  "bill_to": "Bill To : WATSONS PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106, LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\n\nMALAYSIA\n\nTel :\nFax :",
   "line_items": [
     {
-      "barcode": "04894532992539",
-      "product_description": "WATSONS SIDE SEALED COTTON PUFFS",
+      "item_number": null,
+      "description": "WATSONS SIDE SEALED COTTON PUFFS . WATSONS SIDE SEALED COTTON PUFFS 189S SEA AW2022 . WATSONS OOB COTTON RELAUNCH",
       "quantity": "6864",
       "unit_price": "0.970",
+      "Reference / Supporting Information": null,
+      "tax": null,
       "amount": "6,658.08"
     },
     {
-      "barcode": "04894532992539",
-      "product_description": "WATSONS SIDE SEALED COTTON PUFFS",
+      "item_number": null,
+      "description": "WATSONS SIDE SEALED COTTON PUFFS . WATSONS SIDE SEALED COTTON PUFFS 189S SEA AW2022 . WATSONS OOB COTTON RELAUNCH",
       "quantity": "168",
       "unit_price": "0.970",
+      "Reference / Supporting Information": null,
+      "tax": null,
       "amount": "162.96"
     },
     {
-      "barcode": "04894819091315",
-      "product_description": "WATSONS X BT21 SIDE SEALED COTTON PUFFS",
+      "item_number": null,
+      "description": "WATSONS X BT21 SIDE SEALED COTTON PUFFS . WATSONS X BT21 SIDE SEALED COTTON PUFFS 189S SEA AW2025 . WATSONS WATSONS X BT21 SIDE SEALED COTTON PUFFS",
       "quantity": "17760",
       "unit_price": "0.970",
+      "Reference / Supporting Information": null,
+      "tax": null,
       "amount": "17,227.20"
     },
     {
-      "barcode": "04894819001315",
-      "product_description": "WATSONS X BT21 SIDE SEALED COTTON PUFFS",
+      "item_number": null,
+      "description": "WATSONS X BT21 SIDE SEALED COTTON PUFFS.\nWATSONS X BT21 SIDE SEALED COTTON PUFFS 189S SEA AW2025\nWATSONS WATSONS X BT21 SIDE SEALED COTTON PUFFS | SKU",
       "quantity": "6912",
       "unit_price": "0.970",
-      "amount": "6,704.64"
+      "Reference / Supporting Information": null,
+      "tax": null,
+      "amount": "6,704.64",
+      "low_confidence": true
     }
   ],
-  "subtotal": "30,752.88",
-  "freight_charges": "538.97",
-  "grand_total": "31,291.85",
-  "payment_info": {
-    "bank_name": "THE HONGKONG AND SHANGHAI BANKING CORPORATION LIMITED",
-    "bank_address": "1 QUEENS ROAD CENTRAL, CENTRAL AND WESTERN DISTRICT, CENTRAL, HONG KONG",
-    "account_name": "INTERNATIONAL BUYING-A DIVISION OF AS WATSON RETAIL (HK) LIMITED",
-    "account_number": "808-480685-201"
+  "subtotal": "USD 30,752.88",
+  "tax_total": null,
+  "discount": null,
+  "freight_charges": "USD 538.97",
+  "grand_total": "USD 31,291.85",
+  "amount_in_words": null,
+  "additional_fields": {
+    "CI Number": "26001099",
+    "CI Date": "28-JAN-2026",
+    "PO Number": "MY2501539",
+    "BU PO Number": "18082166",
+    "Payment Terms": "TT 30 DAYS",
+    "Trade Terms": "CFR PORT KLANG",
+    "Bill Of Lading": "CNSHA0001548220",
+    "Departure Date": "25-JAN-2026",
+    "Country Of Origin": "CHINA",
+    "Business Unit": "WATSONS PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106, LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\n\nMALAYSIA\n\nTel :\nFax :",
+    "Banker": "THE HONGKONG AND SHANGHAI BANKING CORPORATION LIMITED",
+    "A/c Name": "INTERNATIONAL BUYING-A DIVISION OF AS WATSON RETAIL (HK) LIMITED",
+    "A/c Number": "808-480685-201"
   }
 }

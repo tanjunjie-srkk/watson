@@ -1,0 +1,1 @@
+{"timestamp_utc": "2026-02-23T05:59:40.410318+00:00", "request_mode": "extraction_from_ocr", "model": "gpt-5.2-chat", "ocr_payload_chars": 9601, "prompt_tokens": 3990, "completion_tokens": 1403, "total_tokens": 5393}
