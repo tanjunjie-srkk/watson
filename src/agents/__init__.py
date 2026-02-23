@@ -4,17 +4,36 @@ import json
 import os
 from openai import AzureOpenAI
 
-def _get_required_env(name: str) -> str:
+def _get_config_value(name: str) -> str | None:
     value = os.getenv(name)
+    if value:
+        return value
+
+    try:
+        import streamlit as st
+
+        secret_value = st.secrets.get(name)
+        if secret_value:
+            return str(secret_value)
+    except Exception:
+        pass
+
+    return None
+
+
+def _get_required_env(name: str) -> str:
+    value = _get_config_value(name)
     if not value:
-        raise RuntimeError(f"Missing required environment variable: {name}")
+        raise RuntimeError(
+            f"Missing required config value: {name}. Set it as an environment variable or Streamlit secret."
+        )
     return value
 
 
 ENDPOINT = _get_required_env("AZURE_OPENAI_ENDPOINT")
-DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-5.2-chat")
+DEPLOYMENT = _get_config_value("AZURE_OPENAI_DEPLOYMENT") or "gpt-5.2-chat"
 SUBSCRIPTION_KEY = _get_required_env("AZURE_OPENAI_API_KEY")
-API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2024-12-01-preview")
+API_VERSION = _get_config_value("AZURE_OPENAI_API_VERSION") or "2024-12-01-preview"
 
 client = AzureOpenAI(
     api_version=API_VERSION,
