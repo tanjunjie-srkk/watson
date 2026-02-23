@@ -1,0 +1,32 @@
+{
+  "invoice_number": "9175003875",
+  "invoice_date": "17/12/2025",
+  "po_number": "18135262",
+  "bu_po_number": null,
+  "payment_terms": "60",
+  "trade_terms": null,
+  "bill_of_lading": null,
+  "departure_date": null,
+  "country_of_origin": null,
+  "currency": "RM",
+  "bill_to": "S O L D  T O\nWATSON'S PERSONAL CARE STORE SDN BHD\nARENA WATSONS LEVEL 7\nTHE EXCHANGE 106, LINGKARAN TRX,\nTUN RAZAK EXCHANGE,\nKUALA LUMPUR\n55188",
+  "business_unit": null,
+  "line_items": [
+    {
+      "barcode": "9551003281411",
+      "product_description": "ALLIE BEAUTY SUNSCREEN DUO",
+      "quantity": "528",
+      "unit_price": "74.12",
+      "amount": "39,135.36"
+    }
+  ],
+  "subtotal": "39,135.36",
+  "freight_charges": null,
+  "grand_total": "39,135.36",
+  "payment_info": {
+    "bank_name": null,
+    "bank_address": null,
+    "account_name": null,
+    "account_number": null
+  }
+}

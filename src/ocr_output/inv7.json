@@ -1,0 +1,91 @@
+{
+  "mode": "per_image",
+  "results": [
+    {
+      "page_number": 1,
+      "file": "Inv_7_page_1.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "iOiMALL\nDAMANSARA",
+                "confidence": 1.0
+              },
+              {
+                "type": "header",
+                "content": "TAX INVOICE",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "IOI Mall Damansara Sdn Bhd\nCompany Reg. No.: 202401006710\nTIN No.: C 58550375030",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "WATSON'S PERSONAL CARE STORES SDN BHD\nWATSONS\nSUITE 7.01, LEVEL 7, MENARA EXCHANGE 106\nLINGKARAN TRX, TUN RAZAK EXCHANGE\n55188 KUALA LUMPUR\nLot No. : CC71-3",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "Attn : ACCOUNT DEPT",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Invoice No. : 2810002827\nInvoice Date : 01/04/2025\nDue Date : 07/04/2025\nLease ID : t0003462\nCustomer No :\nPage : 1/1",
+                "confidence": 0.98
+              },
+              {
+                "type": "table_header",
+                "content": "Description | From Date | To Date | Amount (RM)",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "Base Rental | 01/04/2025 | 30/04/2025 | 49,571.90",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "Service & Promotion Charge | 01/04/2025 | 30/04/2025 | 9,237.00",
+                "confidence": 1.0
+              },
+              {
+                "type": "subtotal",
+                "content": "Total Amount Excluding SST (RM) : 58,808.90\nSST@0% (RM) : 0.00\nTotal Amount Including SST (RM) : 58,808.90",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "Amount In Words: Ringgit Malaysia Fifty Eight Thousand Eight Hundred Eight And Ninety Cents Only",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "Note:\n1. Please make payment to the bank account details as follows:-\nAccount Name: IOI MALL DAMANSARA SDN BHD\nAccount No: 100870211\nBank Name: United Overseas Bank Malaysia (Puchong)\nSWIFT Code: UOVBMYKLXXX\nPayment Advice Recipient Email: arfinance@ioiproperties.com.my\n2. Payment to be received in bank with value date not later than due date.\n3. Late payment interest will be charged on overdue invoices as stipulated in the agreement.",
+                "confidence": 1.0
+              },
+              {
+                "type": "footer",
+                "content": "THIS COMPUTER GENERATED INVOICE REQUIRES NO SIGNATURE\n\nIOI MALL DAMANSARA SDN BHD (Company Reg. No.: 202401006710 (1552560-P))\nManagement Office, LG-3A, Lower Ground Floor, No.2A Persiaran Suria, Tropicana Indah 47810 Petaling Jaya, Selangor 47810\nPetaling Jaya\n+603-3007 2788\nW ioimalldamansara.com.my",
+                "confidence": 0.99
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,661 @@
+{
+  "mode": "per_image",
+  "results": [
+    {
+      "page_number": 1,
+      "file": "SOA_2_page_1.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "CITY-LINK EXPRESS (M) SDN BHD (198001011058)\nOUTSTANDING INVOICE REPORT\nDate: 01/01/2000 to 07/01/2026\nPrint Date : 7/1/2026 : 1:16:45PM\nPage 1 of 178",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_header",
+                "content": "Collector | Group | Cust ID | Name | Address | Brn | Date | Doc No | Cust ID | Doc Amt | Outstanding | Total",
+                "confidence": 0.98
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00030993 | WATSONS PERSONAL\nCARE STORES SDN. BHD. | PLAZA METRO KAJANG (M023)\nLOT G-77 (GRD FLR) METRO\nPLAZA KAJANG\nJLN TUN ABDUL AZIZ\n43000\nSELANGOR\n60387344539\nChristine.lim@watsons.com.my\noperationsupportgroup@watsons.com.my\nm.my.kahchin.wong@watsons.com.my | KJG | 31/10/2025 | IKJG000243581 | 00030993 | 4.90 | 4.90 | 4.90",
+                "confidence": 0.94
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | S 14/01/2021 00031251 | WATSONS PERSONAL\nCARE STORES SDN. BHD. | LEVEL 7 EXCHANGE 106\nLINGKARAN TRX\nTUN RAZAK EXCHANGE\n55188\n6032770668\nChristine.lim@watsons.com.my\noperationsupportgroup@watsons.com.my\nm.my.kahchin.wong@watsons.com.my | JSB | 14/06/2024 | RCP000359810 | 00031251 | -189,102.73 | 43.35 | ",
+                "confidence": 0.93
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 15/07/2024 | RCP0003626714 | 00031251 | -390,778.85 | -22.23 | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 13/09/2024 | RCP0003659740 | 00031251 | -283,830.13 | -1,017.60 | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 15/11/2024 | RCP0003761613 | 00031251 | -253,244.79 | -1,761.59 | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 13/12/2024 | RCP0003792952 | 00031251 | -173,863.61 | -309.50 | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 14/02/2025 | RCP0003857293 | 00031251 | -184,226.95 | -597.70 | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 31/03/2025 | RCP0003912305 | 00031251 | -142,819.96 | -2,799.85 | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 15/04/2025 | RCP0003924147 | 00031251 | -311,158.05 | -289.84 | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 15/05/2025 | RCP0003959178 | 00031251 | -278,998.44 | -1,599.90 | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 13/06/2025 | RCP0003992016 | 00031251 | -94,059.38 | -1,740.40 | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 15/07/2025 | RCP0004026445 | 00031251 | -370,493.24 | -1,012.60 | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 15/08/2025 | RCP0004059648 | 00031251 | -301,149.14 | -0.33 | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 12/09/2025 | RCP0004089335 | 00031251 | -164,896.48 | -0.23 | ",
+                "confidence": 0.95
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "file": "SOA_2_page_10.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "CITY-LINK EXPRESS (M) SDN BHD (198001011058)\nOUTSTANDING INVOICE REPORT\nDate: 01/01/2000 to 07/01/2026",
+                "confidence": 1.0
+              },
+              {
+                "type": "header",
+                "content": "Print Date : 7/1/2026 1:16:45PM\nPage 10 of 178",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_header",
+                "content": "Collector | Group | Cust ID | Name | Address | Brn | Date | Doc No | Cust ID | Doc Amt | Outstanding | Total",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00062324 | WATSONS PERSONAL CARE STORES SDN. BHD. | GURNEY PLAZA (M056)\nLOT B10.1/12/18 PLAZA\nGURNEY\nPERSIARAN GURNEY\n10250\nPENANG\n6042281342\nChristine.lim@watsons.com.my\noperationsupport@watsons.com.my\nm.my.kahchin.wong@watsons.com.my | PEN | 30/11/2025 | IPEN000464473 | 00061788 | 9.79 | 9.79 | 14.69",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 30/11/2025 | IPEN000464474 | 00062324 | 4.83 | 4.83 | 4.83",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00064549 | WATSONS PERSONAL CARE STORES SDN. BHD. | KARAMUNSING COMPLEX (M060)\nLOT G43,G46 & G47 (GRD FLR)\nKOMPLEKS KARAMUNSING\n88300\nSABAH\n6088259720\nChristine.lim@watsons.com.my\noperationsupport@watsons.com.my\nm.my.kahchin.wong@watsons.com.my | BKI | 31/10/2025 | IBKI000379051 | 00064549 | 31.29 | 31.29 | 31.29",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00064551 | WATSONS PERSONAL CARE STORES SDN. BHD. | AEON MELAKA (M263)\nLOT F18 (1ST FLR)\nJAYA JUSCO MELAKA\nAYER KEROH\n75450\nMELAKA\n6062325759\nChristine.lim@watsons.com.my\noperationsupport@watsons.com.my\nm.my.kahchin.wong@watsons.com.my | MKZ | 31/10/2025 | IMKZ000280125 | 00064551 | 9.79 | 9.79 | 9.79",
+                "confidence": 1.0
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "file": "SOA_2_page_11.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "CITY-LINK EXPRESS (M) SDN BHD (198001011058)\nOUTSTANDING INVOICE REPORT\nDate: 01/01/2000 to 07/01/2026\n\nPrint Date : 7/1/2026 1:16:45PM\nPage 11 of 178",
+                "confidence": 0.97
+              },
+              {
+                "type": "table_header",
+                "content": "Collector | Group | Cust ID | Name | Address | Brn | Date | Doc No | Cust ID | Doc Amt | Outstanding | Total",
+                "confidence": 0.98
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00068073 | WATSON'S PERSONAL CARE STORES SDN. BHD. | TAMAN UNIVERSITY (M062)\nLG29 (LWR GD FLR)\nTMN UNIVERSITY SHPG CTR\nSKUDAI\n81300\nJOHOR\n6075212831\nChristine.lim@watsons.com.my\noperationsupportsgroup@watsons.co\nm.my:kachhin.wong@watsons.co\nm.my | SKD | 30/11/2025 | ISKD000101014 | 00068073 | 4.90 | 4.90 | 4.90",
+                "confidence": 0.93
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00069059 | WATSON'S PERSONAL CARE STORES SDN. BHD. | SRI GOMBAK (M063)\nNO 13 (GRD FLR) JLN SRI\nGOMBAK 1/6\nTMN SRI GOMBAK\n68100\n60361857290\nChristine.lim@watsons.com.my\noperationsupportsgroup@watsons.co\nm.my:kachhin.wong@watsons.co\nm.my | BCA | 31/10/2025 | IBCA000177132 | 00069059 | 4.90 | 4.90 | 4.90",
+                "confidence": 0.93
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00075038 | WATSON'S PERSONAL CARE STORES SDN. BHD. | CENTRAL SQUARE SUNGAI PETANI\nLOT GF11-GF13 (GRD FLR)\nSENTRAL SQUARE\nNO 23 JLN KAMPUNG BARU\n08000\nKEDAH\n6044234340\nChristine.lim@watsons.com.my\noperationsupportsgroup@watsons.co\nm.my:kachhin.wong@watsons.co\nm.my | SGP | 31/10/2025 | ISGP000191252 | 00075038 | 9.79 | 9.79 | 9.79",
+                "confidence": 0.93
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "file": "SOA_2_page_2.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 2,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "CITY-LINK EXPRESS (M) SDN BHD (198001011058)\nOUTSTANDING INVOICE REPORT\nDate: 01/01/2000 to 07/01/2026\nPrint Date : 7/1/2026 1:16:45PM\nPage 2 of 178",
+                "confidence": 0.97
+              },
+              {
+                "type": "table_header",
+                "content": "Collector | Group | Cust ID | Name | Address | Brn | Date | Doc No | Cust ID | Doc Amt | Outstanding | Total",
+                "confidence": 0.9
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 14/11/2025 | RCP0004156377 | 00031251 | -4,460.65 | -168.68 | ",
+                "confidence": 0.86
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 15/12/2025 | RCP0004190662 | 00031251 | -251,137.73 | -6,801.55 | -18,165.35",
+                "confidence": 0.86
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00031255 | WATSON'S PERSONAL CARE STORES SDN. BHD. | MAHKOTA PARADE (M005)\nLOT G74 MAHKOTA PARADE\nJALAN MERDEKA\nBANDAR HILIR\n75000\nMELAKA\n6062827349\nChristine.lim@watsons.com.my\ncreationsupport@watsons.co\nm.my\nm.my | MKZ | 31/10/2025 | IMKZ000280119 | 00031255 | 4.90 | 4.90 | ",
+                "confidence": 0.88
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 30/11/2025 | IMKZ000280561 | 00031255 | 4.90 | 4.90 | 9.80",
+                "confidence": 0.88
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00031257 | WATSON'S PERSONAL CARE STORES SDN. BHD. | KOMPLEKS M.P.K.S. (M007)\nLOT 02 & 06 (GRD FLR)\nKOMPLEKS MPKS JLN KOLAM AIR\n05050\nKEDAH\n6047345073\nChristine.lim@watsons.com.my\ncreationsupport@watsons.co\nm.my\nm.my | AOR | 31/10/2025 | IAOR000217227 | 00031257 | 4.90 | 4.90 | ",
+                "confidence": 0.87
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 30/11/2025 | IAOR000218040 | 00031257 | 4.90 | 4.90 | 9.80",
+                "confidence": 0.87
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "file": "SOA_2_page_3.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 3,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "CITY-LINK EXPRESS (M) SDN BHD (198001011058)\n\nOUTSTANDING INVOICE REPORT\n\nDate: 01/01/2000 to 07/01/2026\n\nPrint Date : 7/1/2026 1:16:45PM\n\nPage 3 of 178",
+                "confidence": 0.99
+              },
+              {
+                "type": "table_header",
+                "content": "Collector | Group | Cust ID | Name | Address | Brn | Date | Doc No | Cust ID | Doc Amt | Outstanding | Total",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00031259 | WATSONS PERSONAL CARE STORES SDN. BHD. | SELAYANG MALL (M009)\nLOT G03 (GRD FLR)\nSELAYANG MALL\nJLN SU9 TMN SELAYANG UTAMA\n68100\n6036167053\nChristine.lim@watsons.com.mycop\ncreationsupportsgroup@watsons.co\nm.my:kahchin.wong@watsons.co\nm.my | BCA | 31/10/2025 | IBCA000177131 | 00031259 | 4.83 | 4.83 |",
+                "confidence": 0.92
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 30/11/2025 | IBCA000177518 | 00031259 | 9.79 | 9.79 | 14.62",
+                "confidence": 0.9
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00031262 | WATSONS PERSONAL CARE STORES SDN. BHD. | AEON BUKIT RAJA (M349)\nLOT F24 & F24A 1ST FLR AEON\nBUKIT RAJA\nSHOPPING CENTRE PRSN\nBUKIT RAJA 2\nBDR BARU KLANG\n41150\nSELANGOR\n60333412300\nChristine.lim@watsons.com.mycop\ncreationsupportsgroup@watsons.co\nm.my:kahchin.wong@watsons.co\nm.my | KLG | 30/11/2025 | IKLG000317505 | 00031262 | 4.90 | 4.90 | 4.90",
+                "confidence": 0.93
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00031267 | WATSONS PERSONAL CARE STORES SDN. BHD. | WETEX PARADE SHOPPING (M232)\nG16-G19(GRD FLR)\nWETEX PARADE JLN ALI\n84000\nJOHOR\n6079516653\nChristine.lim@watsons.com.mycop\ncreationsupportsgroup@watsons.co\nm.my:kahchin.wong@watsons.co\nm.my | MUR | 30/11/2025 | IMUR000118441 | 00031267 | 4.90 | 4.90 | 4.90",
+                "confidence": 0.93
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "file": "SOA_2_page_4.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 4,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "CITY-LINK EXPRESS (M) SDN BHD (198001011058)\n\nOUTSTANDING INVOICE REPORT\n\nDate: 01/01/2000 to 07/01/2026\n\nPrint Date : 7/1/2026 1:16:45PM\n\nPage 4 of 178",
+                "confidence": 0.99
+              },
+              {
+                "type": "table_header",
+                "content": "Collector | Group | Cust ID | Name | Address | Brn | Date | Doc No | Cust ID | Doc Amt | Outstanding | Total",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00031271 | WATSON'S PERSONAL CARE STORES SDN. BHD. | ALPHA ANGLE SHOPPING (M019)\nF9-F10 ALPHA ANGLE SHOPPING CENTRE\nJALAN R1 WANGSA MAJU\nSETAPAK\n53300\n603418317\nChristine.lim@watsons.com.mycop\nerationsupportgroup@watsons.co\nm.my;kachhin.wong@watsons.co\nm.my | WMJ | 31/10/2025 | IWMJ000037253 | 00031271 | 9.79 | 9.79 | ",
+                "confidence": 0.97
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00031271 | WATSON'S PERSONAL CARE STORES SDN. BHD. | ALPHA ANGLE SHOPPING (M019)\nF9-F10 ALPHA ANGLE SHOPPING CENTRE\nJALAN R1 WANGSA MAJU\nSETAPAK\n53300\n603418317\nChristine.lim@watsons.com.mycop\nerationsupportgroup@watsons.co\nm.my;kachhin.wong@watsons.co\nm.my | WMJ | 30/11/2025 | IWMJ000037536 | 00031271 | 9.79 | 9.79 | 19.58",
+                "confidence": 0.97
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00031272 | WATSON'S PERSONAL CARE STORES SDN. BHD. | AMPANG POINT SHOPPING (M020)\nM25 AMPANG POINT SHPG CTR\nJLN MAMANDA 9\nAMPANG\n68000\n6034512825\nChristine.lim@watsons.com.mycop\nerationsupportgroup@watsons.co\nm.my;kachhin.wong@watsons.co\nm.my | AMP | 31/10/2025 | IAMP000061567 | 00031272 | 4.90 | 4.90 | ",
+                "confidence": 0.97
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00031272 | WATSON'S PERSONAL CARE STORES SDN. BHD. | AMPANG POINT SHOPPING (M020)\nM25 AMPANG POINT SHPG CTR\nJLN MAMANDA 9\nAMPANG\n68000\n6034512825\nChristine.lim@watsons.com.mycop\nerationsupportgroup@watsons.co\nm.my;kachhin.wong@watsons.co\nm.my | AMP | 30/11/2025 | IAMP000062069 | 00031272 | 4.90 | 4.90 | 9.80",
+                "confidence": 0.97
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00031954 | WATSON'S PERSONAL CARE STORES SDN. BHD. | SEREMBAN PRIME MALL (M348)\nLOT G06 & G07 GRD FLR\nSEREMBAN MALL\nLOT 4973 JLN DATO BDR\nTUNGGAL\n70000\nNEGERI SEMBILAN\n6067631286\nChristine.lim@watsons.com.mycop\nerationsupportgroup@watsons.co\nm.my;kachhin.wong@watsons.co\nm.my | SBN | 31/10/2025 | ISBN000208339 | 00031954 | 9.79 | 9.79 | ",
+                "confidence": 0.97
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "file": "SOA_2_page_5.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "CITY-LINK EXPRESS (M) SDN BHD (198001010058)\nOUTSTANDING INVOICE REPORT\nDate: 01/01/2000 to 07/01/2026",
+                "confidence": 0.98
+              },
+              {
+                "type": "header",
+                "content": "Print Date : 7/1/2026 1:16:45PM\nPage 5 of 178",
+                "confidence": 0.98
+              },
+              {
+                "type": "table_header",
+                "content": "Collector | Group | Cust ID | Name | Address | Brn | Date | Doc No | Cust ID | Doc Amt | Outstanding | Total",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00034149 | WATSON'S PERSONAL CARE STORES SDN. BHD. | KINTA CITY SHOPPING (M033)\nLOT P7 (1ST FLR) KINTA CITY\nSHPG CTR\nJLN THE LEAN SWEE IPOH\nGARDEN\n34100\nPERAK\n60321432386\nChristine.lim@watsons.com.mycop\nerationsupportsgroup@watsons.co\nm.my\nkachhin.wong@watsons.co\nm.my | TPG | 30/11/2025 | ISBN000208721 | 00031954 | 4.90 | 4.90 | 14.69",
+                "confidence": 0.93
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 31/10/2025 | TPG000122712 | 00034149 | 14.69 | 14.69 | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 30/11/2025 | TPG000122738 | 00034149 | 19.59 | 19.59 | 34.28",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00034658 | WATSON'S PERSONAL CARE STORES SDN. BHD. | KUANTAN PARADE (M035)\nUNIT G49 (GRD FL) KUANTAN\nPARADE\nJLN HAJI ABDUL RAHMAN\n25000\nPAHANG\n60321432386\nChristine.lim@watsons.com.mycop\nerationsupportsgroup@watsons.co\nm.my\nkachhin.wong@watsons.co\nm.my | KUA | 30/11/2025 | IKUA000226483 | 00034658 | 4.90 | 4.90 | 4.90",
+                "confidence": 0.94
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00034659 | WATSON'S PERSONAL CARE STORES SDN. BHD. | SUNWAY PYRAMID (M034)\nLOT LL2.67 LOWER LEVEL 1\nSUNWAY PYRAMID\nNO 3 JLN PSN1/5\n46150\nSELANGOR\n60321432386\nChristine.lim@watsons.com.mycop\nerationsupportsgroup@watsons.co\nm.my\nkachhin.wong@watsons.co\nm.my | SJA |  |  |  |  |  | ",
+                "confidence": 0.92
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "file": "SOA_2_page_6.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 6,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "CITY-LINK EXPRESS (M) SDN BHD (198001011058)\nOUTSTANDING INVOICE REPORT\nDate: 01/01/2000 to 07/01/2026",
+                "confidence": 0.98
+              },
+              {
+                "type": "header",
+                "content": "Print Date : 7/1/2026 1:16:45PM\nPage 6 of 178",
+                "confidence": 0.99
+              },
+              {
+                "type": "table_header",
+                "content": "Collector | Group | Cust ID | Name | Address | Brn | Date | Doc No | Cust ID | Doc Amt | Outstanding | Total",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 31/10/2025 | ISJA000489298 | 00034659 | 4.83 | 4.83 | ",
+                "confidence": 0.9
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 30/11/2025 | ISJA000490349 | 00034659 | 9.67 | 9.67 | 14.50",
+                "confidence": 0.9
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00034660 | WATSONS PERSONAL CARE STORES SDN. BHD. | PLAZA ANGSANA (M036)\nL1.29A PLAZA ANGSANA\nPUSAT\nBANDAR TAMPOI JALAN\nSKUDAI\n81200\nJOHOR\n60321432386\nChristine.lim@watsons.com.my\ncorporationsupportgroup@watsons.com.my\nm.my.kachhin.wong@watsons.com.my | SKD | 31/10/2025 | ISKD000100488 | 00034660 | 9.79 | 9.79 | ",
+                "confidence": 0.88
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 30/11/2025 | ISKD000101011 | 00034660 | 4.83 | 4.83 | 14.62",
+                "confidence": 0.9
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00035650 | WATSONS PERSONAL CARE STORES SDN. BHD. | AMCORP MALL (M038)\nLOT L1-70 & L1-71 AMCORP\nMALL NO 18\nJLN PERSIARAN BARAT OFF\nJLN TIMUR\n46000\nSELANGOR\n60379582784\nChristine.lim@watsons.com.my\ncorporationsupportgroup@watsons.com.my\nm.my.kachhin.wong@watsons.com.my | TPM | 31/10/2025 | TPM000103460 | 00035650 | 4.90 | 4.90 | ",
+                "confidence": 0.88
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 30/11/2025 | TPM000104013 | 00035650 | 9.79 | 9.79 | 14.69",
+                "confidence": 0.9
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "file": "SOA_2_page_7.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 7,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "CITY-LINK EXPRESS (M) SDN BHD (198001010058)\nOUTSTANDING INVOICE REPORT\nDate: 01/01/2000 to 07/01/2026\n\nPrint Date : 7/1/2026 1:16:45PM\nPage 7 of 178",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_header",
+                "content": "Collector | Group | Cust ID | Name | Address | Brn | Date | Doc No | Cust ID | Doc Amt | Outstanding | Total",
+                "confidence": 0.92
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00037242 | WATSON'S PERSONAL CARE STORES SDN. BHD. | MEGAMALL PINANG SHOP (M40)\n4 & 5Q (GRD FLR) MEGAMALL\nPINANG SHPG CTR\nNO 2828 JLN BARU BDR PRAI\nJAYA\nSEBERANG PRAI\n13600\nPENANG\n6043994453\nChristine.lim@watsons.com.mycop\nerationsupportsgroup@watsons.co\nm.my;chakchin.wong@watsons.co\nm.my | BTW | 31/10/2025 | IBTW000439273 | 00037242 | 37.14 | 37.14 | 37.14",
+                "confidence": 0.88
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00038417 | WATSON'S PERSONAL CARE STORES SDN. BHD. | KOMTAR (M042)\nLOT A3-29 - A3-32 BLL3.02 &\n3.03 LEVEL 3\nKOMPLEKS TUN ABDUL\nRAZAK (KOMTAR)\n10150\nPENANG\n6042642272\nChristine.lim@watsons.com.mycop\nerationsupportsgroup@watsons.co\nm.my;chakchin.wong@watsons.co\nm.my | PEN | 31/10/2025 | IPEN000463443 | 00038417 | 4.90 | 4.90 | 4.90",
+                "confidence": 0.88
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00039657 | WATSON'S PERSONAL CARE STORES SDN. BHD. | BERJAYA MEGAMALL (M43)\nLOT G82 (GRD FLR) BERJAYA\nMEGAMALL KUANTAN\nJLN TUN ISMAIL SRI\nDAGANGAN\n25000\nPAHANG\n6095888025\nChristine.lim@watsons.com.mycop\nerationsupportsgroup@watsons.co\nm.my;chakchin.wong@watsons.co\nm.my | KUA | 31/10/2025 | IKUA000225961 | 00039657 | 4.90 | 4.90 | 4.90",
+                "confidence": 0.88
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "file": "SOA_2_page_8.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "CITY-LINK EXPRESS (M) SDN BHD (198001011058)\nOUTSTANDING INVOICE REPORT\nDate: 01/01/2000 to 07/01/2026\n\nPrint Date : 7/1/2026 1:16:45PM\nPage 8 of 178",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_header",
+                "content": "Collector | Group | Cust ID | Name | Address | Brn | Date | Doc No | Cust ID | Doc Amt | Outstanding | Total",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00044106 | WATSON'S PERSONAL CARE STORES SDN. BHD. | CITY SQUARE (M045)\nLOT M2-06 & M2-11 LVL 2 JB CITY SQUARE\nNO 106 & 108 JLN WONG AH FOOK\n80000\nJOHOR\n6072260159\nChristine.lim@watsons.com.mycop\nersationspursgroup@watsons.co\nm.my;khachin.wong@watsons.co\nm.my | SKD | 30/11/2025 | IKUA000226489 | 00039657 | 9.79 | 9.79 | 14.69",
+                "confidence": 0.92
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00047912 | WATSON'S PERSONAL CARE STORES SDN. BHD. | MID VALLEY MEGAMALL (M299)\nLOT F-049 & 050 (1ST FLR) MID VALLEY MEGAMALL\nMID VALLEY CITY\n58000\n6032286840\nChristine.lim@watsons.com.mycop\nersationspursgroup@watsons.co\nm.my;khachin.wong@watsons.co\nm.my | KUL | 31/10/2025 | ISKD00010489 | 00044106 | 4.90 | 4.90 | 4.90",
+                "confidence": 0.92
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00047912 | WATSON'S PERSONAL CARE STORES SDN. BHD. | MID VALLEY MEGAMALL (M299)\nLOT F-049 & 050 (1ST FLR) MID VALLEY MEGAMALL\nMID VALLEY CITY\n58000\n6032286840\nChristine.lim@watsons.com.mycop\nersationspursgroup@watsons.co\nm.my;khachin.wong@watsons.co\nm.my | KUL | 31/10/2025 | IKUL000588355 | 00047912 | 14.50 | 14.50 | ",
+                "confidence": 0.9
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00047912 | WATSON'S PERSONAL CARE STORES SDN. BHD. | MID VALLEY MEGAMALL (M299)\nLOT F-049 & 050 (1ST FLR) MID VALLEY MEGAMALL\nMID VALLEY CITY\n58000\n6032286840\nChristine.lim@watsons.com.mycop\nersationspursgroup@watsons.co\nm.my;khachin.wong@watsons.co\nm.my | KUL | 30/11/2025 | IKUL000589671 | 00047912 | 14.56 | 14.56 | 29.06",
+                "confidence": 0.9
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00053587 | WATSON'S PERSONAL CARE STORES SDN. BHD. | IPOH PARADE (M048)\nLOT G36 (GRD FLR)\nIPOH PARADE\n30450\nPERAK\n60321423386\nChristine.lim@watsons.com.mycop\nersationspursgroup@watsons.co\nm.my;khachin.wong@watsons.co\nm.my | IPH | 31/10/2025 | IIPH000357936 | 00053587 | 9.79 | 9.79 | ",
+                "confidence": 0.91
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "file": "SOA_2_page_9.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 9,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "CITY-LINK EXPRESS (M) SDN BHD (198001011058)\nOUTSTANDING INVOICE REPORT\nDate: 01/01/2000 to 07/01/2026\nPrint Date : 7/1/2026 1:16:45PM\nPage 9 of 178",
+                "confidence": 0.97
+              },
+              {
+                "type": "table_header",
+                "content": "Collector | Group | Cust ID | Name | Address | Brn | Date | Doc No | Cust ID | Doc Amt | Outstanding | Total",
+                "confidence": 0.98
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00054916 | WATSON'S PERSONAL CARE STORES SDN. BHD. | BINTANG MIRI SARAWAK (M241)\nLOT F69-F71 1ST FLOOR\nBITANG PLAZA\nSHOPPING COMPLEX\n98000\nSARAWAK\n6085425184\nChristine.lim@watsons.com.mycop\n erationssupport@watsons.co\nm.my.kahchin.wong@watsons.co\nm.my | MYY | 30/11/2025 | IPH000359202 | 00053587 | 4.90 | 4.90 | 14.69",
+                "confidence": 0.93
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 31/10/2025 | IMYY000148559 | 00054916 | 33.58 | 33.58 | ",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": " |  |  |  |  |  | 30/11/2025 | IMYY000148931 | 00054916 | 28.62 | 28.62 | 62.20",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00059631 | WATSON'S PERSONAL CARE STORES SDN. BHD. | CENTRE POINT KK (M243)\nLOT G75A-A (GRD FLR)\nNO 1 JLN CENTREPOINT\n88000\nSABAH\n60321432386\nChristine.lim@watsons.com.mycop\n erationssupport@watsons.co\nm.my.kahchin.wong@watsons.co\nm.my | BKI | 31/10/2025 | IBK000379050 | 00059631 | 33.33 | 33.33 | 33.33",
+                "confidence": 0.93
+              },
+              {
+                "type": "table_row",
+                "content": "KUL01 | C60 | WATSON | 00061788 | WATSON'S PERSONAL CARE STORES SDN. BHD. | PRANGIN MALL (M055)\nLOT G50 (GRD FLR) PRANGIN\nMALL\nJLN DR LIM CHWEE LEONG\n10100\nPENANG\n6042633854\nChristine.lim@watsons.com.mycop\n erationssupport@watsons.co\nm.my.kahchin.wong@watsons.co\nm.my | PEN | 31/10/2025 | IPEN000463448 | 00061788 | 4.90 | 4.90 | ",
+                "confidence": 0.93
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    }
+  ]
+}

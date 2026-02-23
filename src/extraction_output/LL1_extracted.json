@@ -1,0 +1,41 @@
+{
+  "document_type": "Invoice",
+  "vendor_name": "MTRUSTEE BHD AS TRUSTEE FOR IGB REIT",
+  "document_number": "RD 25005442",
+  "document_date": "02 Apr 2025",
+  "currency": "MYR",
+  "total_amount": "37,387.25",
+  "bill_to": "WATSON'S PERSONAL CARE STORES SDN BHD\nLevel 7, Menara Exchange 106,\nLingkaran TRX,\nTun Razak Exchange,\n55188, Kuala Lumpur, Wilayah Persekutuan\nMalaysia",
+  "line_items": [
+    {
+      "item_number": "1",
+      "description": "Base Rent\nUnit No:        LG-242, The Gardens Mall\nTrade Name:    WATSONS",
+      "quantity": null,
+      "unit_price": null,
+      "Reference / Supporting Information": null,
+      "tax": null,
+      "amount": "30,685.00"
+    },
+    {
+      "item_number": "2",
+      "description": "Service Charge\nUnit No:        LG-242, The Gardens Mall\nTrade Name:    WATSONS",
+      "quantity": null,
+      "unit_price": null,
+      "Reference / Supporting Information": null,
+      "tax": null,
+      "amount": "6,702.25"
+    }
+  ],
+  "subtotal": "37,387.25",
+  "tax_total": null,
+  "discount": null,
+  "freight_charges": null,
+  "grand_total": "37,387.25",
+  "amount_in_words": "RINGGIT MALAYSIA THIRTY SEVEN THOUSAND THREE HUNDRED EIGHTY SEVEN AND TWENTY FIVE CENTS ONLY.",
+  "additional_fields": {
+    "Invoice Date": "02 Apr 2025",
+    "Due Date": "07 May 2025",
+    "Currency Code": "MYR",
+    "Tenancy Period": "01 Sep 2022  -  31 Aug 2025"
+  }
+}

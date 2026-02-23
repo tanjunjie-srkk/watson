@@ -1,0 +1,91 @@
+{
+  "mode": "per_image",
+  "results": [
+    {
+      "page_number": 1,
+      "file": "Inv_2_page_1.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "KANEBO COSMETICS MALAYSIA SDN. BHD.\nREGISTRATION NO: 201101020666(948801-D)\nSUITE 8.02-03 LEVEL 8, MENARA AMFIRST, NO.1, JLN 19/3,\n46300 PETALING JAYA, SELANGOR, MALAYSIA\nTEL: 03-7954-9171 FAX: 03-7954-9172\nMBB ACC: 514495137212    CITIBANK ACC: 0116937018",
+                "confidence": 1.0
+              },
+              {
+                "type": "header",
+                "content": "INVOICE",
+                "confidence": 1.0
+              },
+              {
+                "type": "header",
+                "content": "Kanebo\nFEEL YOUR BEAUTY",
+                "confidence": 1.0
+              },
+              {
+                "type": "address",
+                "content": "S O L D  T O\nWATSON'S PERSONAL CARE STORE SDN BHD\nARENA WATSONS LEVEL 7\nTHE EXCHANGE 106, LINGKARAN TRX,\nTUN RAZAK EXCHANGE,\nKUALA LUMPUR\n55188",
+                "confidence": 1.0
+              },
+              {
+                "type": "address",
+                "content": "S H I P  T O\nWATSON'S PERSONAL CARE STORES SDN BHD\nWATSON'S WAREHOUSE\nLOT 43470 & 101870\nJALAN SAPIR 33/7 SEKSYEN 33\nSHAH ALAM PREMIER INDUSTRIAL PARK\nSHAH ALAM\n40400",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "NUMBER : 9175003875\nDATE : 17/12/2025\nCASH/CREDIT : CREDIT (MYR)\nTERMS (DAYS) : 60\nPage 1 of 1",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Customer P.O.No: 18135262\nCustomer Code: 81530352\nCustomer TelNo: 60327076688\nSalesman Code: BJ0102\nOrder No: 2799567",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_header",
+                "content": "EAN Code | Material Code | Description | Qty | Retail Price Per Unit | Disc Amt Per Unit | Cost Price Per Unit | Net Amount (RM)",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "9551003281411 | 26148866 | ALLIE BEAUTY SUNSCREEN DUO | 528 | 109.00 | 34.88 | 74.12 | 39,135.36",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "Remarks:\nDelivered By:Transporter Chop,Sign&Date\nReceived By: Customer Chop, Sign&Date",
+                "confidence": 1.0
+              },
+              {
+                "type": "subtotal",
+                "content": "TOTAL (RM)    39,135.36",
+                "confidence": 1.0
+              },
+              {
+                "type": "subtotal",
+                "content": "AMOUNT DUE (RM)    39,135.36",
+                "confidence": 1.0
+              },
+              {
+                "type": "footer",
+                "content": "Important Note:Any Irregularities must be reported to Kanebo within 5 working days of invoice date,failure of which Kanebo will not accept any responsibility.\nThis is a computer generated item thus require no signature.",
+                "confidence": 1.0
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "document_type": "Invoice",
+  "vendor_name": "Sedunia Travel Services Sdn. Bhd.",
+  "document_number": "NITM10008788",
+  "document_date": "27-JAN-26",
+  "currency": "MYR",
+  "total_amount": "300.00",
+  "bill_to": "WATSON'S PERSONAL CARE STORES SDN BHD\nArena Watsons\nLevel 7, The Exchange 106,\nLingkaran TRX, Tun Razak Exchange,\n55188 Kuala Lumpur",
+  "line_items": [
+    {
+      "item_number": "1",
+      "description": "HOTEL (DOM)\nHotel Name: Royale Hotel Batu Gajah\nCheck-In Date: 05FEB26\nCheck-Out: 06FEB26\nRoom Type: TWN\nRoom Category: STD\nRoom(s): 1 Room(s) x 1 Night(s)\nPassenger(s): AHMAD REDHUAN BIN OMAR BAKHI / NAIM BIN MASLAN /\n\nPrice breakdown:\n05Feb26 - 06Feb26: MYR 130.00 x 1 Night(s)",
+      "quantity": "1",
+      "unit_price": "130.00",
+      "tax": null,
+      "amount": "130.00"
+    },
+    {
+      "item_number": "2",
+      "description": "SERVICE FEE\nDescription: SERVICE FEE\nPassenger(s): AHMAD REDHUAN BIN OMAR BAKHI / NAIM BIN MASLAN /",
+      "quantity": "1",
+      "unit_price": "20.00",
+      "tax": null,
+      "amount": "20.00"
+    },
+    {
+      "item_number": "3",
+      "description": "HOTEL (DOM)\nHotel Name: Royale Hotel Batu Gajah\nCheck-In Date: 05FEB26\nCheck-Out: 06FEB26\nRoom Type: TWN\nRoom Category: STD\nRoom(s): 1 Room(s) x 1 Night(s)\nPassenger(s): MUHAMMAD NAJIB BIN ROSDI / SAFUAN BIN SAIDI /\n\nPrice breakdown:\n05Feb26 - 06Feb26: MYR 130.00 x 1 Night(s)",
+      "quantity": "1",
+      "unit_price": "130.00",
+      "tax": null,
+      "amount": "130.00"
+    },
+    {
+      "item_number": "4",
+      "description": "SERVICE FEE",
+      "quantity": "1",
+      "unit_price": "20.00",
+      "tax": null,
+      "amount": "20.00"
+    }
+  ],
+  "subtotal": "300.00",
+  "tax_total": null,
+  "discount": null,
+  "freight_charges": null,
+  "grand_total": "300.00",
+  "amount_in_words": "MYR Three Hundred Ringgits",
+  "additional_fields": {
+    "Attn": "MS MISLINA",
+    "Customer No.": "TW1007",
+    "Booking No.": "SD100002597",
+    "Due Date": "13-MAR-26",
+    "Consultant": "Azrina Tarmizi",
+    "Sales ID": "JO",
+    "Less Amount Received": "0.00",
+    "Balance": "300.00",
+    "XO": "XOTM10010201, XOTM10010202"
+  }
+}

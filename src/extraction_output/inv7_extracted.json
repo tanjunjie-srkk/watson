@@ -1,0 +1,56 @@
+{
+  "document_type": "Tax Invoice",
+  "vendor_name": "IOI Mall Damansara Sdn Bhd",
+  "document_number": "2810002827",
+  "document_date": "01/04/2025",
+  "currency": "RM",
+  "total_amount": "58,808.90",
+  "bill_to": "WATSON'S PERSONAL CARE STORES SDN BHD\nWATSONS\nSUITE 7.01, LEVEL 7, MENARA EXCHANGE 106\nLINGKARAN TRX, TUN RAZAK EXCHANGE\n55188 KUALA LUMPUR\nLot No. : CC71-3",
+  "line_items": [
+    {
+      "item_number": null,
+      "description": "Base Rental",
+      "quantity": null,
+      "unit_price": null,
+      "Reference / Supporting Information": "From Date: 01/04/2025\nTo Date: 30/04/2025",
+      "tax": null,
+      "amount": "49,571.90"
+    },
+    {
+      "item_number": null,
+      "description": "Service & Promotion Charge",
+      "quantity": null,
+      "unit_price": null,
+      "Reference / Supporting Information": "From Date: 01/04/2025\nTo Date: 30/04/2025",
+      "tax": null,
+      "amount": "9,237.00"
+    }
+  ],
+  "subtotal": "58,808.90",
+  "tax_total": "0.00",
+  "discount": null,
+  "freight_charges": null,
+  "grand_total": "58,808.90",
+  "amount_in_words": "Ringgit Malaysia Fifty Eight Thousand Eight Hundred Eight And Ninety Cents Only",
+  "additional_fields": {
+    "Company Reg. No.": "202401006710",
+    "TIN No.": "C 58550375030",
+    "Attn": "ACCOUNT DEPT",
+    "Invoice Date": "01/04/2025",
+    "Due Date": "07/04/2025",
+    "Lease ID": "t0003462",
+    "Customer No": "",
+    "Page": "1/1",
+    "Total Amount Excluding SST (RM)": "58,808.90",
+    "SST@0% (RM)": "0.00",
+    "Total Amount Including SST (RM)": "58,808.90",
+    "Account Name": "IOI MALL DAMANSARA SDN BHD",
+    "Account No": "100870211",
+    "Bank Name": "United Overseas Bank Malaysia (Puchong)",
+    "SWIFT Code": "UOVBMYKLXXX",
+    "Payment Advice Recipient Email": "arfinance@ioiproperties.com.my",
+    "Management Office Address": "Management Office, LG-3A, Lower Ground Floor, No.2A Persiaran Suria, Tropicana Indah 47810 Petaling Jaya, Selangor 47810",
+    "Contact Phone": "+603-3007 2788",
+    "Website": "ioimalldamansara.com.my"
+  }
+}

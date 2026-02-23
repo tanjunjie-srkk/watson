@@ -1,0 +1,44 @@
+{
+  "document_type": "Invoice",
+  "vendor_name": "KANEBO COSMETICS MALAYSIA SDN. BHD.",
+  "document_number": "9175003875",
+  "document_date": "17/12/2025",
+  "currency": "MYR",
+  "total_amount": "39,135.36",
+  "bill_to": "WATSON'S PERSONAL CARE STORE SDN BHD\nARENA WATSONS LEVEL 7\nTHE EXCHANGE 106, LINGKARAN TRX,\nTUN RAZAK EXCHANGE,\nKUALA LUMPUR\n55188",
+  "line_items": [
+    {
+      "item_number": null,
+      "description": "ALLIE BEAUTY SUNSCREEN DUO",
+      "quantity": "528",
+      "unit_price": "74.12",
+      "Reference / Supporting Information": "EAN Code: 9551003281411\nMaterial Code: 26148866\nRetail Price Per Unit: 109.00\nDisc Amt Per Unit: 34.88",
+      "tax": null,
+      "amount": "39,135.36"
+    }
+  ],
+  "subtotal": "39,135.36",
+  "tax_total": null,
+  "discount": null,
+  "freight_charges": null,
+  "grand_total": "39,135.36",
+  "amount_in_words": null,
+  "additional_fields": {
+    "REGISTRATION NO": "201101020666(948801-D)",
+    "Vendor Address": "SUITE 8.02-03 LEVEL 8, MENARA AMFIRST, NO.1, JLN 19/3,\n46300 PETALING JAYA, SELANGOR, MALAYSIA",
+    "TEL": "03-7954-9171",
+    "FAX": "03-7954-9172",
+    "MBB ACC": "514495137212",
+    "CITIBANK ACC": "0116937018",
+    "SHIP TO": "WATSON'S PERSONAL CARE STORES SDN BHD\nWATSON'S WAREHOUSE\nLOT 43470 & 101870\nJALAN SAPIR 33/7 SEKSYEN 33\nSHAH ALAM PREMIER INDUSTRIAL PARK\nSHAH ALAM\n40400",
+    "CASH/CREDIT": "CREDIT (MYR)",
+    "TERMS (DAYS)": "60",
+    "Customer P.O.No": "18135262",
+    "Customer Code": "81530352",
+    "Customer TelNo": "60327076688",
+    "Salesman Code": "BJ0102",
+    "Order No": "2799567",
+    "Remarks": "Delivered By:Transporter Chop,Sign&Date\nReceived By: Customer Chop, Sign&Date",
+    "Page": "Page 1 of 1"
+  }
+}

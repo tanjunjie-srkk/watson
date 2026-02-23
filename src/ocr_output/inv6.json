@@ -1,0 +1,413 @@
+{
+  "mode": "per_image",
+  "results": [
+    {
+      "page_number": 1,
+      "file": "Inv_6_page_1.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "ORIENT ESCAPE TRAVEL SDN BHD (137939-M)\n(KPLL/N:0767)\nUnit D-25-7 Menara SuzeCap 1, KL Gateway\nNO.2 Jalan Kerinchi, Gerbang Kerinchi Lestari\n59200 Kuala Lumpur    Tel: 03-7932 1622",
+                "confidence": 0.96
+              },
+              {
+                "type": "paragraph",
+                "content": "HRBP Travel\nHQ\n665816\nTR Sg / Puch\nTR Fizah",
+                "confidence": 0.85
+              },
+              {
+                "type": "address",
+                "content": "To :   WATSONS PERSONAL CARE STORES SDN BHD\n        Arena Watsons, Level 7,\n        The Exchange 106, Lingkaran TRX,\n        Tun Razak Exchange 55188 Kuala Lumpur Malaysia\n\nTel: 60327076688 Fax: 603-21432399\nEmail: finance.nontrade@watsons.com.my\n(W0003)",
+                "confidence": 0.97
+              },
+              {
+                "type": "header",
+                "content": "INVOICE",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Doc no.        : BS92303\nDate           : 08/01/2026\nPayment        : 30 DAYS\nSalesperson    : EVALOW\nTour code      : BS92303\nTravel date    :\nDue date       : 07/02/2026",
+                "confidence": 0.95
+              },
+              {
+                "type": "key_value",
+                "content": "Attn:  MS NUR SYAHIRAH",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Re :  BOOKED MS NUR SYAHIRAH | SING/PEI/CHIN/MS",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Passenger detail   #Adult:      2        #Child:      0        #Infant:      0",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_header",
+                "content": "Pax name | Ticket no | Fare | Tax | Total Fare",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "1  SING/PEI/CHIN/MS | 232 6391652398 | 532.00 | 84.48 | 616.48",
+                "confidence": 0.97
+              },
+              {
+                "type": "table_row",
+                "content": "2  BINTI/SIDIKAH/SITI/NORFAIZA/MS | 232 6391652399 | 696.00 | 97.60 | 793.60",
+                "confidence": 0.97
+              },
+              {
+                "type": "table_header",
+                "content": "Origin / Destination | Flight No | Date | Time | Pnr",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "SIBU / KUALA LUMPUR | MH2715 | 18JAN | 1115 /1320 | FLDLUP",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": "KUALA LUMPUR / SIBU | MH2716 | 21JAN | 0825 /1030 | FLDLUP",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": "KOTA KINABALU / KUALA LUMPUR | MH2613 | 18JAN | 0950 /1220 | FLDNUG",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": "KUALA LUMPUR / KOTA KINABALU | MH2610 | 21JAN | 0935 /1215 | FLDNUG",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_header",
+                "content": "Description | Price Per | Qty | Amount",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "AIRFARE - ECONOMY CLASS | 1,198.00 | 1 | 1,198.00",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "DOMESTIC AIRPORT TAXES | 182.08 | 1 | 182.08",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "ACF | 15.00 | 2 | 30.00",
+                "confidence": 1.0
+              },
+              {
+                "type": "subtotal",
+                "content": "Total:MYR One Thousand Four Hundred Ten\nAnd Cent Eight Only\n\nTotal :MYR        1,410.08",
+                "confidence": 0.98
+              },
+              {
+                "type": "paragraph",
+                "content": "Remarks:",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "This is a computer generated invoice. No signature is required.\nChgs Should Be Crossed 'A/C PAYEE ONLY' & Made Payable To 'ORIENT ESCAPE TRAVEL SDN BHD'\nMaybank A/C :0140-8431-9671",
+                "confidence": 0.96
+              },
+              {
+                "type": "paragraph",
+                "content": "IMPORTANT:This Invoice Is To Be Settled Within The Terms As Shown Above Otherwise An Interest Charge At The Rate Of 1.5% Per Month Will Be Added On The Overdue Amount.",
+                "confidence": 0.97
+              },
+              {
+                "type": "signature",
+                "content": "RECEIVED\n\nBY FINANCE\n\nFor ORIENT ESCAPE TRAVEL SDN BHD (137939-M)",
+                "confidence": 0.9
+              },
+              {
+                "type": "footer",
+                "content": "E & OE        Print no:0        Printed on: 08/01/26        Page:  1 / 1",
+                "confidence": 1.0
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "file": "Inv_6_page_2.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "Smaller",
+                "confidence": 0.9
+              },
+              {
+                "type": "key_value",
+                "content": "Employee        [43413442] AHMAD FUAD BIN YACOB",
+                "confidence": 0.98
+              },
+              {
+                "type": "key_value",
+                "content": "Claim           HQ-TR_Travel Request",
+                "confidence": 0.98
+              },
+              {
+                "type": "key_value",
+                "content": "Attached Files  0",
+                "confidence": 0.95
+              },
+              {
+                "type": "header",
+                "content": "PENDING APPROVAL",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_header",
+                "content": "Name | Date | Status",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": "AHMAD FUAD BIN YACOB | 07-01-2026 12:43:58 PM | Submitted",
+                "confidence": 0.98
+              },
+              {
+                "type": "table_row",
+                "content": "ZUKHAIRI BIN JOHAN ARIFFIN | 08-01-2026 10:28:37 AM | Approved",
+                "confidence": 0.97
+              },
+              {
+                "type": "table_row",
+                "content": "NG SEK NGOR | 08-01-2026 03:47:38 PM | Approved",
+                "confidence": 0.97
+              },
+              {
+                "type": "table_row",
+                "content": "HR_ADMIN |  | Pending",
+                "confidence": 0.9
+              },
+              {
+                "type": "key_value",
+                "content": "Claim No.        711548-26",
+                "confidence": 0.98
+              },
+              {
+                "type": "key_value",
+                "content": "Travel Request Date   07-01-2026 (Wed)",
+                "confidence": 0.98
+              },
+              {
+                "type": "key_value",
+                "content": "First Name *    AHMAD FUAD",
+                "confidence": 0.98
+              },
+              {
+                "type": "key_value",
+                "content": "Last Name *     BIN YACOB",
+                "confidence": 0.98
+              },
+              {
+                "type": "key_value",
+                "content": "NRIC / Passport *    780416085715",
+                "confidence": 0.97
+              },
+              {
+                "type": "key_value",
+                "content": "Contact No.     0163550587",
+                "confidence": 0.97
+              },
+              {
+                "type": "key_value",
+                "content": "Date Start of Travel   18-01-2026 (Sun)",
+                "confidence": 0.98
+              },
+              {
+                "type": "key_value",
+                "content": "Date End of Travel     21-01-2026 (Wed)",
+                "confidence": 0.98
+              },
+              {
+                "type": "key_value",
+                "content": "Expense Type    For Outstation Claim Only",
+                "confidence": 0.96
+              },
+              {
+                "type": "key_value",
+                "content": "From            KAMUNTING",
+                "confidence": 0.98
+              },
+              {
+                "type": "key_value",
+                "content": "To              KUALA LUMPUR",
+                "confidence": 0.98
+              },
+              {
+                "type": "key_value",
+                "content": "Depart / Check-In Date   18-01-2026 (Sun)",
+                "confidence": 0.97
+              },
+              {
+                "type": "key_value",
+                "content": "Return / Check-Out Date  21-01-2026 (Wed)",
+                "confidence": 0.97
+              },
+              {
+                "type": "key_value",
+                "content": "Amount          0.00",
+                "confidence": 0.99
+              },
+              {
+                "type": "key_value",
+                "content": "Total Amount    0.00",
+                "confidence": 0.99
+              },
+              {
+                "type": "key_value",
+                "content": "Company         Watson's Personal Care Stores Sdn Bhd",
+                "confidence": 0.96
+              },
+              {
+                "type": "key_value",
+                "content": "Section         WTCMY GO HO People & Culture",
+                "confidence": 0.94
+              },
+              {
+                "type": "key_value",
+                "content": "Designation     BUSINESS PARTNER, SENIOR EXECUTIVE",
+                "confidence": 0.94
+              },
+              {
+                "type": "key_value",
+                "content": "Remarks         TL meeting and Training at HQ",
+                "confidence": 0.95
+              },
+              {
+                "type": "footer",
+                "content": "Date Created    [43413442] AHMAD FUAD BIN YACOB, 07-01-2026 (Wed) 12:43:22 PM\nLast Updated    [43405921] NG SEK NGOR, 08-01-2026 (Thu) 03:47:38 PM",
+                "confidence": 0.96
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "file": "Inv_6_page_3.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "10:54 AM\nUnit4 Prosoft HRMS\nSmaller",
+                "confidence": 0.98
+              },
+              {
+                "type": "key_value",
+                "content": "Employee        [43001345] SING PEI CHIN\nClaim           HQ-TR_Travel Request\nAttached Files  0",
+                "confidence": 0.98
+              },
+              {
+                "type": "header",
+                "content": "PENDING APPROVAL",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_header",
+                "content": "Name | Date | Status",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": "SING PEI CHIN | 07-01-2026 07:41:31 PM | Submitted",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": "ZUKHAIRI BIN JOHAN ARIFFIN | 08-01-2026 10:28:39 AM | Approved",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": "NG SEK NGOR |  | Pending",
+                "confidence": 0.94
+              },
+              {
+                "type": "table_row",
+                "content": "HR_ADMIN |  | ",
+                "confidence": 0.9
+              },
+              {
+                "type": "key_value",
+                "content": "Claim No.            711717-26                 Total Amount      0.00\nTravel Request Date  07-01-2026 (Wed)          Company           Watson’s Personal Care Stores Sdn Bhd\nFirst Name           SING                      Section           WTCMY GP HO People & Office Services Function\nLast Name            PEI CHIN                  Designation       BUSINESS PARTNER/DEPUTY MANAGER\nNRIC / Passport      800306-13-5342            Remarks           Management Meeting (19-20/1/2026)\nContact No.          0168838588\nDate Start of Travel 18-01-2026 (Sun)\nDate End of Travel   21-01-2026 (Wed)",
+                "confidence": 0.97
+              },
+              {
+                "type": "paragraph",
+                "content": "Expense Type        [Admin] Air Flight Ticket - Return\nFrom                Sibu\nTo                  KUL\nDepart / Check-In\nDate                18-01-2026 (Sun)\nTime                11:15\nReturn / Check-Out\nDate                21-01-2026 (Wed)\nTime                08:25\nHotel / Airline Name (if any)\n                      Sibu-KL MH2715, KL-Sibu MH2716\nAmount              0.00",
+                "confidence": 0.96
+              },
+              {
+                "type": "paragraph",
+                "content": "Expense Type        [Admin] Hotel Accommodation\nFrom                Sibu\nTo                  KUL\nDepart / Check-In\nDate                18-01-2026 (Sun)\nReturn / Check-Out\nDate                21-01-2026 (Wed)\nHotel / Airline Name (if any)\n                      Capitol Hotel, KL\nAmount              0.00",
+                "confidence": 0.96
+              },
+              {
+                "type": "key_value",
+                "content": "Date Created    [43001345] SING PEI CHIN, 07-01-2026 (Wed) 07:41:25 PM\nLast Updated    [43804825] ZUKHAIRI BIN JOHAN ARIFFIN, 08-01-2026 (Thu) 10:28:39 AM",
+                "confidence": 0.96
+              },
+              {
+                "type": "footer",
+                "content": "https://unit4hrms.com/WTSweb/eClaim/Claims/ClaimApplication_Detailed.aspx?SSWorkflowItemTarget=0&UserRoleType=SS&UserRoleInfo=4...      1/1",
+                "confidence": 0.85
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    }
+  ]
+}

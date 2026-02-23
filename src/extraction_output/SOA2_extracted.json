@@ -1,0 +1,166 @@
+{
+  "document_type": "Statement of Account",
+  "vendor_name": "CITY-LINK EXPRESS (M) SDN BHD (198001011058)",
+  "statement_number": null,
+  "statement_date": "7/1/2026 : 1:16:45PM",
+  "currency": null,
+  "customer_name": "WATSONS PERSONAL CARE STORES SDN. BHD.",
+  "customer_address": null,
+  "customer_account": null,
+  "statement_period_from": "01/01/2000",
+  "statement_period_to": "07/01/2026",
+  "transactions": [
+    {
+      "date": "31/10/2025",
+      "document_number": "IKJG000243581",
+      "description": "KUL01 | C60 | WATSON | 00030993 | WATSONS PERSONAL\nCARE STORES SDN. BHD. | PLAZA METRO KAJANG (M023)\nLOT G-77 (GRD FLR) METRO\nPLAZA KAJANG\nJLN TUN ABDUL AZIZ\n43000\nSELANGOR\n60387344539\nChristine.lim@watsons.com.my\noperationsupportgroup@watsons.com.my\nm.my.kahchin.wong@watsons.com.my",
+      "type": "invoice",
+      "debit": "4.90",
+      "credit": null,
+      "balance": "4.90",
+      "low_confidence": false
+    },
+    {
+      "date": "14/06/2024",
+      "document_number": "RCP000359810",
+      "description": "KUL01 | C60 | WATSON | S 14/01/2021 00031251 | WATSONS PERSONAL\nCARE STORES SDN. BHD. | LEVEL 7 EXCHANGE 106\nLINGKARAN TRX\nTUN RAZAK EXCHANGE\n55188\n6032770668\nChristine.lim@watsons.com.my\noperationsupportgroup@watsons.com.my\nm.my.kahchin.wong@watsons.com.my",
+      "type": "payment",
+      "debit": null,
+      "credit": "-189,102.73",
+      "balance": "43.35",
+      "low_confidence": false
+    },
+    {
+      "date": "15/07/2024",
+      "document_number": "RCP0003626714",
+      "description": "",
+      "type": "payment",
+      "debit": null,
+      "credit": "-390,778.85",
+      "balance": "-22.23",
+      "low_confidence": false
+    },
+    {
+      "date": "13/09/2024",
+      "document_number": "RCP0003659740",
+      "description": "",
+      "type": "payment",
+      "debit": null,
+      "credit": "-283,830.13",
+      "balance": "-1,017.60",
+      "low_confidence": false
+    },
+    {
+      "date": "15/11/2024",
+      "document_number": "RCP0003761613",
+      "description": "",
+      "type": "payment",
+      "debit": null,
+      "credit": "-253,244.79",
+      "balance": "-1,761.59",
+      "low_confidence": false
+    },
+    {
+      "date": "13/12/2024",
+      "document_number": "RCP0003792952",
+      "description": "",
+      "type": "payment",
+      "debit": null,
+      "credit": "-173,863.61",
+      "balance": "-309.50",
+      "low_confidence": false
+    },
+    {
+      "date": "14/02/2025",
+      "document_number": "RCP0003857293",
+      "description": "",
+      "type": "payment",
+      "debit": null,
+      "credit": "-184,226.95",
+      "balance": "-597.70",
+      "low_confidence": false
+    },
+    {
+      "date": "31/03/2025",
+      "document_number": "RCP0003912305",
+      "description": "",
+      "type": "payment",
+      "debit": null,
+      "credit": "-142,819.96",
+      "balance": "-2,799.85",
+      "low_confidence": false
+    },
+    {
+      "date": "15/04/2025",
+      "document_number": "RCP0003924147",
+      "description": "",
+      "type": "payment",
+      "debit": null,
+      "credit": "-311,158.05",
+      "balance": "-289.84",
+      "low_confidence": false
+    },
+    {
+      "date": "15/05/2025",
+      "document_number": "RCP0003959178",
+      "description": "",
+      "type": "payment",
+      "debit": null,
+      "credit": "-278,998.44",
+      "balance": "-1,599.90",
+      "low_confidence": false
+    },
+    {
+      "date": "13/06/2025",
+      "document_number": "RCP0003992016",
+      "description": "",
+      "type": "payment",
+      "debit": null,
+      "credit": "-94,059.38",
+      "balance": "-1,740.40",
+      "low_confidence": false
+    },
+    {
+      "date": "15/07/2025",
+      "document_number": "RCP0004026445",
+      "description": "",
+      "type": "payment",
+      "debit": null,
+      "credit": "-370,493.24",
+      "balance": "-1,012.60",
+      "low_confidence": false
+    },
+    {
+      "date": "15/08/2025",
+      "document_number": "RCP0004059648",
+      "description": "",
+      "type": "payment",
+      "debit": null,
+      "credit": "-301,149.14",
+      "balance": "-0.33",
+      "low_confidence": false
+    },
+    {
+      "date": "12/09/2025",
+      "document_number": "RCP0004089335",
+      "description": "",
+      "type": "payment",
+      "debit": null,
+      "credit": "-164,896.48",
+      "balance": "-0.23",
+      "low_confidence": false
+    }
+  ],
+  "aging": {
+    "current": null,
+    "30_days": null,
+    "60_days": null,
+    "90_days": null,
+    "over_90_days": null
+  },
+  "total_outstanding": null,
+  "additional_fields": {
+    "report_title": "OUTSTANDING INVOICE REPORT",
+    "print_date": "7/1/2026 1:16:45PM"
+  }
+}

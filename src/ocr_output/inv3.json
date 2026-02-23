@@ -1,0 +1,76 @@
+{
+  "mode": "per_image",
+  "results": [
+    {
+      "page_number": 1,
+      "file": "Inv_3_page_1.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "50 SEDUNIA travel\n\n50 Years of Customised Travel, Crafted with Care\n\nINVOICE - NITM10008927",
+                "confidence": 0.98
+              },
+              {
+                "type": "address",
+                "content": "To:\nWATSON'S PERSONAL CARE STORES SDN BHD\nArena Watsons\nLevel 7, The Exchange 106,\nLingkaran TRX, Tun Razak Exchange,\n55188 Kuala Lumpur\n\nAttn:   MS LINA",
+                "confidence": 0.99
+              },
+              {
+                "type": "key_value",
+                "content": "Issue Date:        04-FEB-26\nCustomer No.:      TW1007\nBooking No.:       SO1000020849\nDue Date:          20-MAR-26\nConsultant:        Kelly Khor\nSales ID:          JO",
+                "confidence": 0.99
+              },
+              {
+                "type": "table_header",
+                "content": "Description | Unit Fare | Tax | Qty | Amount",
+                "confidence": 0.98
+              },
+              {
+                "type": "table_row",
+                "content": "1   CORP - XO TICKET (DOM / DA)\nRouting\nSUBANG / ALOR SETAR\nALOR SETAR / SUBANG\nTicket No.            Passenger\n918-CHGUB0001         DIKHWAN HADY/BIN DARNALIS MR\n\nDeparture        Arrival Date\n07FEB26 1340     07FEB26 1455      FY 1672\n07FEB26 2105     07FEB26 2215      FY 1675 | 673.00 |  | 1 | 673.00",
+                "confidence": 0.92
+              },
+              {
+                "type": "table_row",
+                "content": "2   SERVICE FEE\nDescription: SERVICE FEE\nPassenger(s): DIKHWAN HADY/BIN DARNALIS MR | 23.00 |  | 1 | 23.00",
+                "confidence": 0.95
+              },
+              {
+                "type": "subtotal",
+                "content": "XO: XOTM10010390\n\nTOTAL                               696.00           696.00\nE. & O.E.\nGrand Total:  MYR Six Hundred And Ninety-Six Ringgits\n\nTOTAL                 MYR           696.00\nLESS Amount Received  MYR             0.00\nBalance                              696.00",
+                "confidence": 0.9
+              },
+              {
+                "type": "paragraph",
+                "content": "Remark\nIn the event of non-payment for airline tickets, the named passenger(s) on the ticket(s) will be liable for payment. Cheque or transfer should be made payable to:\nSEDUNIA TRAVEL SERVICES SDN BHD.",
+                "confidence": 0.99
+              },
+              {
+                "type": "signature",
+                "content": "ACCOUNTS\nCHARGEABLE\n\nCHECKED BY:  ying   29/2/26\n\nAPPROVED BY:",
+                "confidence": 0.85
+              },
+              {
+                "type": "footer",
+                "content": "Sedunia Travel Services Sdn. Bhd. (197801002549 (39240-V))\nLevel 01-1B, 12 & 13, Menara Genesis, 33 Jalan Sultan Ismail, 50250 Kuala Lumpur, Malaysia.\nFinance & Admin: 603 2779 5470     Email: contact@seduniatravel.com\n\nPenang Branch\nUnit 1-3, 1st Floor, Menara Penang Garden, 42A, Jalan Sultan Ahmad Shah, 10500 Penang, Malaysia.\nTel: (604) 423 0535     Email: penang@sedunia.com.my\n\nWebsite: www.seduniatravel.com\n\nINVOICE - NITM10008927                                   Page 1 of 1",
+                "confidence": 0.98
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    }
+  ]
+}

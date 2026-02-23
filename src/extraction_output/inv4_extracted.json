@@ -1,0 +1,46 @@
+{
+  "invoice_number": "3007",
+  "invoice_date": null,
+  "po_number": null,
+  "bu_po_number": null,
+  "payment_terms": null,
+  "trade_terms": null,
+  "bill_of_lading": null,
+  "departure_date": null,
+  "country_of_origin": null,
+  "currency": "MYR",
+  "bill_to": "Arena Watsons Level 7 Exchange 106\nLingkaran TRX 55188\n\nKuala Lumpur\n, Kuala Lumpur\n\nMALAYSIA",
+  "business_unit": "Watson’s Personal Care Stores Sdn Bhd\n(Reg No: 289892 V)\nArena Watsons\nLevel 7, Exchange 106, Lingkaran TRX\n55188 Kuala Lumpur\nTel : 603-2707 6888",
+  "line_items": [
+    {
+      "barcode": null,
+      "product_description": "ROOM CHARGE",
+      "quantity": null,
+      "unit_price": null,
+      "amount": "143.00"
+    },
+    {
+      "barcode": null,
+      "product_description": "ROOM CHARGE",
+      "quantity": null,
+      "unit_price": null,
+      "amount": "143.00"
+    },
+    {
+      "barcode": null,
+      "product_description": "ROOM CHARGE",
+      "quantity": null,
+      "unit_price": null,
+      "amount": "143.00"
+    }
+  ],
+  "subtotal": "429.00",
+  "freight_charges": null,
+  "grand_total": "429.00",
+  "payment_info": {
+    "bank_name": null,
+    "bank_address": null,
+    "account_name": null,
+    "account_number": null
+  }
+}

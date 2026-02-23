@@ -1,0 +1,252 @@
+{
+  "mode": "per_image",
+  "results": [
+    {
+      "page_number": 1,
+      "file": "Inv_4_page_1.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "KING PARK HOTEL TAWAU\n(Wholly Owned by King Park Hotel Sdn. Bhd. 144896-K)\n\nTB 30, Jalan Haji Karim\nTawau, 91000,\nSabah\nMalaysia\nPhone number : 089-767700\nEmail : reservations@tawau.kingparkhotel.com.my\nWebsite : https://tawau.kingparkhotel.com.my\n\nSSM No. (NEW): 198501012442    SSM No. (OLD): 144896-K\nSST No. : S60-1808-31028233    TIN No. : C8858930100",
+                "confidence": 0.96
+              },
+              {
+                "type": "header",
+                "content": "GUEST INVOICE",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "GUEST NAME :\nSyahrul Nizam Bin Salamon ,",
+                "confidence": 0.95
+              },
+              {
+                "type": "address",
+                "content": "ADDRESS\nArena Watsons Level 7 Exchange 106\nLingkaran TRX 55188\n\nKuala Lumpur\n, Kuala Lumpur\n\nMALAYSIA",
+                "confidence": 0.94
+              },
+              {
+                "type": "key_value",
+                "content": "INVOICE NO. :        INVOICE No. 3007\nCONFIRMATION NO. :  10003155\nGUEST/GROUP ID :    0\nROOM NO. :          702\nGUEST PAX :         2/0/0\nNATIONALITY :       Malaysian\nARRIVE :            11/11/2025 11:51\nDEPART :            14/11/2025 04:25\nPAGE NO. :\nPRINTED BY :        Y2V3 jurayah",
+                "confidence": 0.93
+              },
+              {
+                "type": "table_header",
+                "content": "DATE | Description | Reference | Amount",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "11/11/2025 | ROOM CHARGE | 702 * | 143.00",
+                "confidence": 0.98
+              },
+              {
+                "type": "table_row",
+                "content": "12/11/2025 | ROOM CHARGE | 702 * | 143.00",
+                "confidence": 0.98
+              },
+              {
+                "type": "table_row",
+                "content": "13/11/2025 | ROOM CHARGE | 702 * | 143.00",
+                "confidence": 0.98
+              },
+              {
+                "type": "subtotal",
+                "content": "Total (MYR)    429.00\nAdvances (MYR)    0.00\nNet (MYR)    429.00",
+                "confidence": 0.97
+              },
+              {
+                "type": "paragraph",
+                "content": "Invoice Amount : FOUR HUNDRED TWENTY NINE ONLY\n\nTransfer to Debtor Account : WATSON'S PERSONAL CARE STORE",
+                "confidence": 0.97
+              },
+              {
+                "type": "paragraph",
+                "content": "TAXES & LEVIES\nAll rates quoted are subject to prevailing government taxes. Levies or charges are subject to change in accordance with the Malaysian Government legislation.",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_header",
+                "content": "Tax type | Description | Rate | Taxable amount | Tax amount",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "OTHR | SSTax (FB) | 8.00 | 83.34 | 6.66",
+                "confidence": 0.95
+              },
+              {
+                "type": "table_row",
+                "content": "OTHR | SSTax (RM) | 8.00 | 313.89 | 25.11",
+                "confidence": 0.95
+              },
+              {
+                "type": "subtotal",
+                "content": "Total tax    31.77",
+                "confidence": 0.98
+              },
+              {
+                "type": "paragraph",
+                "content": "Payment summary",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_header",
+                "content": "DATE | Description | Reference | Amount",
+                "confidence": 1.0
+              },
+              {
+                "type": "signature",
+                "content": "ACCOUNTS\nCHARGEABLE\n\nCHECKED BY : 11/11/26\n\nAPPROVED BY\n\n[signature]\n\n[handwritten notes near top right]\n\"OR 2000/Nov\"\n\"OR 720/Nov\"\n\n\"Submit to Accounts (29/11)\"",
+                "confidence": 0.7
+              },
+              {
+                "type": "footer",
+                "content": "[handwritten signature at bottom right]",
+                "confidence": 0.6
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "file": "Inv_4_page_2.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "watsons",
+                "confidence": 1.0
+              },
+              {
+                "type": "header",
+                "content": "178",
+                "confidence": 0.8
+              },
+              {
+                "type": "address",
+                "content": "Watson’s Personal Care Stores Sdn Bhd\n(Reg No: 289892 V)\nArena Watsons\nLevel 7, Exchange 106, Lingkaran TRX\n55188 Kuala Lumpur\nTel : 603-2707 6888",
+                "confidence": 0.95
+              },
+              {
+                "type": "key_value",
+                "content": "Date : 14th October, 2025",
+                "confidence": 1.0
+              },
+              {
+                "type": "address",
+                "content": "Address : KING PARK HOTEL\nTB 30, Jalan Haji Karim\n91000 Tawau, SABAH",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Tel : 089 767700",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Attention : Reservation Dept (reservations@tawau.kingparkhotel.com.my)",
+                "confidence": 1.0
+              },
+              {
+                "type": "header",
+                "content": "RESERVATION AND SETTLEMENT OF HOTEL ACCOMMODATION",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "We would like to confirm the following reservation:",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Guest Name : Syahrul Nizam Bin Salamon\nMohd Syafiie Firdaus Bin Mahali\nJonexshon John\nJesua Richard",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Room Type : 2 Superior Twin Room",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Room Rate : RM143.00nett (2 breakfast)\n(Only room charged to Company)",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Check In : 11/11/2025        Check Out: 14/11/2025",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Duration : 3 nights",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Purpose : Week 46 – Stocktake at M341, M087, M466 & M2205",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "We look forward to your returned confirmation via EMAIL FrontDeskClerk@watsons.com.my.",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "Thank you for your cooperation.",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "Yours faithfully,",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "WATSON’S PERSONAL CARE STORES SDN. BHD.",
+                "confidence": 1.0
+              },
+              {
+                "type": "signature",
+                "content": "CHECKED BY\nLina",
+                "confidence": 0.85
+              },
+              {
+                "type": "signature",
+                "content": "APPROVED BY\nChong Yit Sheng\nAudit, Loss Prevention and Process\nTransformation Director",
+                "confidence": 0.85
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    }
+  ]
+}

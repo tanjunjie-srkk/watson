@@ -1,0 +1,208 @@
+{
+  "mode": "per_image",
+  "results": [
+    {
+      "page_number": 1,
+      "file": "Inv_5_page_1.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "50 SEDUNIA travel\n50 Years of Customised Travel, Crafted with Care",
+                "confidence": 0.98
+              },
+              {
+                "type": "header",
+                "content": "INVOICE - NITM10008788",
+                "confidence": 1.0
+              },
+              {
+                "type": "paragraph",
+                "content": "Submit to Watson (4/2/26)",
+                "confidence": 0.9
+              },
+              {
+                "type": "address",
+                "content": "To:      WATSON'S PERSONAL CARE STORES SDN BHD\nArena Watsons\nLevel 7, The Exchange 106,\nLingkaran TRX, Tun Razak Exchange,\n55188 Kuala Lumpur",
+                "confidence": 0.98
+              },
+              {
+                "type": "key_value",
+                "content": "Attn:   MS MISLINA",
+                "confidence": 1.0
+              },
+              {
+                "type": "key_value",
+                "content": "Issue Date:     27-JAN-26\nCustomer No.:   TW1007\nBooking No.:    SD100002597\nDue Date:      13-MAR-26\nConsultant:    Azrina Tarmizi\nSales ID:      JO",
+                "confidence": 0.97
+              },
+              {
+                "type": "table_header",
+                "content": "Description | Unit Fare | Tax | Qty | Amount",
+                "confidence": 1.0
+              },
+              {
+                "type": "table_row",
+                "content": "1  HOTEL (DOM)\nHotel Name: Royale Hotel Batu Gajah\nCheck-In Date: 05FEB26\nCheck-Out: 06FEB26\nRoom Type: TWN\nRoom Category: STD\nRoom(s): 1 Room(s) x 1 Night(s)\nPassenger(s): AHMAD REDHUAN BIN OMAR BAKHI / NAIM BIN MASLAN /\n\nPrice breakdown:\n05Feb26 - 06Feb26: MYR 130.00 x 1 Night(s) | 130.00 |  | 1 | 130.00",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": "2  SERVICE FEE\nDescription: SERVICE FEE\nPassenger(s): AHMAD REDHUAN BIN OMAR BAKHI / NAIM BIN MASLAN / | 20.00 |  | 1 | 20.00",
+                "confidence": 0.98
+              },
+              {
+                "type": "table_row",
+                "content": "3  HOTEL (DOM)\nHotel Name: Royale Hotel Batu Gajah\nCheck-In Date: 05FEB26\nCheck-Out: 06FEB26\nRoom Type: TWN\nRoom Category: STD\nRoom(s): 1 Room(s) x 1 Night(s)\nPassenger(s): MUHAMMAD NAJIB BIN ROSDI / SAFUAN BIN SAIDI /\n\nPrice breakdown:\n05Feb26 - 06Feb26: MYR 130.00 x 1 Night(s) | 130.00 |  | 1 | 130.00",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": "4  SERVICE FEE | 20.00 |  | 1 | 20.00",
+                "confidence": 0.99
+              },
+              {
+                "type": "signature",
+                "content": "ACCOUNTS CHARGEABLE\nCHECKED BY: Ina   12/2/26\nAPPROVED BY: Joey Saili",
+                "confidence": 0.85
+              },
+              {
+                "type": "footer",
+                "content": "Sedunia Travel Services Sdn. Bhd. (197901004205 (42404-D))\nLevel 01-18, 12 & 13, Menara Genesis, 33 Jalan Sultan Ismail, 50250 Kuala Lumpur, Malaysia.\nFinance & Admin: (603) 2779 5470    Email: contact@seduniatravel.com\n\nPenang Branch\nUnit 1-3, 1st Floor, Menara Penang Garden, 42A, Jalan Sultan Ahmad Shah, 10050 Penang, Malaysia.\nTel: (604) 294 0353    Email: penang@seduniatravel.com\n\nWebsite: www.seduniatravel.com\n\nCEIVER\n\nPATA   MATTA   IATA   IAS\n\nINVOICE - NITM10008788        BY FINANCE        Page 1 of 2",
+                "confidence": 0.94
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "file": "Inv_5_page_2.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "header",
+                "content": "50 SEDUNIA travel\n50 Years of Customised Travel, Crafted with Care",
+                "confidence": 0.93
+              },
+              {
+                "type": "table_header",
+                "content": "Description | Unit Fare | Tax | Qty | Amount",
+                "confidence": 0.96
+              },
+              {
+                "type": "table_row",
+                "content": "Description: SERVICE FEE |  |  |  | ",
+                "confidence": 0.95
+              },
+              {
+                "type": "paragraph",
+                "content": "Passenger(s): MUHAMMAD NAJIB BIN ROSDI / SAFUAN BIN SAIDI /",
+                "confidence": 0.94
+              },
+              {
+                "type": "paragraph",
+                "content": "XO: XOTM10010201, XOTM10010202",
+                "confidence": 0.9
+              },
+              {
+                "type": "table_row",
+                "content": " | 300.00 |  |  | 300.00",
+                "confidence": 0.95
+              },
+              {
+                "type": "subtotal",
+                "content": "TOTAL | MYR | 300.00",
+                "confidence": 0.93
+              },
+              {
+                "type": "subtotal",
+                "content": "E. & O. E.",
+                "confidence": 0.98
+              },
+              {
+                "type": "subtotal",
+                "content": "Less Amount Received | MYR | 0.00",
+                "confidence": 0.92
+              },
+              {
+                "type": "subtotal",
+                "content": "Balance |  | 300.00",
+                "confidence": 0.93
+              },
+              {
+                "type": "paragraph",
+                "content": "Grand Total: MYR Three Hundred Ringgits",
+                "confidence": 0.88
+              },
+              {
+                "type": "paragraph",
+                "content": "Remark\nIn the event of non-payment for airline tickets, the named passenger(s) on the ticket(s) will be liable for payment. Cheque or transfer should be made payable to:\nSEDUNIA TRAVEL SERVICES SDN BHD.",
+                "confidence": 0.95
+              },
+              {
+                "type": "signature",
+                "content": "ACCOUNTS\nCHARGEABLE\n\nCHECKED BY\n\nAPPROVED BY",
+                "confidence": 0.85
+              },
+              {
+                "type": "footer",
+                "content": "Sedunia Travel Services Sdn. Bhd. (KPL 173062)\nLevel 01-B, 12 & 13, Menara Genesis, 33 Jalan Sultan Ismail, 50250 Kuala Lumpur, Malaysia.\nFinance & Admin: (603) 2779 5470    Email: contact@seduniatravel.com\n\nPenang Branch\nUnit 1-3, 1st Floor, Marina Penang Garden, 42A, Jalan Sultan Ahmad Shah, 10050 Penang, Malaysia.\nTel: (604) 294 0235    Email: penang@sedunia.com.my\n\nWebsite: www.seduniatravel.com\n\nINVOICE - NTM10008788\n\nPATA   MATTA   IATA   IAS\n\nPage 2 of 2",
+                "confidence": 0.9
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "clear"
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "file": "Inv_5_page_3.png",
+      "model_output": {
+        "pages": [
+          {
+            "page_number": 1,
+            "file_name": "",
+            "sections": [
+              {
+                "type": "empty",
+                "content": "[UNREADABLE]",
+                "confidence": 0.0
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "total_pages": 1,
+          "languages_detected": [
+            "en"
+          ],
+          "image_quality": "low_resolution"
+        }
+      }
+    }
+  ]
+}
