@@ -678,7 +678,12 @@ def load_all_extraction_rows() -> pd.DataFrame:
     extraction_dir = Path(__file__).resolve().parent / "extraction_output"
     rows = []
     if extraction_dir.exists():
-        files = sorted(extraction_dir.glob("*_extracted*.json"))
+        files = sorted(
+            [
+                f for f in extraction_dir.glob("*.json")
+                if f.name not in {"bank_matching_results.json"}
+            ]
+        )
         for i, f in enumerate(files, start=1):
             try:
                 data = json.loads(f.read_text(encoding="utf-8"))
@@ -700,7 +705,7 @@ def load_all_extraction_rows() -> pd.DataFrame:
 
 def _team_from_doc_type(doc_type: str) -> str:
     text = (doc_type or "").strip().lower()
-    if "rental" in text or "lease" in text:
+    if "rental" in text or "lease" in text or "utility" in text:
         return "rental"
     return "sales"
 
@@ -735,7 +740,15 @@ def infer_document_team(file_path: Path, doc_team_map: dict[str, str]) -> str:
 
     extraction_dir = Path(__file__).resolve().parent / "extraction_output"
     if extraction_dir.exists():
-        candidates = sorted(extraction_dir.glob(f"{file_path.stem}_extracted*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+        candidates = sorted(
+            [
+                p for p in extraction_dir.glob("*.json")
+                if p.name not in {"bank_matching_results.json"}
+                and (p.stem == file_path.stem or p.stem.startswith(file_path.stem + "_extracted"))
+            ],
+            key=lambda p: p.stat().st_mtime,
+            reverse=True,
+        )
         for candidate in candidates:
             try:
                 data = json.loads(candidate.read_text(encoding="utf-8"))
@@ -750,6 +763,35 @@ def infer_document_team(file_path: Path, doc_team_map: dict[str, str]) -> str:
     return "sales"
 
 
+def find_source_pdf_for_extraction(source_file: str) -> Path | None:
+    """Match extraction JSON source filename to original PDF in docs/database."""
+    if not source_file:
+        return None
+
+    database_dir = Path(__file__).resolve().parent / "docs" / "database"
+    if not database_dir.exists():
+        return None
+
+    source_stem = Path(source_file).stem
+    base = source_stem.replace("_extracted", "")
+
+    exact_name = f"{base}.pdf"
+    exact_path = database_dir / exact_name
+    if exact_path.exists():
+        return exact_path
+
+    pdf_files = [p for p in database_dir.iterdir() if p.is_file() and p.suffix.lower() == ".pdf"]
+    for pdf in pdf_files:
+        if pdf.name.lower() == exact_name.lower():
+            return pdf
+
+    for pdf in pdf_files:
+        if pdf.stem.lower().startswith(base.lower()):
+            return pdf
+
+    return None
+
+
 def load_extraction_repository_items() -> list[dict]:
     """Build row data for Extraction Viewer repository layout."""
     extraction_dir = Path(__file__).resolve().parent / "extraction_output"
@@ -757,7 +799,14 @@ def load_extraction_repository_items() -> list[dict]:
         return []
 
     items: list[dict] = []
-    files = sorted(extraction_dir.glob("*_extracted*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+    files = sorted(
+        [
+            f for f in extraction_dir.glob("*.json")
+            if f.name not in {"bank_matching_results.json"}
+        ],
+        key=lambda p: p.stat().st_mtime,
+        reverse=True,
+    )
     for f in files:
         try:
             data = json.loads(f.read_text(encoding="utf-8"))
@@ -975,6 +1024,10 @@ if "processing_selected_doc" not in st.session_state:
     st.session_state["processing_selected_doc"] = None
 if "extraction_selected_file" not in st.session_state:
     st.session_state["extraction_selected_file"] = None
+if "report_preview_source" not in st.session_state:
+    st.session_state["report_preview_source"] = None
+if "report_detail_row" not in st.session_state:
+    st.session_state["report_detail_row"] = None
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -1299,9 +1352,19 @@ elif page == "📋 Report Format":
 
     if not df.empty and current_role != "admin":
         if current_role == "rental":
-            df = df[df["Types (Inv/CN)"].astype(str).str.lower().str.contains("rental|lease", regex=True)].copy()
+            df = df[
+                df["Types (Inv/CN)"]
+                .astype(str)
+                .str.lower()
+                .str.contains("rental|lease|utility", regex=True)
+            ].copy()
         elif current_role == "sales":
-            df = df[~df["Types (Inv/CN)"].astype(str).str.lower().str.contains("rental|lease", regex=True)].copy()
+            df = df[
+                ~df["Types (Inv/CN)"]
+                .astype(str)
+                .str.lower()
+                .str.contains("rental|lease|utility", regex=True)
+            ].copy()
 
     if df.empty:
         st.info(f"No extraction files available for role: {current_role.title()}.")
@@ -1448,10 +1511,15 @@ elif page == "📋 Report Format":
                     f'<span class="doc-card-status">{s_icon} {s_label}</span>'
                     f'</div></div>'
                 )
-                st.markdown(card_html, unsafe_allow_html=True)
+                row_left, row_right = st.columns([12, 2])
+                with row_left:
+                    st.markdown(card_html, unsafe_allow_html=True)
+                with row_right:
+                    if st.button("View", key=f"view_detail_{row_no}", use_container_width=True):
+                        current_open = st.session_state.get("report_detail_row")
+                        st.session_state["report_detail_row"] = None if current_open == row_no else row_no
 
-                # ── Expandable detail section ─────────────────────────
-                with st.expander(f"View details — #{row_no}", expanded=False):
+                if st.session_state.get("report_detail_row") == row_no:
                     # Action buttons row
                     ac1, ac2, ac3 = st.columns([1, 1, 4])
                     with ac1:
@@ -1470,90 +1538,37 @@ elif page == "📋 Report Format":
                                 st.session_state["doc_status"][row_no] = "pending"
                                 st.rerun()
 
-                    # ── Key fields grid ────────────────────────────────
-                    key_fields = [
-                        ("Invoice No", inv_no),
-                        ("Invoice Date", inv_date),
-                        ("TIN No", row.get("TIN No", "")),
-                        ("Total (inc. tax)", total),
-                    ]
-                    grid_html = '<div class="doc-field-grid">'
-                    for lbl, val in key_fields:
-                        v = val if val else "—"
-                        grid_html += f'<div class="doc-field"><div class="doc-field-label">{lbl}</div><div class="doc-field-value">{v}</div></div>'
-                    grid_html += '</div>'
-                    st.markdown(grid_html, unsafe_allow_html=True)
+                    st.markdown("**Quick Reference (table order)**")
+                    ordered_cols = [c for c in REPORT_COLUMNS if c in row.index]
+                    detail_row = {c: (row.get(c, "") if row.get(c, "") not in (None, "") else "—") for c in ordered_cols}
+                    st.dataframe(
+                        pd.DataFrame([detail_row]),
+                        use_container_width=True,
+                        hide_index=True,
+                    )
 
-                    # ── Location & IDs ─────────────────────────────────
-                    loc_pairs = [
-                        ("Lot No", row.get("Lot No", "")),
-                        ("Location", row.get("Location", "")),
-                        ("Account No", row.get("Account No", "")),
-                        ("Lease ID", row.get("Lease ID", "")),
-                        ("Unit No", row.get("Unit No", "")),
-                        ("No. Akaun", row.get("No. Akaun", "")),
-                    ]
-                    filled_loc = [(l, v) for l, v in loc_pairs if v]
-                    if filled_loc:
-                        loc_html = '<div class="doc-field-grid">'
-                        for lbl, val in filled_loc:
-                            loc_html += f'<div class="doc-field"><div class="doc-field-label">{lbl}</div><div class="doc-field-value">{val}</div></div>'
-                        loc_html += '</div>'
-                        st.markdown(loc_html, unsafe_allow_html=True)
-
-                    # ── Electricity details ────────────────────────────
-                    elec_amt = row.get("Amaun Elektrik", "")
-                    kwh_b = row.get("Kwh Reading Before", "")
-                    kwh_a = row.get("Kwh Reading After", "")
-                    total_u = row.get("Current Reading / Total Units", "")
-                    if elec_amt or kwh_b or kwh_a:
-                        st.markdown("**⚡ Electricity Details**")
-                        elec_pairs = [
-                            ("Amaun Elektrik", elec_amt),
-                            ("kWh Before", kwh_b),
-                            ("kWh After", kwh_a),
-                            ("Total Units", total_u),
-                        ]
-                        elec_html = '<div class="doc-field-grid">'
-                        for lbl, val in elec_pairs:
-                            if val:
-                                elec_html += f'<div class="doc-field"><div class="doc-field-label">{lbl}</div><div class="doc-field-value">{val}</div></div>'
-                        elec_html += '</div>'
-                        st.markdown(elec_html, unsafe_allow_html=True)
-
-                    # ── Matching info ──────────────────────────────────
                     if matched_to:
-                        conf = row.get("Match Confidence", "")
-                        conf_icon = {"High": "🟢", "Medium": "🟡", "Low": "🟠"}.get(conf, "⚪")
-                        st.markdown(
-                            f'<div style="background:#f0fff4;border:1px solid #c6f6d5;border-radius:8px;padding:0.6rem 1rem;margin:0.4rem 0;">'
-                            f'🔗 <strong>Matched To:</strong> {matched_to}<br/>'
-                            f'{conf_icon} <strong>{conf}</strong> — {row.get("Matched On", "")}'
-                            f'</div>',
-                            unsafe_allow_html=True,
+                        st.caption(
+                            f"Matched To: {matched_to} | Confidence: {row.get('Match Confidence', '')} | Matched On: {row.get('Matched On', '')}"
                         )
-
-                    # ── Additional details ─────────────────────────────
-                    extras = [
-                        ("Description", row.get("Description", "")),
-                        ("Premise Address", row.get("Premise Address", "")),
-                        ("No. Invois Cukai", row.get("No. Invois Cukai", "")),
-                        ("Project", row.get("Project", "")),
-                        ("Contract No / Batch No", row.get("Contract No / Batch No", "")),
-                        ("LHDN UUID", row.get("LHDN UUID", "")),
-                        ("Validate On", row.get("Validate On", "")),
-                    ]
-                    filled_extras = [(l, v) for l, v in extras if v]
-                    if filled_extras:
-                        ext_html = '<div class="doc-field-grid">'
-                        for lbl, val in filled_extras:
-                            ext_html += f'<div class="doc-field"><div class="doc-field-label">{lbl}</div><div class="doc-field-value">{val}</div></div>'
-                        ext_html += '</div>'
-                        st.markdown(ext_html, unsafe_allow_html=True)
 
                     src = row.get("_source_file", "")
                     if src:
                         st.caption(f"Source: {src}")
+
+                    if src:
+                        pdf_match = find_source_pdf_for_extraction(src)
+                        btn_label = "📄 View Original PDF"
+                        if st.button(btn_label, key=f"view_original_pdf_{row_no}"):
+                            current_preview = st.session_state.get("report_preview_source")
+                            st.session_state["report_preview_source"] = None if current_preview == src else src
+
+                        if st.session_state.get("report_preview_source") == src:
+                            if pdf_match and pdf_match.exists():
+                                st.markdown(f"##### Original PDF: {pdf_match.name}")
+                                display_processing_file_preview(pdf_match)
+                            else:
+                                st.info("Matching PDF not found in src/docs/database.")
 
             st.markdown("---")
 
