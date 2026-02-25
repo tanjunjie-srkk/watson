@@ -437,11 +437,24 @@ def display_processing_file_preview(file_path: Path):
 
     if suffix == ".pdf":
         pdf_bytes = file_path.read_bytes()
-        pdf_base64 = base64.b64encode(pdf_bytes).decode("utf-8")
-        st.markdown(
-            f'<iframe src="data:application/pdf;base64,{pdf_base64}" width="100%" height="800" type="application/pdf"></iframe>',
-            unsafe_allow_html=True,
-        )
+        # Render PDF pages as images (avoids iframe/CSP blocking on Streamlit Cloud)
+        try:
+            import tempfile, fitz  # noqa: E401
+            doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+            n_pages = len(doc)
+            st.markdown(
+                f'<div style="color:#5a8a8f;font-size:0.82rem;margin-bottom:0.4rem;">'
+                f'📄 {n_pages} page{"s" if n_pages != 1 else ""}</div>',
+                unsafe_allow_html=True,
+            )
+            for page_idx in range(n_pages):
+                pix = doc[page_idx].get_pixmap(dpi=150)
+                img_bytes = pix.tobytes("png")
+                st.image(img_bytes, caption=f"Page {page_idx + 1} of {n_pages}", use_container_width=True)
+            doc.close()
+        except Exception as img_err:
+            st.warning(f"Could not render PDF pages as images: {img_err}")
+            st.info("Use the download button below to view the PDF.")
         st.download_button(
             "⬇️ Download PDF",
             data=pdf_bytes,
