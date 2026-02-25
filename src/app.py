@@ -28,101 +28,226 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# ─── Custom CSS ──────────────────────────────────────────────────────────────
+# ─── Custom CSS — Watsons Brand Theme ────────────────────────────────────────
+# Palette:  Teal #006770 · #00A0AF · #00a3b2 · #70c9d2 · #57e2c8
+#           Red  #EE2D25 · White #FFFFFF
 st.markdown("""
 <style>
+    /* ═══ GLOBAL FOUNDATION ═══ */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     .block-container { padding-top: 1rem; }
+
+    /* ═══ MAIN HEADER BAR ═══ */
     .main-header {
-        background: linear-gradient(135deg, #1a365d 0%, #2d5a87 50%, #1e6f5c 100%);
-        padding: 1.2rem 2rem; border-radius: 10px; margin-bottom: 1.5rem; color: white;
+        background: linear-gradient(135deg, #005a62 0%, #006770 30%, #00A0AF 100%);
+        padding: 1.4rem 2rem; border-radius: 12px; margin-bottom: 1.5rem; color: white;
+        border-bottom: 3px solid #57e2c8;
+        box-shadow: 0 4px 16px rgba(0,103,112,0.18);
     }
-    .main-header h1 { color: white; font-size: 1.8rem; margin: 0; font-weight: 700; }
-    .main-header p { color: #c8dae8; font-size: 0.95rem; margin: 0.3rem 0 0 0; }
+    .main-header h1 { color: white; font-size: 1.8rem; margin: 0; font-weight: 800; letter-spacing: -0.01em; }
+    .main-header p { color: #b2e8ec; font-size: 0.95rem; margin: 0.3rem 0 0 0; }
+
     .pipeline-step {
-        background: #f7fafc; border-left: 4px solid #2d5a87;
+        background: #f0fafb; border-left: 4px solid #00A0AF;
         padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin-bottom: 0.8rem;
     }
-    .confidence-high { color: #38a169; font-weight: 600; }
-    .confidence-medium { color: #d69e2e; font-weight: 600; }
-    .confidence-low { color: #e53e3e; font-weight: 600; }
-    /* Sidebar styles */
+    .confidence-high { color: #00A0AF; font-weight: 600; }
+    .confidence-medium { color: #d68000; font-weight: 600; }
+    .confidence-low { color: #EE2D25; font-weight: 600; }
+
+    /* ═══ SIDEBAR ═══ */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+        background: linear-gradient(180deg, #004d55 0%, #006770 40%, #007a85 100%) !important;
     }
     [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
     [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] li,
-    [data-testid="stSidebar"] .stCaption p { color: #94a3b8 !important; }
-    [data-testid="stSidebar"] hr { border-color: rgba(255,255,255,0.08) !important; }
+    [data-testid="stSidebar"] .stCaption p { color: #b2e8ec !important; }
+    [data-testid="stSidebar"] hr { border-color: rgba(255,255,255,0.12) !important; }
+    /* Sidebar selectbox / radio / widget labels */
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] .stSelectbox label,
+    [data-testid="stSidebar"] .stRadio label {
+        color: #d0f0f4 !important;
+    }
+    [data-testid="stSidebar"] .stRadio [data-testid="stMarkdownContainer"] p {
+        color: #e0f7f9 !important;
+    }
+    /* Radio button active state */
+    [data-testid="stSidebar"] .stRadio [role="radiogroup"] label[data-checked="true"] {
+        background: rgba(87,226,200,0.15) !important;
+        border-radius: 6px;
+    }
+
     .sidebar-logo {
         text-align: center; padding: 1.2rem 0 0.6rem 0;
     }
     .sidebar-logo-icon {
-        font-size: 2.2rem; display: block; margin-bottom: 0.3rem;
+        font-size: 2.4rem; display: block; margin-bottom: 0.3rem;
     }
     .sidebar-logo-text {
-        font-size: 1.15rem; font-weight: 700; color: #f1f5f9;
+        font-size: 1.2rem; font-weight: 800; color: #ffffff;
         letter-spacing: 0.02em;
     }
     .sidebar-logo-sub {
-        font-size: 0.72rem; color: #64748b; letter-spacing: 0.06em;
+        font-size: 0.72rem; color: #70c9d2; letter-spacing: 0.06em;
         text-transform: uppercase; margin-top: 2px;
     }
     .sidebar-section {
-        font-size: 0.68rem; font-weight: 600; color: #475569;
+        font-size: 0.68rem; font-weight: 700; color: #57e2c8;
         text-transform: uppercase; letter-spacing: 0.1em;
         padding: 0.8rem 0 0.4rem 0.5rem;
     }
     .sidebar-about-card {
-        background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
+        background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
         border-radius: 10px; padding: 0.8rem 1rem; margin-top: 0.3rem;
     }
     .sidebar-about-title {
-        font-size: 0.7rem; font-weight: 600; color: #64748b;
+        font-size: 0.7rem; font-weight: 600; color: #70c9d2;
         text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.6rem;
     }
     .sidebar-about-item {
         display: flex; align-items: flex-start; gap: 0.5rem;
-        padding: 0.35rem 0; font-size: 0.8rem; color: #94a3b8;
+        padding: 0.35rem 0; font-size: 0.8rem; color: #b2e8ec;
     }
-    .sidebar-about-item strong { color: #cbd5e1; }
+    .sidebar-about-item strong { color: #ffffff; }
     .sidebar-badge {
-        display: inline-block; font-size: 0.62rem; font-weight: 600;
-        padding: 2px 8px; border-radius: 20px;
-        background: rgba(56,161,105,0.15); color: #4ade80;
+        display: inline-block; font-size: 0.62rem; font-weight: 700;
+        padding: 2px 10px; border-radius: 20px;
+        background: rgba(87,226,200,0.2); color: #57e2c8;
         letter-spacing: 0.03em;
     }
     .sidebar-footer {
-        text-align: center; padding: 0.5rem 0; font-size: 0.72rem; color: #475569;
+        text-align: center; padding: 0.5rem 0; font-size: 0.72rem; color: #70c9d2;
     }
-    .info-card {
-        background: #fff; border: 1px solid #e2e8f0; border-radius: 10px;
-        padding: 1rem; margin-bottom: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-    }
-    .info-card .card-title { font-weight: 700; color: #1a365d; margin-bottom: 0.3rem; }
-    .info-card .card-subtitle { font-size: 0.8rem; color: #718096; }
 
-    /* Report card styles */
-    .doc-card {
-        background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
-        padding: 0; margin-bottom: 0.75rem; overflow: hidden;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: box-shadow 0.2s;
+    /* ═══ STREAMLIT WIDGET OVERRIDES (Watsons Teal) ═══ */
+    /* Primary buttons */
+    .stButton > button[kind="primary"],
+    .stButton > button[data-testid="baseButton-primary"] {
+        background: linear-gradient(135deg, #006770, #00A0AF) !important;
+        border: none !important; color: white !important; font-weight: 600;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 8px rgba(0,103,112,0.18) !important;
+        transition: all 0.2s ease;
     }
-    .doc-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .stButton > button[kind="primary"]:hover,
+    .stButton > button[data-testid="baseButton-primary"]:hover {
+        background: linear-gradient(135deg, #005a62, #008a96) !important;
+        box-shadow: 0 4px 12px rgba(0,103,112,0.3) !important;
+    }
+    /* Secondary buttons */
+    .stButton > button[kind="secondary"],
+    .stButton > button[data-testid="baseButton-secondary"] {
+        border: 1.5px solid #00A0AF !important; color: #006770 !important;
+        font-weight: 600; border-radius: 8px !important;
+        transition: all 0.2s ease;
+    }
+    .stButton > button[kind="secondary"]:hover,
+    .stButton > button[data-testid="baseButton-secondary"]:hover {
+        background: #e0f7f9 !important; border-color: #006770 !important;
+    }
+    /* Default buttons */
+    .stButton > button {
+        border: 1.5px solid #d0e8eb !important; color: #006770 !important;
+        font-weight: 500; border-radius: 8px !important;
+        transition: all 0.2s ease;
+    }
+    .stButton > button:hover {
+        background: #e0f7f9 !important; border-color: #00A0AF !important;
+        color: #005a62 !important;
+    }
+    /* Download buttons */
+    .stDownloadButton > button {
+        border: 1.5px solid #00A0AF !important; color: #006770 !important;
+        font-weight: 600; border-radius: 8px !important;
+    }
+    .stDownloadButton > button:hover {
+        background: #e0f7f9 !important;
+    }
+    /* Tabs */
+    .stTabs [data-baseweb="tab-list"] { gap: 4px; }
+    .stTabs [data-baseweb="tab"] {
+        border-radius: 8px 8px 0 0 !important; font-weight: 600;
+        color: #006770 !important;
+    }
+    .stTabs [aria-selected="true"] {
+        background: #e0f7f9 !important; color: #006770 !important;
+        border-bottom: 3px solid #00A0AF !important;
+    }
+    /* Metrics */
+    [data-testid="stMetricValue"] { color: #006770 !important; font-weight: 800; }
+    [data-testid="stMetricLabel"] { color: #4a6d71 !important; }
+    /* Expanders */
+    details[data-testid="stExpander"] summary {
+        color: #006770 !important; font-weight: 600;
+    }
+    /* Selectbox / multiselect borders */
+    .stSelectbox [data-baseweb="select"] > div,
+    .stMultiSelect [data-baseweb="select"] > div {
+        border-color: #b2e8ec !important; border-radius: 8px !important;
+    }
+    .stSelectbox [data-baseweb="select"] > div:focus-within,
+    .stMultiSelect [data-baseweb="select"] > div:focus-within {
+        border-color: #00A0AF !important;
+        box-shadow: 0 0 0 1px #00A0AF !important;
+    }
+    /* Progress bar */
+    .stProgress > div > div > div { background: #00A0AF !important; }
+    /* Dividers */
+    hr { border-color: #d0e8eb !important; }
+    /* File uploader */
+    [data-testid="stFileUploader"] section {
+        border: 2px dashed #70c9d2 !important; border-radius: 10px !important;
+    }
+    [data-testid="stFileUploader"] section:hover {
+        border-color: #00A0AF !important; background: #f0fafb !important;
+    }
+    /* Toggle */
+    .stToggle label span[data-checked="true"] {
+        background-color: #00A0AF !important;
+    }
+    /* Text input */
+    .stTextInput input { border-color: #b2e8ec !important; border-radius: 8px !important; }
+    .stTextInput input:focus { border-color: #00A0AF !important; box-shadow: 0 0 0 1px #00A0AF !important; }
+    /* Status widget */
+    [data-testid="stStatusWidget"] { border-left: 4px solid #00A0AF !important; }
+
+    /* ═══ INFO / SUCCESS / WARNING / ERROR BANNERS ═══ */
+    .stAlert [data-testid="stAlertContentInfo"] {
+        background: #e0f7f9 !important; border-left-color: #00A0AF !important;
+    }
+
+    /* ═══ GENERAL CARDS ═══ */
+    .info-card {
+        background: #fff; border: 1px solid #d0e8eb; border-radius: 12px;
+        padding: 1rem; margin-bottom: 0.5rem; box-shadow: 0 1px 4px rgba(0,103,112,0.06);
+    }
+    .info-card .card-title { font-weight: 700; color: #006770; margin-bottom: 0.3rem; }
+    .info-card .card-subtitle { font-size: 0.8rem; color: #5a8a8f; }
+
+    /* ═══ REPORT DOCUMENT CARDS ═══ */
+    .doc-card {
+        background: #fff; border: 1px solid #d0e8eb; border-radius: 12px;
+        padding: 0; margin-bottom: 0.75rem; overflow: hidden;
+        box-shadow: 0 1px 4px rgba(0,103,112,0.06); transition: all 0.2s;
+    }
+    .doc-card:hover { box-shadow: 0 4px 14px rgba(0,103,112,0.12); border-color: #70c9d2; }
     .doc-card-header {
         display: flex; align-items: center; padding: 0.8rem 1.2rem;
         gap: 1rem; cursor: pointer;
     }
     .doc-card-num {
-        font-weight: 700; font-size: 0.85rem; color: #718096;
+        font-weight: 700; font-size: 0.85rem; color: #5a8a8f;
         min-width: 32px; text-align: center;
     }
     .doc-card-type {
         font-size: 0.7rem; font-weight: 600; padding: 3px 10px;
         border-radius: 20px; text-transform: uppercase; letter-spacing: 0.03em;
     }
-    .doc-card-company { font-weight: 600; color: #1a365d; font-size: 0.95rem; flex: 1; }
-    .doc-card-detail { color: #4a5568; font-size: 0.85rem; }
-    .doc-card-amount { font-weight: 700; color: #1a365d; font-size: 1rem; white-space: nowrap; }
+    .doc-card-company { font-weight: 600; color: #006770; font-size: 0.95rem; flex: 1; }
+    .doc-card-detail { color: #4a6d71; font-size: 0.85rem; }
+    .doc-card-amount { font-weight: 700; color: #006770; font-size: 1rem; white-space: nowrap; }
     .doc-card-match {
         font-size: 0.72rem; padding: 2px 8px; border-radius: 10px;
         font-weight: 600; white-space: nowrap;
@@ -132,12 +257,150 @@ st.markdown("""
         gap: 0.6rem; padding: 0.8rem 1.2rem;
     }
     .doc-field { padding: 0.4rem 0; }
-    .doc-field-label { font-size: 0.7rem; color: #a0aec0; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 2px; }
-    .doc-field-value { font-size: 0.88rem; color: #2d3748; font-weight: 500; word-break: break-word; }
-    .doc-status-verified { border-left: 4px solid #38a169; }
-    .doc-status-rejected { border-left: 4px solid #e53e3e; opacity: 0.6; }
-    .doc-status-pending { border-left: 4px solid #e2e8f0; }
-    .doc-card-status { font-size: 0.8rem; white-space: nowrap; color: #718096; }
+    .doc-field-label { font-size: 0.7rem; color: #70a0a5; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 2px; }
+    .doc-field-value { font-size: 0.88rem; color: #1a3d42; font-weight: 500; word-break: break-word; }
+    .doc-status-verified { border-left: 4px solid #00A0AF; }
+    .doc-status-rejected { border-left: 4px solid #EE2D25; opacity: 0.6; }
+    .doc-status-pending { border-left: 4px solid #d0e8eb; }
+    .doc-card-status { font-size: 0.8rem; white-space: nowrap; color: #5a8a8f; }
+
+    /* ═══ LINE-ITEM MATCHING PAGE — AP Reconciliation ═══ */
+    .lim-header {
+        background: linear-gradient(135deg, #004d55 0%, #006770 50%, #00A0AF 100%);
+        padding: 1.6rem 2.2rem; border-radius: 12px; margin-bottom: 1.2rem;
+        display: flex; align-items: center; gap: 1.2rem;
+        border-bottom: 3px solid #57e2c8;
+        box-shadow: 0 4px 16px rgba(0,103,112,0.18);
+    }
+    .lim-header-icon { font-size: 2.2rem; }
+    .lim-header h2 { color: #fff; margin: 0; font-size: 1.5rem; font-weight: 800; letter-spacing: -0.01em; }
+    .lim-header p { color: #b2e8ec; margin: 0.2rem 0 0 0; font-size: 0.85rem; }
+
+    /* KPI cards */
+    .lim-kpi-card {
+        background: #fff; border: 1px solid #d0e8eb; border-radius: 12px;
+        padding: 0.9rem 1rem; text-align: center;
+        box-shadow: 0 1px 4px rgba(0,103,112,0.06); position: relative;
+    }
+    .lim-kpi-card .kpi-value { font-size: 1.45rem; font-weight: 800; margin-bottom: 0.1rem; line-height: 1.2; }
+    .lim-kpi-card .kpi-label {
+        font-size: 0.68rem; color: #5a8a8f; text-transform: uppercase;
+        letter-spacing: 0.06em; font-weight: 600;
+    }
+    .lim-kpi-card .kpi-tooltip {
+        font-size: 0.65rem; color: #8ab0b5; margin-top: 0.2rem;
+        font-style: italic;
+    }
+    .lim-kpi-card .kpi-border-top { position: absolute; top: 0; left: 10%; right: 10%; height: 3px; border-radius: 0 0 3px 3px; }
+    .lim-kpi-teal .kpi-value { color: #006770; }
+    .lim-kpi-teal .kpi-border-top { background: #006770; }
+    .lim-kpi-blue .kpi-value { color: #00A0AF; }
+    .lim-kpi-blue .kpi-border-top { background: #00A0AF; }
+    .lim-kpi-green .kpi-value { color: #00856e; }
+    .lim-kpi-green .kpi-border-top { background: #00856e; }
+    .lim-kpi-red .kpi-value { color: #EE2D25; }
+    .lim-kpi-red .kpi-border-top { background: #EE2D25; }
+    .lim-kpi-amber .kpi-value { color: #d68000; }
+    .lim-kpi-amber .kpi-border-top { background: #d68000; }
+    .lim-kpi-navy .kpi-value { color: #004d55; }
+    .lim-kpi-navy .kpi-border-top { background: #004d55; }
+
+    .lim-section-title {
+        font-size: 0.95rem; font-weight: 700; color: #006770;
+        padding: 0.5rem 0 0.25rem 0; display: flex; align-items: center; gap: 0.5rem;
+    }
+
+    /* Tables */
+    .lim-table {
+        width: 100%; border-collapse: separate; border-spacing: 0;
+        font-size: 0.84rem; border-radius: 10px; overflow: hidden;
+        border: 1px solid #b2dfe4;
+    }
+    .lim-table thead th {
+        background: #006770; color: #fff; padding: 0.55rem 0.8rem;
+        font-weight: 700; font-size: 0.75rem; text-transform: uppercase;
+        letter-spacing: 0.04em; text-align: left;
+    }
+    .lim-table tbody td {
+        padding: 0.5rem 0.8rem; border-bottom: 1px solid #e0f0f2;
+        color: #1a3d42; font-size: 0.84rem;
+    }
+    .lim-table tbody tr:last-child td { border-bottom: none; }
+    .lim-table tbody tr:hover { background: #f0fafb; }
+    .lim-table .amount-col { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .lim-table .neg-amount { color: #EE2D25; }
+    .lim-table-ledger thead th { background: #00856e; }
+    .lim-table-result thead th { background: #004d55; }
+    .lim-table-result tbody td { font-size: 0.83rem; }
+
+    /* Status badges */
+    .lim-badge {
+        display: inline-flex; align-items: center; gap: 0.3rem;
+        padding: 2px 10px; border-radius: 20px; font-weight: 700;
+        font-size: 0.73rem; white-space: nowrap;
+    }
+    .lim-badge-match { background: #e0f7f0; color: #00856e; }
+    .lim-badge-mismatch { background: #fde8e7; color: #EE2D25; }
+    .lim-badge-missing-ledger { background: #fff3e0; color: #d68000; }
+    .lim-badge-missing-soa { background: #e0f7f9; color: #00A0AF; }
+    .lim-badge-investigating { background: #e0f7f9; color: #00A0AF; }
+    .lim-badge-resolved { background: #e0f7f0; color: #006770; }
+    .lim-badge-approved { background: #e0f7f0; color: #004d55; border: 1px solid #70c9d2; }
+
+    /* Summary / reconciliation bar */
+    .lim-recon-bar {
+        background: #fff; border: 1px solid #d0e8eb; border-radius: 12px;
+        padding: 1rem 1.5rem; margin-top: 0.8rem;
+        box-shadow: 0 1px 4px rgba(0,103,112,0.06);
+    }
+    .lim-recon-row {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 0.3rem 0; font-size: 0.88rem;
+    }
+    .lim-recon-row .recon-label { color: #4a6d71; font-weight: 500; }
+    .lim-recon-row .recon-value { font-weight: 700; color: #006770; font-variant-numeric: tabular-nums; }
+    .lim-recon-divider { border-bottom: 1px dashed #b2dfe4; margin: 0.3rem 0; }
+    .lim-progress-track {
+        background: #e0f0f2; border-radius: 6px; height: 10px; width: 100%;
+        overflow: hidden; margin-top: 0.4rem;
+    }
+    .lim-progress-fill { height: 100%; border-radius: 6px; transition: width 0.6s ease; }
+
+    /* Variance rows */
+    .lim-variance-row {
+        background: #fff8e6; border-left: 4px solid #d68000;
+        padding: 0.6rem 1rem; border-radius: 0 8px 8px 0;
+        margin-bottom: 0.4rem; font-size: 0.84rem;
+    }
+    /* Filter bar */
+    .lim-filter-bar {
+        background: #f0fafb; border: 1px solid #d0e8eb; border-radius: 12px;
+        padding: 0.8rem 1.2rem; margin-bottom: 1rem;
+    }
+    /* Drill-down panel */
+    .lim-drill-panel {
+        background: #fff; border: 1px solid #b2dfe4; border-radius: 12px;
+        padding: 1.2rem 1.5rem; margin-top: 0.5rem;
+        box-shadow: 0 2px 8px rgba(0,103,112,0.08);
+    }
+    .lim-drill-field { margin-bottom: 0.5rem; }
+    .lim-drill-field .dl-label {
+        font-size: 0.68rem; color: #5a8a8f; text-transform: uppercase;
+        letter-spacing: 0.05em; font-weight: 600; margin-bottom: 1px;
+    }
+    .lim-drill-field .dl-value { font-size: 0.92rem; color: #006770; font-weight: 600; }
+    .lim-drill-field .dl-value.dl-highlight { color: #EE2D25; background: #fde8e7; padding: 1px 6px; border-radius: 4px; }
+    .lim-drill-field .dl-value.dl-ok { color: #00856e; }
+
+    .lim-comment-box {
+        width: 100%; border: 1px solid #b2dfe4; border-radius: 8px;
+        padding: 0.5rem 0.7rem; font-size: 0.84rem; resize: vertical;
+        min-height: 60px; font-family: inherit;
+    }
+    .lim-comment-box:focus { border-color: #00A0AF; outline: none; box-shadow: 0 0 0 2px rgba(0,160,175,0.15); }
+
+    /* ═══ DATAFRAME THEMING ═══ */
+    .stDataFrame { border-radius: 10px !important; overflow: hidden; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -941,7 +1204,7 @@ def match_utility_to_rental(df: pd.DataFrame) -> list[dict]:
 # ═══════════════════════════════════════════════════════════════════════════
 st.markdown("""
 <div class="main-header">
-    <h1>📄 Watson Document Intelligence Platform</h1>
+    <h1>📄 Watsons Document Intelligence Platform</h1>
     <p>AI-Powered OCR &bull; Document Classification &bull; Data Extraction &bull; Bank Statement Matching</p>
 </div>
 """, unsafe_allow_html=True)
@@ -954,7 +1217,7 @@ with st.sidebar:
     st.markdown(
         '<div class="sidebar-logo">'
         '<span class="sidebar-logo-icon">🔬</span>'
-        '<div class="sidebar-logo-text">Watson Intelligence</div>'
+        '<div class="sidebar-logo-text">Watsons Intelligence</div>'
         '<div class="sidebar-logo-sub">Document AI Platform</div>'
         '</div>',
         unsafe_allow_html=True,
@@ -970,15 +1233,17 @@ with st.sidebar:
 
     # ── Navigation ────────────────────────────────────────────
     st.markdown('<div class="sidebar-section">Navigation</div>', unsafe_allow_html=True)
+    _nav_pages = [
+        "📤 Document Processing",
+        "🔍 OCR Viewer",
+        "📊 Extraction Viewer",
+        "📋 Report Format",
+    ]
+    if current_role == "admin":
+        _nav_pages.append("🏦 Bank Matching")
     page = st.radio(
         "nav",
-        [
-            "📤 Document Processing",
-            "🔍 OCR Viewer",
-            "📊 Extraction Viewer",
-            "📋 Report Format",
-            "🏦 Bank Matching",
-        ],
+        _nav_pages,
         label_visibility="collapsed",
     )
 
@@ -1005,7 +1270,7 @@ with st.sidebar:
     st.markdown(
         '<div class="sidebar-footer">'
         f'<span class="sidebar-badge">v1.0</span><br/>'
-        f'<span style="color:#475569;font-size:0.7rem;">Powered by Azure OpenAI &bull; {datetime.now().strftime("%d %b %Y")}</span>'
+        f'<span style="color:#70c9d2;font-size:0.7rem;">Powered by Azure OpenAI &bull; {datetime.now().strftime("%d %b %Y")}</span>'
         '</div>',
         unsafe_allow_html=True,
     )
@@ -1413,13 +1678,13 @@ elif page == "📋 Report Format":
         with tab_sheet:
             # Type style lookup
             _type_style = {
-                "Inv": ("🧾", "#e8f0fe", "#1a56db"),
-                "Utility": ("⚡", "#fef9e7", "#b7791f"),
-                "Rental": ("🏠", "#e6ffed", "#276749"),
-                "Hotel": ("🏨", "#fce7f3", "#9d174d"),
-                "Travel": ("✈️", "#eff6ff", "#1e40af"),
-                "SOA": ("📑", "#f3e8ff", "#6b21a8"),
-                "CN": ("📌", "#fef2f2", "#b91c1c"),
+                "Inv": ("🧾", "#e0f7f9", "#006770"),
+                "Utility": ("⚡", "#f0fafb", "#00856e"),
+                "Rental": ("🏠", "#e0f7f0", "#004d55"),
+                "Hotel": ("🏨", "#fde8e7", "#EE2D25"),
+                "Travel": ("✈️", "#e0f7f9", "#00A0AF"),
+                "SOA": ("📑", "#f0fafb", "#007a85"),
+                "CN": ("📌", "#fde8e7", "#d68000"),
             }
 
             # ── Toolbar ──────────────────────────────────────────────
@@ -1489,8 +1754,8 @@ elif page == "📋 Report Format":
                 match_html = ""
                 if matched_to:
                     conf = row.get("Match Confidence", "")
-                    conf_colors = {"High": "#38a169", "Medium": "#d69e2e", "Low": "#e53e3e"}
-                    mc = conf_colors.get(conf, "#718096")
+                    conf_colors = {"High": "#00856e", "Medium": "#d68000", "Low": "#EE2D25"}
+                    mc = conf_colors.get(conf, "#5a8a8f")
                     match_html = f'<span class="doc-card-match" style="background:{mc};color:white;">🔗 {conf}</span>'
 
                 status_icons = {"verified": "✅", "rejected": "❌", "pending": "⏳"}
@@ -1677,7 +1942,7 @@ elif page == "📋 Report Format":
 
                         with pair_col1:
                             st.markdown(
-                                '<div style="background:#fff3cd; border-left:4px solid #ffc107; '
+                                '<div style="background:#f0fafb; border-left:4px solid #00856e; '
                                 'padding:0.8rem 1rem; border-radius:0 8px 8px 0; margin-bottom:0.6rem;">'
                                 '<strong>⚡ Utility / Electricity Bill</strong></div>',
                                 unsafe_allow_html=True,
@@ -1700,7 +1965,7 @@ elif page == "📋 Report Format":
 
                         with pair_col2:
                             st.markdown(
-                                '<div style="background:#d4edda; border-left:4px solid #28a745; '
+                                '<div style="background:#e0f7f0; border-left:4px solid #004d55; '
                                 'padding:0.8rem 1rem; border-radius:0 8px 8px 0; margin-bottom:0.6rem;">'
                                 '<strong>🏠 Rental / Lease Invoice</strong></div>',
                                 unsafe_allow_html=True,
@@ -1760,24 +2025,538 @@ elif page == "📋 Report Format":
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# PAGE: BANK MATCHING
+# PAGE: BANK MATCHING  –  Enterprise AP Line-Item Reconciliation
 # ═══════════════════════════════════════════════════════════════════════════
 elif page == "🏦 Bank Matching":
 
-    st.markdown("### 🏦 Bank Statement Matching & Reconciliation")
-    st.markdown("Compare extracted invoices/bills against bank statement entries for automated reconciliation.")
+    import random
+    from datetime import datetime as _dt, timedelta as _td
 
-    matching_json = Path(__file__).resolve().parent / "extraction_output" / "bank_matching_results.json"
-    matching_txt = Path(__file__).resolve().parent / "extraction_output" / "bank_matching_report.txt"
+    # ------------------------------------------------------------------
+    # MOCK DATA  (enriched with aging, assignee, investigation status)
+    # ------------------------------------------------------------------
+    _TODAY = _dt(2026, 2, 24)
+    _ASSIGNEES = ["Sarah L.", "Ahmad R.", "Mei Ling C.", "Daniel K."]
 
-    if matching_json.exists():
-        mdata = load_json_file(matching_json)
-        if isinstance(mdata, dict):
-            display_bank_matching(mdata, matching_txt)
+    def _mock_date(offset_days):
+        d = _TODAY - _td(days=offset_days)
+        return d.strftime("%d-%b-%Y")
+
+    def _aging_bucket(days):
+        if days <= 30: return "0–30"
+        if days <= 60: return "31–60"
+        if days <= 90: return "61–90"
+        return "90+"
+
+    MOCK_SCENARIOS = {
+        "Scenario 1 – Supplier SOA vs Account Ledger (Full Match)": {
+            "description": "All line items from the supplier statement match the account ledger perfectly.",
+            "supplier": "Acme Corp Sdn Bhd",
+            "soa": [
+                {"doc_no": "INV-1001", "doc_type": "Invoice",     "date": _mock_date(10), "amount":  10_000},
+                {"doc_no": "INV-1002", "doc_type": "Invoice",     "date": _mock_date(8),  "amount":   5_000},
+                {"doc_no": "CN-2001",  "doc_type": "Credit Note", "date": _mock_date(5),  "amount":  -1_000},
+            ],
+            "ledger": [
+                {"doc_no": "INV-1001", "doc_type": "Invoice",     "posting_date": _mock_date(9),  "amount":  10_000},
+                {"doc_no": "INV-1002", "doc_type": "Invoice",     "posting_date": _mock_date(7),  "amount":   5_000},
+                {"doc_no": "CN-2001",  "doc_type": "Credit Note", "posting_date": _mock_date(4),  "amount":  -1_000},
+            ],
+        },
+        "Scenario 2 – Partial Match with Variance": {
+            "description": "Some invoices have amount differences or are missing from the ledger.",
+            "supplier": "Global Trading Sdn Bhd",
+            "soa": [
+                {"doc_no": "INV-2001", "doc_type": "Invoice",     "date": _mock_date(45), "amount":  25_000},
+                {"doc_no": "INV-2002", "doc_type": "Invoice",     "date": _mock_date(40), "amount":   8_500},
+                {"doc_no": "CN-3001",  "doc_type": "Credit Note", "date": _mock_date(35), "amount":  -2_000},
+                {"doc_no": "INV-2003", "doc_type": "Invoice",     "date": _mock_date(30), "amount":  15_750},
+            ],
+            "ledger": [
+                {"doc_no": "INV-2001", "doc_type": "Invoice",     "posting_date": _mock_date(44), "amount":  25_000},
+                {"doc_no": "INV-2002", "doc_type": "Invoice",     "posting_date": _mock_date(39), "amount":   8_200},
+                {"doc_no": "CN-3001",  "doc_type": "Credit Note", "posting_date": _mock_date(34), "amount":  -2_000},
+            ],
+        },
+        "Scenario 3 – Multi-Supplier Reconciliation": {
+            "description": "Complex reconciliation across multiple document types with partial matches.",
+            "supplier": "Premier Supplies Sdn Bhd",
+            "soa": [
+                {"doc_no": "INV-5001", "doc_type": "Invoice",     "date": _mock_date(95), "amount":  42_800},
+                {"doc_no": "INV-5002", "doc_type": "Invoice",     "date": _mock_date(75), "amount":  18_350},
+                {"doc_no": "INV-5003", "doc_type": "Invoice",     "date": _mock_date(55), "amount":   6_900},
+                {"doc_no": "CN-5001",  "doc_type": "Credit Note", "date": _mock_date(40), "amount":  -3_200},
+                {"doc_no": "INV-5004", "doc_type": "Invoice",     "date": _mock_date(20), "amount":  31_500},
+                {"doc_no": "DN-5001",  "doc_type": "Debit Note",  "date": _mock_date(10), "amount":   1_200},
+            ],
+            "ledger": [
+                {"doc_no": "INV-5001", "doc_type": "Invoice",     "posting_date": _mock_date(93), "amount":  42_800},
+                {"doc_no": "INV-5002", "doc_type": "Invoice",     "posting_date": _mock_date(73), "amount":  18_350},
+                {"doc_no": "INV-5003", "doc_type": "Invoice",     "posting_date": _mock_date(53), "amount":   6_500},
+                {"doc_no": "CN-5001",  "doc_type": "Credit Note", "posting_date": _mock_date(38), "amount":  -3_200},
+                {"doc_no": "INV-5004", "doc_type": "Invoice",     "posting_date": _mock_date(18), "amount":  31_500},
+                {"doc_no": "DN-5001",  "doc_type": "Debit Note",  "posting_date": _mock_date(8),  "amount":   1_200},
+            ],
+        },
+    }
+
+    # ------------------------------------------------------------------
+    # Helpers
+    # ------------------------------------------------------------------
+    def _fmt_amt(v):
+        if v is None:
+            return '<span style="color:#a0aec0;">—</span>'
+        if v < 0:
+            return f'<span class="neg-amount">({abs(v):,.0f})</span>'
+        return f"{v:,.0f}"
+
+    def _parse_mock_date(d_str):
+        try:
+            return _dt.strptime(d_str, "%d-%b-%Y")
+        except Exception:
+            return _TODAY
+
+    def _build_matching_results(soa_items, ledger_items):
+        """Build enriched matching results with aging & assignment."""
+        ledger_map = {r["doc_no"]: r for r in ledger_items}
+        soa_map = {r["doc_no"]: r for r in soa_items}
+        results = []
+        random.seed(42)  # deterministic for POC
+
+        # Items from SOA
+        for s in soa_items:
+            doc = s["doc_no"]
+            aging_days = (_TODAY - _parse_mock_date(s["date"])).days
+            base = {
+                "doc_no": doc,
+                "doc_type": s["doc_type"],
+                "soa_amount": s["amount"],
+                "soa_date": s["date"],
+                "aging_days": aging_days,
+                "aging_bucket": _aging_bucket(aging_days),
+                "assigned_to": random.choice(_ASSIGNEES),
+                "last_updated": _mock_date(random.randint(0, 5)),
+            }
+            if doc in ledger_map:
+                l = ledger_map[doc]
+                base["ledger_amount"] = l["amount"]
+                base["ledger_date"] = l["posting_date"]
+                base["date_diff"] = abs((_parse_mock_date(s["date"]) - _parse_mock_date(l["posting_date"])).days)
+                if s["amount"] == l["amount"]:
+                    base["variance"] = 0
+                    base["status"] = "Match"
+                    base["investigation"] = "Approved"
+                else:
+                    base["variance"] = s["amount"] - l["amount"]
+                    base["status"] = "Amount Mismatch"
+                    base["investigation"] = random.choice(["Under Investigation", "Resolved"])
+            else:
+                base["ledger_amount"] = None
+                base["ledger_date"] = None
+                base["date_diff"] = None
+                base["variance"] = None
+                base["status"] = "Missing in Ledger"
+                base["investigation"] = "Under Investigation"
+            results.append(base)
+
+        # Items in Ledger but not in SOA
+        for l in ledger_items:
+            if l["doc_no"] not in soa_map:
+                aging_days = (_TODAY - _parse_mock_date(l["posting_date"])).days
+                results.append({
+                    "doc_no": l["doc_no"],
+                    "doc_type": l["doc_type"],
+                    "soa_amount": None,
+                    "soa_date": None,
+                    "ledger_amount": l["amount"],
+                    "ledger_date": l["posting_date"],
+                    "date_diff": None,
+                    "aging_days": aging_days,
+                    "aging_bucket": _aging_bucket(aging_days),
+                    "variance": None,
+                    "status": "Missing in SOA",
+                    "investigation": "Under Investigation",
+                    "assigned_to": random.choice(_ASSIGNEES),
+                    "last_updated": _mock_date(random.randint(0, 5)),
+                })
+        return results
+
+    _STATUS_BADGE = {
+        "Match":              '<span class="lim-badge lim-badge-match">✔ Match</span>',
+        "Amount Mismatch":    '<span class="lim-badge lim-badge-mismatch">⚠ Amount Mismatch</span>',
+        "Missing in Ledger":  '<span class="lim-badge lim-badge-missing-ledger">✖ Missing in Ledger</span>',
+        "Missing in SOA":     '<span class="lim-badge lim-badge-missing-soa">✖ Missing in SOA</span>',
+    }
+    _INV_BADGE = {
+        "Under Investigation": '<span class="lim-badge lim-badge-investigating">🔍 Investigating</span>',
+        "Resolved":            '<span class="lim-badge lim-badge-resolved">✔ Resolved</span>',
+        "Approved":            '<span class="lim-badge lim-badge-approved">✔ Approved</span>',
+    }
+
+    # ══════════════════════════════════════════════════════════
+    # HEADER
+    # ══════════════════════════════════════════════════════════
+    st.markdown("""
+    <div class="lim-header">
+        <div class="lim-header-icon">📊</div>
+        <div>
+            <h2>AP Line-Item Reconciliation</h2>
+            <p>Supplier statement vs Account ledger &mdash; automated matching, variance analysis &amp; exception management.</p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ── Scenario selector ────────────────────────────────────
+    sel_c, info_c = st.columns([3, 5])
+    with sel_c:
+        scenario_name = st.selectbox("Scenario", list(MOCK_SCENARIOS.keys()), label_visibility="collapsed")
+    scenario = MOCK_SCENARIOS[scenario_name]
+    with info_c:
+        st.caption(f"**{scenario['supplier']}** — {scenario['description']}")
+
+    soa_items = scenario["soa"]
+    ledger_items = scenario["ledger"]
+    match_results = _build_matching_results(soa_items, ledger_items)
+
+    # Aggregates
+    soa_total = sum(r["amount"] for r in soa_items)
+    led_total = sum(r["amount"] for r in ledger_items)
+    net_variance = soa_total - led_total
+    n_total = len(match_results)
+    n_match = sum(1 for r in match_results if r["status"] == "Match")
+    n_mismatch = sum(1 for r in match_results if r["status"] == "Amount Mismatch")
+    n_missing = sum(1 for r in match_results if r["status"].startswith("Missing"))
+    match_rate = (n_match / n_total * 100) if n_total else 0
+    total_mismatch_amt = sum(abs(r["variance"]) for r in match_results if r["status"] == "Amount Mismatch" and r["variance"])
+    overdue_variance = sum(abs(r["variance"] or 0) for r in match_results if r["status"] != "Match" and r["aging_days"] > 30)
+
+    # KPI risk colour
+    def _risk_color(val, baseline=0, minor_thresh=500):
+        if val == baseline:
+            return "green"
+        if abs(val - baseline) <= minor_thresh:
+            return "amber"
+        return "red"
+
+    # ══════════════════════════════════════════════════════════
+    # KPI CARDS  (6 metrics)
+    # ══════════════════════════════════════════════════════════
+    k1, k2, k3, k4, k5, k6 = st.columns(6)
+    _kpi_data = [
+        (k1, f"{soa_total:,.0f}", "Total Exposure (SOA)", "Total amount claimed by supplier", "navy"),
+        (k2, f"{led_total:,.0f}", "Ledger Total", "Sum posted in your books", "blue"),
+        (k3, f"{_fmt_amt(net_variance)}", "Net Variance", "SOA − Ledger difference", _risk_color(net_variance)),
+        (k4, f"{match_rate:.0f}%", "Match Rate", "Percentage of fully matched items", "green" if match_rate == 100 else ("amber" if match_rate >= 80 else "red")),
+        (k5, f"{total_mismatch_amt:,.0f}", "Mismatch Amount", "Sum of absolute variances", "red" if total_mismatch_amt else "green"),
+        (k6, f"{overdue_variance:,.0f}", "Overdue Variance", "Unresolved variance > 30 days", "red" if overdue_variance else "green"),
+    ]
+    for col, val, label, tooltip, color in _kpi_data:
+        with col:
+            st.markdown(f"""
+            <div class="lim-kpi-card lim-kpi-{color}">
+                <div class="kpi-border-top"></div>
+                <div class="kpi-value">{val}</div>
+                <div class="kpi-label">{label}</div>
+                <div class="kpi-tooltip">{tooltip}</div>
+            </div>""", unsafe_allow_html=True)
+
+    st.markdown("")
+
+    # ══════════════════════════════════════════════════════════
+    # SIDE-BY-SIDE SOURCE TABLES
+    # ══════════════════════════════════════════════════════════
+    left_col, right_col = st.columns(2, gap="large")
+    with left_col:
+        st.markdown('<div class="lim-section-title">📄 Supplier SOA</div>', unsafe_allow_html=True)
+        soa_hdr = "".join(f"<th>{h}</th>" for h in ["Doc No", "Doc Type", "Date", "Amount"])
+        soa_body = ""
+        for r in soa_items:
+            soa_body += f'<tr><td>{r["doc_no"]}</td><td>{r["doc_type"]}</td><td>{r["date"]}</td><td class="amount-col">{_fmt_amt(r["amount"])}</td></tr>'
+        soa_body += f'<tr style="background:#e0f7f9;font-weight:700;"><td colspan="3">Total</td><td class="amount-col">{_fmt_amt(soa_total)}</td></tr>'
+        st.markdown(f'<table class="lim-table"><thead><tr>{soa_hdr}</tr></thead><tbody>{soa_body}</tbody></table>', unsafe_allow_html=True)
+
+    with right_col:
+        st.markdown('<div class="lim-section-title">📒 Account Ledger</div>', unsafe_allow_html=True)
+        led_hdr = "".join(f"<th>{h}</th>" for h in ["Doc No", "Doc Type", "Posting Date", "Amount"])
+        led_body = ""
+        for r in ledger_items:
+            led_body += f'<tr><td>{r["doc_no"]}</td><td>{r["doc_type"]}</td><td>{r["posting_date"]}</td><td class="amount-col">{_fmt_amt(r["amount"])}</td></tr>'
+        led_body += f'<tr style="background:#e0f7f0;font-weight:700;"><td colspan="3">Total</td><td class="amount-col">{_fmt_amt(led_total)}</td></tr>'
+        st.markdown(f'<table class="lim-table lim-table-ledger"><thead><tr>{led_hdr}</tr></thead><tbody>{led_body}</tbody></table>', unsafe_allow_html=True)
+
+    st.markdown("")
+    st.markdown("---")
+
+    # ══════════════════════════════════════════════════════════
+    # FILTER BAR + EXCEPTION TOGGLE
+    # ══════════════════════════════════════════════════════════
+    st.markdown('<div class="lim-section-title">🔎 Filters</div>', unsafe_allow_html=True)
+    with st.container():
+        fc1, fc2, fc3, fc4, fc5 = st.columns([2, 2, 2, 2, 1])
+        with fc1:
+            flt_status = st.multiselect(
+                "Match Status",
+                ["Match", "Amount Mismatch", "Missing in Ledger", "Missing in SOA"],
+                default=[],
+                placeholder="All statuses",
+            )
+        with fc2:
+            flt_aging = st.multiselect(
+                "Aging Bucket",
+                ["0–30", "31–60", "61–90", "90+"],
+                default=[],
+                placeholder="All buckets",
+            )
+        with fc3:
+            flt_investigation = st.multiselect(
+                "Investigation Status",
+                ["Under Investigation", "Resolved", "Approved"],
+                default=[],
+                placeholder="All",
+            )
+        with fc4:
+            flt_show = st.toggle("Show Exceptions Only", value=True, help="When ON, only mismatched / missing items are shown.")
+        with fc5:
+            if st.button("↻ Reset", use_container_width=True):
+                st.rerun()
+
+    # Apply filters
+    filtered = match_results
+    if flt_show:
+        filtered = [r for r in filtered if r["status"] != "Match"]
+    if flt_status:
+        filtered = [r for r in filtered if r["status"] in flt_status]
+    if flt_aging:
+        filtered = [r for r in filtered if r["aging_bucket"] in flt_aging]
+    if flt_investigation:
+        filtered = [r for r in filtered if r["investigation"] in flt_investigation]
+
+    # Sort: exceptions first
+    _status_order = {"Amount Mismatch": 0, "Missing in Ledger": 1, "Missing in SOA": 2, "Match": 3}
+    filtered.sort(key=lambda r: (_status_order.get(r["status"], 9), -abs(r["variance"] or 0)))
+
+    # ══════════════════════════════════════════════════════════
+    # LINE-ITEM MATCHING RESULTS TABLE
+    # ══════════════════════════════════════════════════════════
+    st.markdown(f'<div class="lim-section-title">🎯 Line-Item Matching Results &nbsp;<span style="font-weight:400;color:#5a8a8f;font-size:0.82rem;">({len(filtered)} of {n_total} items)</span></div>', unsafe_allow_html=True)
+
+    _cols = ["Doc No", "Type", "SOA Amt", "Ledger Amt", "Variance", "Aging", "Bucket", "Assigned To", "Updated", "Status", "Investigation"]
+    res_hdr = "".join(f"<th>{c}</th>" for c in _cols)
+    res_body = ""
+    for r in filtered:
+        var_td = ""
+        if r["variance"] is not None and r["variance"] != 0:
+            var_td = f'<td class="amount-col" style="color:#EE2D25;font-weight:800;" title="SOA {r["soa_amount"]:,.0f} − Ledger {r["ledger_amount"]:,.0f}">{_fmt_amt(r["variance"])}</td>'
+        elif r["variance"] == 0:
+            var_td = '<td class="amount-col" style="color:#00856e;">0</td>'
         else:
-            st.error("Could not load matching results.")
-    elif matching_txt.exists():
-        st.markdown("#### 📄 Matching Report")
-        st.code(matching_txt.read_text(encoding="utf-8"), language=None, line_numbers=True)
-    else:
-        st.info("No bank matching results found yet. Process a bank statement and documents first.")
+            var_td = '<td class="amount-col">' + _fmt_amt(None) + '</td>'
+
+        row_bg = ""
+        if r["status"] == "Amount Mismatch":
+            row_bg = ' style="background:#fff8e6;"'
+        elif r["status"].startswith("Missing"):
+            row_bg = ' style="background:#fde8e7;"'
+
+        res_body += (
+            f'<tr{row_bg}>'
+            f'<td><strong>{r["doc_no"]}</strong></td>'
+            f'<td>{r["doc_type"]}</td>'
+            f'<td class="amount-col">{_fmt_amt(r["soa_amount"])}</td>'
+            f'<td class="amount-col">{_fmt_amt(r["ledger_amount"])}</td>'
+            f'{var_td}'
+            f'<td style="text-align:center;">{r["aging_days"]}d</td>'
+            f'<td>{r["aging_bucket"]}</td>'
+            f'<td>{r["assigned_to"]}</td>'
+            f'<td>{r["last_updated"]}</td>'
+            f'<td>{_STATUS_BADGE.get(r["status"], r["status"])}</td>'
+            f'<td>{_INV_BADGE.get(r["investigation"], r["investigation"])}</td>'
+            f'</tr>'
+        )
+    st.markdown(f'<table class="lim-table lim-table-result"><thead><tr>{res_hdr}</tr></thead><tbody>{res_body}</tbody></table>', unsafe_allow_html=True)
+
+    # ══════════════════════════════════════════════════════════
+    # DRILL-DOWN DETAIL PANEL
+    # ══════════════════════════════════════════════════════════
+    st.markdown("")
+    st.markdown('<div class="lim-section-title">🔍 Document Drill-Down</div>', unsafe_allow_html=True)
+    doc_options = [r["doc_no"] for r in match_results]
+    # Default to first exception if any
+    exception_docs = [r["doc_no"] for r in match_results if r["status"] != "Match"]
+    default_idx = doc_options.index(exception_docs[0]) if exception_docs else 0
+
+    dd_doc = st.selectbox("Select document to inspect", doc_options, index=default_idx, label_visibility="collapsed")
+    dd_item = next((r for r in match_results if r["doc_no"] == dd_doc), None)
+
+    if dd_item:
+        st.markdown('<div class="lim-drill-panel">', unsafe_allow_html=True)
+
+        dl_left, dl_mid, dl_right = st.columns(3)
+        with dl_left:
+            st.markdown("**📄 SOA Details**")
+            if dd_item["soa_amount"] is not None:
+                st.markdown(f"""
+                <div class="lim-drill-field"><div class="dl-label">Doc No</div><div class="dl-value">{dd_item['doc_no']}</div></div>
+                <div class="lim-drill-field"><div class="dl-label">Type</div><div class="dl-value">{dd_item['doc_type']}</div></div>
+                <div class="lim-drill-field"><div class="dl-label">SOA Date</div><div class="dl-value">{dd_item['soa_date']}</div></div>
+                <div class="lim-drill-field"><div class="dl-label">Amount</div><div class="dl-value">{_fmt_amt(dd_item['soa_amount'])}</div></div>
+                """, unsafe_allow_html=True)
+            else:
+                st.caption("_Not present in supplier SOA._")
+
+        with dl_mid:
+            st.markdown("**📒 Ledger Details**")
+            if dd_item["ledger_amount"] is not None:
+                amt_class = "dl-highlight" if dd_item["status"] == "Amount Mismatch" else "dl-ok"
+                st.markdown(f"""
+                <div class="lim-drill-field"><div class="dl-label">Doc No</div><div class="dl-value">{dd_item['doc_no']}</div></div>
+                <div class="lim-drill-field"><div class="dl-label">Type</div><div class="dl-value">{dd_item['doc_type']}</div></div>
+                <div class="lim-drill-field"><div class="dl-label">Posting Date</div><div class="dl-value">{dd_item['ledger_date']}</div></div>
+                <div class="lim-drill-field"><div class="dl-label">Amount</div><div class="dl-value {amt_class}">{_fmt_amt(dd_item['ledger_amount'])}</div></div>
+                """, unsafe_allow_html=True)
+            else:
+                st.caption("_Not found in account ledger._")
+
+        with dl_right:
+            st.markdown("**📐 Comparison**")
+            var_display = _fmt_amt(dd_item["variance"]) if dd_item["variance"] is not None else "N/A"
+            var_class = "dl-highlight" if (dd_item["variance"] and dd_item["variance"] != 0) else "dl-ok"
+            date_diff_display = f'{dd_item["date_diff"]} days' if dd_item["date_diff"] is not None else "N/A"
+            st.markdown(f"""
+            <div class="lim-drill-field"><div class="dl-label">Variance</div><div class="dl-value {var_class}">{var_display}</div></div>
+            <div class="lim-drill-field"><div class="dl-label">Date Difference</div><div class="dl-value">{date_diff_display}</div></div>
+            <div class="lim-drill-field"><div class="dl-label">Aging</div><div class="dl-value">{dd_item['aging_days']} days ({dd_item['aging_bucket']})</div></div>
+            <div class="lim-drill-field"><div class="dl-label">Status</div><div class="dl-value">{_STATUS_BADGE.get(dd_item['status'], dd_item['status'])}</div></div>
+            <div class="lim-drill-field"><div class="dl-label">Investigation</div><div class="dl-value">{_INV_BADGE.get(dd_item['investigation'], dd_item['investigation'])}</div></div>
+            """, unsafe_allow_html=True)
+
+        # Action row
+        st.markdown("</div>", unsafe_allow_html=True)
+        act1, act2, act3, act4 = st.columns([3, 2, 2, 5])
+        with act1:
+            st.text_area("Add Comment", placeholder="Enter investigation notes…", height=68, key="drill_comment", label_visibility="collapsed")
+        with act2:
+            st.button("📎 Attach Document", use_container_width=True, key="drill_attach")
+        with act3:
+            st.button("✅ Mark Resolved", use_container_width=True, type="primary", key="drill_resolve")
+
+    st.markdown("")
+    st.markdown("---")
+
+    # ══════════════════════════════════════════════════════════
+    # RECONCILIATION SUMMARY BAR + PROGRESS
+    # ══════════════════════════════════════════════════════════
+    st.markdown('<div class="lim-section-title">📋 Reconciliation Summary</div>', unsafe_allow_html=True)
+
+    pbar_color = "#00856e" if match_rate == 100 else ("#d68000" if match_rate >= 70 else "#EE2D25")
+    st.markdown(f"""
+    <div class="lim-recon-bar">
+        <div class="lim-recon-row"><span class="recon-label">SOA Total (Supplier Claimed)</span><span class="recon-value">{_fmt_amt(soa_total)}</span></div>
+        <div class="lim-recon-divider"></div>
+        <div class="lim-recon-row"><span class="recon-label">Ledger Total (Your Books)</span><span class="recon-value">{_fmt_amt(led_total)}</span></div>
+        <div class="lim-recon-divider"></div>
+        <div class="lim-recon-row"><span class="recon-label">Net Variance</span><span class="recon-value" style="color:{'#00856e' if net_variance == 0 else '#EE2D25'};">{_fmt_amt(net_variance)}</span></div>
+        <div class="lim-recon-divider"></div>
+        <div class="lim-recon-row">
+            <span class="recon-label">Match Progress</span>
+            <span class="recon-value" style="color:{pbar_color};">{n_match}/{n_total} items ({match_rate:.0f}%)</span>
+        </div>
+        <div class="lim-progress-track">
+            <div class="lim-progress-fill" style="width:{match_rate:.0f}%;background:{pbar_color};"></div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("")
+
+    # ══════════════════════════════════════════════════════════
+    # AGING VISUALIZATION
+    # ══════════════════════════════════════════════════════════
+    exceptions = [r for r in match_results if r["status"] != "Match"]
+    if exceptions:
+        st.markdown('<div class="lim-section-title">📅 Exception Aging Distribution</div>', unsafe_allow_html=True)
+
+        bucket_counts = {"0–30": 0, "31–60": 0, "61–90": 0, "90+": 0}
+        for r in exceptions:
+            bucket_counts[r["aging_bucket"]] = bucket_counts.get(r["aging_bucket"], 0) + 1
+
+        df_aging = pd.DataFrame({
+            "Aging Bucket": list(bucket_counts.keys()),
+            "Exceptions": list(bucket_counts.values()),
+        })
+        ag_left, ag_right = st.columns([3, 5])
+        with ag_left:
+            st.dataframe(df_aging, use_container_width=True, hide_index=True)
+        with ag_right:
+            st.bar_chart(df_aging.set_index("Aging Bucket"), color="#00A0AF", height=220)
+
+    st.markdown("")
+
+    # ══════════════════════════════════════════════════════════
+    # VARIANCE ANALYSIS (detailed)
+    # ══════════════════════════════════════════════════════════
+    variances = [r for r in match_results if r["status"] in ("Amount Mismatch", "Missing in Ledger", "Missing in SOA")]
+    if variances:
+        st.markdown('<div class="lim-section-title">⚠️ Variance Analysis</div>', unsafe_allow_html=True)
+        for v in variances:
+            if v["status"] == "Amount Mismatch":
+                st.markdown(f"""
+                <div class="lim-variance-row">
+                    <strong>{v['doc_no']}</strong> &mdash;
+                    SOA: <strong>{_fmt_amt(v['soa_amount'])}</strong> &nbsp;|&nbsp;
+                    Ledger: <strong>{_fmt_amt(v['ledger_amount'])}</strong> &nbsp;|&nbsp;
+                    Variance: <strong style="color:#EE2D25;">{_fmt_amt(v['variance'])}</strong>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;Aging: <strong>{v['aging_days']}d</strong> ({v['aging_bucket']})
+                    &nbsp;&nbsp;<em style="color:#5a8a8f;">→ Assigned to {v['assigned_to']}</em>
+                </div>""", unsafe_allow_html=True)
+            elif v["status"] == "Missing in Ledger":
+                st.markdown(f"""
+                <div class="lim-variance-row" style="border-left-color:#EE2D25;background:#fde8e7;">
+                    <strong>{v['doc_no']}</strong> &mdash;
+                    SOA: <strong>{_fmt_amt(v['soa_amount'])}</strong> &nbsp;|&nbsp;
+                    Ledger: <strong style="color:#8ab0b5;">Not found</strong>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;Aging: <strong>{v['aging_days']}d</strong>
+                    &nbsp;&nbsp;<em style="color:#5a8a8f;">→ Document in SOA but missing from ledger. Assigned to {v['assigned_to']}</em>
+                </div>""", unsafe_allow_html=True)
+            else:  # Missing in SOA
+                st.markdown(f"""
+                <div class="lim-variance-row" style="border-left-color:#00A0AF;background:#e0f7f9;">
+                    <strong>{v['doc_no']}</strong> &mdash;
+                    Ledger: <strong>{_fmt_amt(v['ledger_amount'])}</strong> &nbsp;|&nbsp;
+                    SOA: <strong style="color:#8ab0b5;">Not found</strong>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;Aging: <strong>{v['aging_days']}d</strong>
+                    &nbsp;&nbsp;<em style="color:#5a8a8f;">→ Document posted but not in supplier statement. Assigned to {v['assigned_to']}</em>
+                </div>""", unsafe_allow_html=True)
+
+    # ══════════════════════════════════════════════════════════
+    # EXPORT
+    # ══════════════════════════════════════════════════════════
+    st.markdown("")
+    exp1, exp2, _ = st.columns([2, 2, 8])
+    with exp1:
+        df_exp = pd.DataFrame([{
+            "Doc No": r["doc_no"], "Type": r["doc_type"],
+            "SOA Amount": r["soa_amount"], "Ledger Amount": r["ledger_amount"],
+            "Variance": r["variance"], "Status": r["status"],
+            "Aging Days": r["aging_days"], "Aging Bucket": r["aging_bucket"],
+            "Assigned To": r["assigned_to"], "Investigation": r["investigation"],
+            "Last Updated": r["last_updated"],
+        } for r in match_results])
+        csv = df_exp.to_csv(index=False).encode("utf-8")
+        st.download_button("⬇️  Export Full Results (CSV)", data=csv, file_name="ap_reconciliation.csv", mime="text/csv")
+    with exp2:
+        lines = [
+            f"AP Line-Item Reconciliation  –  {scenario['supplier']}",
+            f"Generated: {_TODAY.strftime('%d %b %Y')}",
+            "=" * 60, "",
+            f"{'Doc No':14s}  {'SOA':>12s}  {'Ledger':>12s}  {'Variance':>10s}  {'Status':20s}  {'Aging':>5s}  {'Investigation'}",
+            "-" * 100,
+        ]
+        for r in match_results:
+            sv = f"{r['soa_amount']:,.0f}" if r['soa_amount'] is not None else "-"
+            lv = f"{r['ledger_amount']:,.0f}" if r['ledger_amount'] is not None else "-"
+            vv = f"{r['variance']:,.0f}" if r['variance'] is not None else "-"
+            lines.append(f"{r['doc_no']:14s}  {sv:>12s}  {lv:>12s}  {vv:>10s}  {r['status']:20s}  {r['aging_days']:>3d}d  {r['investigation']}")
+        lines += ["", "-" * 100, f"SOA Total:      {soa_total:>12,.0f}", f"Ledger Total:   {led_total:>12,.0f}",
+                   f"Net Variance:   {net_variance:>12,.0f}", f"Match Rate:     {match_rate:>11.0f}%"]
+        st.download_button("📄  Export Report (TXT)", data="\n".join(lines), file_name="ap_reconciliation_report.txt", mime="text/plain")
