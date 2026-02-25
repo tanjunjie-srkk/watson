@@ -1505,8 +1505,14 @@ if page == "📤 Document Processing":
             c5.markdown(upload_date)
             c6.markdown(status)
 
-            if c7.button("View", key=f"view_doc_{file_path.name}", use_container_width=True):
-                st.session_state["processing_selected_doc"] = str(file_path)
+            is_viewing = st.session_state.get("processing_selected_doc") == str(file_path)
+            btn_label = "Hide" if is_viewing else "View"
+            if c7.button(btn_label, key=f"view_doc_{file_path.name}", use_container_width=True):
+                if is_viewing:
+                    st.session_state["processing_selected_doc"] = None
+                else:
+                    st.session_state["processing_selected_doc"] = str(file_path)
+                st.rerun()
 
             if st.session_state.get("processing_selected_doc") == str(file_path):
                 st.markdown(f"##### Preview: {file_path.name}")
