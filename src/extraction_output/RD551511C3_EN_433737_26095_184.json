@@ -1,0 +1,46 @@
+{
+  "document_type": "Rental Invoice",
+  "vendor_name": "MTRUSTEE BHD AS TRUSTEE FOR IGB REIT",
+  "invoice_number": "RD 25005442",
+  "invoice_date": "02 Apr 2025",
+  "due_date": "07 May 2025",
+  "currency": "MYR",
+  "currency_note": "All monetary values are in MYR",
+  "bill_to": "WATSON'S PERSONAL CARE STORES SDN BHD\nLevel 7, Menara Exchange 106,\nLingkaran TRX,\nTun Razak Exchange,\n55188, Kuala Lumpur, Wilayah Persekutuan\nMalaysia",
+  "property_name": "The Gardens Mall",
+  "unit_number": "LG-242",
+  "trade_name": "WATSONS",
+  "tenancy_period": "01 Sep 2022  -  31 Aug 2025",
+  "line_items": [
+    {
+      "description": "Base Rent\nUnit No:           LG-242, The Gardens Mall\nTrade Name:        WATSONS",
+      "period_from": null,
+      "period_to": null,
+      "tax": null,
+      "amount": "30,685.00",
+      "low_confidence": false
+    },
+    {
+      "description": "Service Charge\nUnit No:           LG-242, The Gardens Mall\nTrade Name:        WATSONS",
+      "period_from": null,
+      "period_to": null,
+      "tax": null,
+      "amount": "6,702.25",
+      "low_confidence": false
+    }
+  ],
+  "subtotal": "37,387.25",
+  "tax_total": null,
+  "grand_total": "37,387.25",
+  "amount_in_words": "RINGGIT MALAYSIA THIRTY SEVEN THOUSAND THREE HUNDRED EIGHTY SEVEN AND TWENTY FIVE CENTS ONLY.",
+  "payment_info": {
+    "bank_name": null,
+    "account_name": null,
+    "account_number": null,
+    "swift_code": null
+  },
+  "additional_fields": {
+    "Currency Code": "MYR",
+    "Page": "1"
+  }
+}

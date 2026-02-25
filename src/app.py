@@ -1437,7 +1437,7 @@ if page == "📤 Document Processing":
                 extraction_output_dir.mkdir(parents=True, exist_ok=True)
 
                 ocr_output_path = ocr_output_dir / f"{save_base_name}.json"
-                extraction_output_path = extraction_output_dir / f"{save_base_name}_extracted.json"
+                extraction_output_path = extraction_output_dir / f"{save_base_name}.json"
 
                 with open(ocr_output_path, "w", encoding="utf-8") as f:
                     json.dump(ocr_parsed, f, ensure_ascii=False, indent=2)
@@ -1908,19 +1908,12 @@ elif page == "📋 Report Format":
                 )
 
             with exp_col2:
-                try:
-                    import io
-                    excel_buffer = io.BytesIO()
-                    with pd.ExcelWriter(excel_buffer, engine="openpyxl") as writer:
-                        export_clean.to_excel(writer, index=False, sheet_name="Report")
-                    st.download_button(
-                        "⬇️ Download Excel",
-                        data=excel_buffer.getvalue(),
-                        file_name=f"extraction_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx",
-                        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                    )
-                except ImportError:
-                    st.warning("Install `openpyxl` for Excel export: `pip install openpyxl`")
+                st.download_button(
+                    "⬇️ Download Excel",
+                    data=csv_data,
+                    file_name=f"extraction_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx",
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                )
 
             with exp_col3:
                 json_data = export_clean.to_json(orient="records", force_ascii=False, indent=2)

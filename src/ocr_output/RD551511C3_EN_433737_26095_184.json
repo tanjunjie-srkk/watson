@@ -1,0 +1,72 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "file_name": "RD551511C3_EN_433737_26095_184_page_1.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "MTRUSTEE BHD AS TRUSTEE FOR IGB REIT\nManaged by\nIGB REIT MANAGEMENT SDN BHD (908168-A)\nLevel 31, The Gardens South Tower, Mid Valley City\nLingkaran Syed Putra, 59200 Kuala Lumpur",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "INVOICE",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "WATSON'S PERSONAL CARE STORES SDN BHD\nLevel 7, Menara Exchange 106,\nLingkaran TRX,\nTun Razak Exchange,\n55188, Kuala Lumpur, Wilayah Persekutuan\nMalaysia",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "Invoice No        : RD 25005442\nInvoice Date      : 02 Apr 2025\nDue Date          : 07 May 2025\n\nCurrency Code     : MYR\nPage              : 1",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Attention:\nTenancy Period: 01 Sep 2022  -  31 Aug 2025",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Item | Description | Period | Year | Amount",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "1 | Base Rent\nUnit No:           LG-242, The Gardens Mall\nTrade Name:        WATSONS | May | 2025 | 30,685.00",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "2 | Service Charge\nUnit No:           LG-242, The Gardens Mall\nTrade Name:        WATSONS | May | 2025 | 6,702.25",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "RINGGIT MALAYSIA THIRTY SEVEN THOUSAND THREE HUNDRED EIGHTY SEVEN AND TWENTY FIVE CENTS ONLY.",
+          "confidence": 1.0
+        },
+        {
+          "type": "subtotal",
+          "content": "TOTAL      37,387.25",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "E.&O.E.\n\nCheque should be crossed 'Account Payee Only' and made payable to MTrustee Bhd for IGB REIT TGM\n\nwithin THIRTY SIX (36) days from the date thereof.\n\nNote: This is a computer generated document. No signature is required.",
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_pages": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "image_quality": "clear"
+  }
+}
