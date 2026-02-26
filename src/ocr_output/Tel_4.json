@@ -1,0 +1,189 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "file_name": "Tel_4_page_1.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "REACH TEN MULTIMEDIA SDN BHD\nSSM Registration No.200501016334 (693377H)\nAT612, Level 6, Tower A1, Icom Square, Jalan Pending, 93450 Kuching Sarawak, Malaysia\n(ST NO:Y60-1808-3101655)\nTel: +6082-266 888   Fax: +6082-266 566   Handphone: 0111-089 0566\nEmail address : account@reach10.com\n\nINVOICE",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "Account No.      : 1140018\nAccount Name     : WATSON'S PERSONAL CARE STORES SDN BHD\nPhone No./PIN    : Please Refer to Next Page\nBill No.         : VCM 2025/12-009\nBill Date        : 18 December 2025\nContract         : NO CONTRACT\nDeposit          : RM 1,540.00\nBilling Period   : 17/11/2025 - 16/12/2025",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Overdue Amount | Current Charges Due Date | Total Amount Due",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "180.57 | 18-Jan-2026 | 361.14",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "SUMMARY OF CHARGE",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Previous Balance                                180.57\nTotal Payment Received By 16-Dec-2025. Thank You.   -0.00\nAdjustment                                        0.00\n\nBalance Forward                                  180.57",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Current Charges\nMonthly Charges\n   Voice                                   80.00\n   Combo Smart (2020) 20 Mbps (Fixed IP)   88.00\nLocal Calls Charges                         0.00\nTrunk Calls Charges                         0.70\nMobile Call Charges                         1.65\nInternational Call Charges                  0.00\nTotal Before Service Tax                  170.35\nService Tax 6%                             10.22\n\nTotal Current Charges including service tax 180.57",
+          "confidence": 1.0
+        },
+        {
+          "type": "subtotal",
+          "content": "TOTAL AMOUNT DUE                              361.14",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Your account is now overdue. Kindly remit the sum of RM 180.57 to avoid any service interruption.If payment have been made, kindly disregard this message.",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "PAYMENT SLIP",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "WATSON'S PERSONAL CARE STORES SDN BHD\nARENA WATSONS\nLEVEL 7, THE EXCHANGE 106,\nLINGKARAN TRX, TUN RAZAK EXCHANGE,\n55188 KUALA LUMPUR",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "Account Number   1140018\nAccount Name     WATSON'S PERSONAL CARE STORES SDN BHD",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Attn: LIM HOOI MAY",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Overdue Amount | Current Charges Due Date | Total Amount Due",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "180.57 | 18-Jan-2026 | 361.14",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "For Mail-in payment, please detach and send this portion together with your cheque/postal/money order payment. Please do not staple.",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "file_name": "Tel_4_page_2.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "REACH TEN MULTIMEDIA SDN BHD\nSSM Registration No.200501016334 (693377H)\nAT612, Level 6, Tower A1, Icom Square, Jalan Pending, 93450 Kuching Sarawak, Malaysia\n(ST NO:Y60-1808-3101655)\nTel: +6082-266 888   Fax: +6082-266 566   Handphone: 0111-089 0566\nEmail address : account@reach10.com\n\nINVOICE",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "PAYMENT OPTIONS",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Your cheque should be made payable to Reach Ten Multimedia Sdn Bhd\nAttach your cheque to the bottom part of this statement, write your account number on the back of the cheque",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "Mail your cheque to :\n\nReach Ten Multimedia Sdn Bhd\nAT612, Level 6, Tower A1,\nICOM Square, Jln. Pending,\n93450 Kuching, Sarawak.",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "ALTERNATIVE PAYMENT METHODS:\nPay by cash/cheque at following bank.\n\nBank: Malayan Banking Berhad (Maybank)\nRemarks: Counter-cash or cheque (payable to \"Reach Ten Multimedia Sdn Bhd\").\nAll payments at Maybank should be credited to account number \"5112 3400 9044\".\nEnsure to Facsimile the obtain bank in slip to 082-266 566 or forward via WhatsApp at 0111-089 0566 or scan and email to account@reach10.com.",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "CHANGE OF ADDRESS / TECHNICAL INQUIRIES",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "For enquiries, please do not hesitate to contact us at 082-266 888.",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "file_name": "Tel_4_page_3.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "REACH TEN MULTIMEDIA SDN BHD\nSSM Registration No.200501016334 (693377H)\nAT612, Level 6, Tower A1, Icom Square, Jalan Pending, 93450 Kuching Sarawak, Malaysia\n(ST NO:Y60-1808-3101655)\nTel: +6082-266 888   Fax: +6082-266 566   Handphone: 0111-089 0566\nEmail address : account@reach10.com\n\nINVOICE",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "Fixed Line",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "Phone Number    :      082263611",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Date | Number Called | Time | Duration | Amount(RM)",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Local Calls\n0 CALLS                                   0 UNITS      00:00:00      0.00",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Trunk Calls\nDate        Number Called   Time     Duration   Amount(RM)\n2025-11-28  0327053799      19:38:08  00:00:43    0.70\n1 CALLS                                               0.70",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Mobile Calls\nDate        Number Called   Time     Duration   Amount(RM)\n2025-11-23  0189865737      14:07:59  00:01:15    0.45\n2025-12-03  0138222757      10:14:30  00:02:32    0.90\n2025-12-15  0168947130      18:49:12  00:00:40    0.30\n3 CALLS                                               1.65",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "International Calls\nDate        Number Called   Time     Duration   Amount(RM)\n0 CALLS                                               0.00",
+          "confidence": 1.0
+        },
+        {
+          "type": "subtotal",
+          "content": "AMOUNT: RM 2.35",
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_pages": 3,
+    "languages_detected": [
+      "en"
+    ],
+    "image_quality": "clear"
+  }
+}

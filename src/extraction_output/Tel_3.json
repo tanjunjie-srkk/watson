@@ -1,0 +1,50 @@
+{
+  "document_type": "Utility Bill",
+  "vendor_name": "Miri Housing Properties Sdn. Bhd.",
+  "invoice_number": "TV25-002233",
+  "invoice_date": "01/01/2026",
+  "due_date": "07/01/2026",
+  "currency": "RM",
+  "currency_note": "All monetary values are in Ringgit Malaysia (RM)",
+  "bill_to": "Watson's Personal Care Stores Sdn Bhd (Lot 1.69-1.71A)\nArena Watsons, Level 7, The Exchange 106, Lingkaran\nTRX, Tun Razak Exchange\n55188 Kuala Lumpur, Wilayah Persekutuan Malaysia",
+  "account_number": null,
+  "billing_period_from": "1/1/2026",
+  "billing_period_to": "31/1/2026",
+  "service_address": null,
+  "line_items": [
+    {
+      "description": "Reimbursement of broadband usage (1/1/2026 - 31/1/2026) (149.00 * 1 = 149.00)",
+      "quantity": "1",
+      "unit_rate": "149.00",
+      "tax": "6%",
+      "amount": "157.94",
+      "low_confidence": false
+    }
+  ],
+  "subtotal": "149.00",
+  "tax_total": "8.94",
+  "surcharges": [],
+  "previous_balance": null,
+  "payment_received": null,
+  "adjustments": null,
+  "current_charges": null,
+  "grand_total": "157.94",
+  "amount_in_words": "Ringgit Malaysia: One Hundred Fifty Seven And Ninety Four Sen Only",
+  "payment_info": {
+    "bank_name": "OCBC AL-AMIN BANK BERHAD",
+    "account_name": "Miri Housing Properties Sdn. Bhd.",
+    "account_number": "161-101428-7"
+  },
+  "additional_fields": {
+    "Company No.": "199201003351",
+    "TIN No. (Vendor)": "C8869379010",
+    "SST Registration No.": "Y62-1809-32000007",
+    "TIN No. (Customer)": "C4909360060",
+    "ID No.": "289892-V",
+    "Tel No.": "03-27076688",
+    "Email": "finance-utilities@watsons.com.my",
+    "Unit": "1.69-71A",
+    "Terms": "7",
+    "Classification Code": "027"
+  }
+}

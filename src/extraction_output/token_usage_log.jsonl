@@ -12,3 +12,4 @@
 {"timestamp_utc": "2026-02-23T08:04:27.536944+00:00", "request_mode": "extraction_from_ocr", "model": "gpt-5.2-chat", "ocr_payload_chars": 3738, "prompt_tokens": 2521, "completion_tokens": 579, "total_tokens": 3100}
 {"timestamp_utc": "2026-02-23T08:11:21.207407+00:00", "request_mode": "extraction_from_ocr", "model": "gpt-5.2-chat", "ocr_payload_chars": 10875, "prompt_tokens": 5266, "completion_tokens": 1202, "total_tokens": 6468}
 {"timestamp_utc": "2026-02-23T08:27:57.997872+00:00", "request_mode": "extraction_from_ocr", "model": "gpt-5.2-chat", "ocr_payload_chars": 8863, "prompt_tokens": 4656, "completion_tokens": 800, "total_tokens": 5456}
+{"timestamp_utc": "2026-02-26T06:36:03.146582+00:00", "request_mode": "extraction_from_ocr", "model": "gpt-5.2-chat", "ocr_payload_chars": 7670, "prompt_tokens": 3801, "completion_tokens": 1063, "total_tokens": 4864}

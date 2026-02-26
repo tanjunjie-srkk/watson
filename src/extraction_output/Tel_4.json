@@ -1,0 +1,88 @@
+{
+  "document_type": "Utility Bill",
+  "vendor_name": "REACH TEN MULTIMEDIA SDN BHD",
+  "invoice_number": "VCM 2025/12-009",
+  "invoice_date": "18 December 2025",
+  "due_date": "18-Jan-2026",
+  "currency": "RM",
+  "currency_note": "All monetary values are in RM",
+  "bill_to": "WATSON'S PERSONAL CARE STORES SDN BHD\nARENA WATSONS\nLEVEL 7, THE EXCHANGE 106,\nLINGKARAN TRX, TUN RAZAK EXCHANGE,\n55188 KUALA LUMPUR",
+  "account_number": "1140018",
+  "billing_period_from": "17/11/2025",
+  "billing_period_to": "16/12/2025",
+  "service_address": null,
+  "line_items": [
+    {
+      "description": "Monthly Charges - Voice",
+      "quantity": null,
+      "unit_rate": null,
+      "tax": null,
+      "amount": "80.00",
+      "low_confidence": false
+    },
+    {
+      "description": "Monthly Charges - Combo Smart (2020) 20 Mbps (Fixed IP)",
+      "quantity": null,
+      "unit_rate": null,
+      "tax": null,
+      "amount": "88.00",
+      "low_confidence": false
+    },
+    {
+      "description": "Local Calls Charges",
+      "quantity": null,
+      "unit_rate": null,
+      "tax": null,
+      "amount": "0.00",
+      "low_confidence": false
+    },
+    {
+      "description": "Trunk Calls Charges",
+      "quantity": null,
+      "unit_rate": null,
+      "tax": null,
+      "amount": "0.70",
+      "low_confidence": false
+    },
+    {
+      "description": "Mobile Call Charges",
+      "quantity": null,
+      "unit_rate": null,
+      "tax": null,
+      "amount": "1.65",
+      "low_confidence": false
+    },
+    {
+      "description": "International Call Charges",
+      "quantity": null,
+      "unit_rate": null,
+      "tax": null,
+      "amount": "0.00",
+      "low_confidence": false
+    }
+  ],
+  "subtotal": "170.35",
+  "tax_total": "10.22",
+  "surcharges": [],
+  "previous_balance": "180.57",
+  "payment_received": "-0.00",
+  "adjustments": "0.00",
+  "current_charges": "180.57",
+  "grand_total": "361.14",
+  "amount_in_words": null,
+  "payment_info": {
+    "bank_name": "Malayan Banking Berhad (Maybank)",
+    "account_name": "Reach Ten Multimedia Sdn Bhd",
+    "account_number": "5112 3400 9044"
+  },
+  "additional_fields": {
+    "Account Name": "WATSON'S PERSONAL CARE STORES SDN BHD",
+    "Phone No./PIN": "Please Refer to Next Page",
+    "Contract": "NO CONTRACT",
+    "Deposit": "1,540.00",
+    "Balance Forward": "180.57",
+    "Service Tax Rate": "6%",
+    "Phone Number": "082263611",
+    "Overdue Amount": "180.57"
+  }
+}

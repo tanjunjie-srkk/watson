@@ -1,0 +1,67 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "file_name": "Tel_3_page_1.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "Miri Housing Properties Sdn. Bhd.\n(Company No. 199201003351) (Tin No.: C8869379010)\nLevel 6, Multi-level Carpark, Bintang Megamall, Miri-Pujut Road, 98000 Miri, Sarawak\n98000 Miri, Sarawak\nTel: 085438877    Fax: 085-425852\nSST Registration No.: Y62-1809-32000007\n\nInvoice",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "Watson's Personal Care Stores Sdn Bhd (Lot 1.69-\n1.71A)\nArena Watsons, Level 7, The Exchange 106, Lingkaran\nTRX, Tun Razak Exchange\n55188 Kuala Lumpur, Wilayah Persekutuan Malaysia",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "Invoice No. : TV25-002233\nInvoice Date : 01/01/2026\nTerms : 7\nDue Date : 07/01/2026\nUnit : 1.69-71A",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "TIN No. : C4909360060\nID No. : 289892-V\nTel No. : 03-27076688\nEmail : finance-utilities@watsons.com.my",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "No. | Description | Classificatio n Code | Amt Excl. SST (RM) | SST Rate | SST Amt (RM) | Amt Incl. SST (RM)",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "1 | Reimbursement of broadband usage\n(1/1/2026 - 31/1/2026) (149.00 * 1 =\n149.00) | 027 | 149.00 | 6% | 8.94 | 157.94",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "SST Exempted Reason\n<<ExemptedReason>>\n\nhttps://einvoice.bintangmegamall.com/live_api/qr/no\nPuFTgfa9ee7102f7f90a6de6c046488fa7321b",
+          "confidence": 1.0
+        },
+        {
+          "type": "subtotal",
+          "content": "Ringgit Malaysia: One Hundred Fifty Seven And Ninety Four Sen Only\nTOTAL AMOUNT\nTOTAL AMOUNT PAYABLE\nE. & O. E.\n\n8.94        157.94\n157.94",
+          "confidence": 0.95
+        },
+        {
+          "type": "paragraph",
+          "content": "Notes :\n1. All cheques should be crossed and made payable to Miri Housing Properties Sdn. Bhd.\n   Bank Name: OCBC AL-AMIN BANK BERHAD\n   Account no: 161-101428-7\n2. We reserve the right to charge interest on all overdue account at 18% per annum from the due date of this\n   invoice as per penalty clause mentioned in the Tenancy / Sale and Purchase Agreement.\n\nUnique Identifier No.:",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "This is computer generated, signature is not required.",
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_pages": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "image_quality": "clear"
+  }
+}

@@ -13,7 +13,7 @@ Your ONLY task is to classify the document into exactly ONE of these categories:
 - "travel"               : Flight tickets, travel agency invoices, itineraries with passenger/routing info
 - "rental"               : Rental/lease invoices, mall rent, service charges, tenancy billing
 - "hotel"                : Hotel folios/invoices, room charges, accommodation bills
-- "utility"              : Utility bills (electricity, water, gas) and telecom bills (phone, internet)
+- "utility"              : Utility bills (electricity, water, gas), telecom bills (phone, internet, telephone)
 - "soa"                  : Statements of account, outstanding balance summaries, aging reports
 - "bank_statement"       : Bank account statements with transaction listings
 - "credit_note"          : Credit notes / refund documents
@@ -24,7 +24,8 @@ CLASSIFICATION HINTS:
 - If you see flight numbers, routing, passenger names, ticket numbers → "travel"
 - If you see base rent, service charge, tenancy period, lot/unit number → "rental"
 - If you see room charge, check-in/check-out, folio, guest name → "hotel"
-- If you see meter reading, tariff, kWh, billing period, subscriber → "utility"
+- If you see meter reading, tariff, kWh, billing period, subscriber, telephone bill, water bill, sewerage, broadband usage, internet usage, wifi → "utility"
+- IMPORTANT: If the invoice description mentions broadband, internet, telephone, electricity, or water reimbursement/usage, classify as "utility" even if issued by a property/rental company
 - If you see list of invoices with aging (30/60/90 days), outstanding balance → "soa"
 - If you see bank name, account transactions, debit/credit columns, running balance → "bank_statement"
 - If you see "Credit Note" or "CN" in the title → "credit_note"
@@ -60,6 +61,10 @@ ALIAS_MAP = {
     "telecom bill": "utility",
     "phone bill": "utility",
     "internet bill": "utility",
+    "telephone bill": "utility",
+    "tel bill": "utility",
+    "water bill": "utility",
+    "sewerage bill": "utility",
     "statement of account": "soa",
     "account statement": "soa",
     "aging report": "soa",
@@ -71,9 +76,9 @@ ALIAS_MAP = {
 
 KEYWORD_RULES = [
     ("credit_note", ["credit note", "credit memo", "refund note", "cn"]),
-    ("bank_statement", ["bank statement", "running balance", "debit", "credit", "account transactions"]),
+    ("utility", ["utility", "electricity", "water", "gas", "telecom", "telephone", "telefon", "meter", "kwh", "tariff", "sewerage", "indah water", "bil air", "bil telefon", "broadband", "wifi", "internet usage", "broadband usage", "monthly charges", "current charges", "billing period"]),
+    ("bank_statement", ["bank statement", "running balance", "account transactions", "opening balance", "closing balance"]),
     ("soa", ["statement of account", "outstanding", "aging", "balance brought forward"]),
-    ("utility", ["utility", "electricity", "water", "gas", "telecom", "meter", "kwh", "tariff"]),
     ("hotel", ["hotel", "folio", "check-in", "check out", "room charge", "guest"]),
     ("travel", ["travel", "flight", "ticket", "itinerary", "passenger", "pnr", "routing"]),
     ("rental", ["rental", "lease", "tenancy", "base rent", "service charge", "lot no"]),

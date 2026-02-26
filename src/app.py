@@ -485,10 +485,14 @@ def display_ocr_result(data: dict):
     if "model_output" in data and isinstance(data["model_output"], dict):
         pages = data["model_output"].get("pages", [])
     elif "results" in data:
-        for result in data["results"]:
+        for idx, result in enumerate(data["results"], start=1):
             if isinstance(result, dict):
                 mo = result.get("model_output", {})
                 if isinstance(mo, dict) and "pages" in mo:
+                    for p in mo["pages"]:
+                        p["page_number"] = idx  # normalise to sequential order
+                        if not p.get("file_name"):
+                            p["file_name"] = result.get("file", "")
                     pages.extend(mo["pages"])
                 elif isinstance(mo, dict) and "pages" not in mo:
                     pass  # skip non-page outputs
@@ -964,11 +968,18 @@ def load_all_extraction_rows() -> pd.DataFrame:
             try:
                 data = json.loads(f.read_text(encoding="utf-8"))
                 if isinstance(data, dict):
+                    # Skip bank statement extractions – they lack invoice-level fields
+                    dt_lower = (data.get("document_type") or "").lower()
+                    if "bank statement" in dt_lower:
+                        continue
                     row = map_extraction_to_report_row(data, i)
                     row["_source_file"] = f.name
                     rows.append(row)
             except Exception:
                 pass
+    # Re-number rows sequentially after skipping
+    for idx, row in enumerate(rows, start=1):
+        row["No"] = idx
     if not rows:
         return pd.DataFrame(columns=REPORT_COLUMNS)
     df = pd.DataFrame(rows)
@@ -1872,7 +1883,44 @@ elif page == "📋 Report Format":
 
             if table_df.empty:
                 st.info("No records match the selected filters.")
-            st.dataframe(table_df, use_container_width=True, hide_index=True)
+
+            # Styled HTML table with larger font in scrollable container
+            st.markdown("""<style>
+            .report-table-wrap {
+                max-height: 500px;
+                overflow-y: auto;
+                overflow-x: auto;
+                border: 2px solid #b0c4c8;
+                border-radius: 8px;
+            }
+            .report-table-wrap table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 0.9rem;
+            }
+            .report-table-wrap thead { position: sticky; top: 0; z-index: 1; }
+            .report-table-wrap th {
+                background-color: #e4e8ec;
+                font-weight: 700;
+                padding: 10px 12px;
+                border: 1px solid #b0c4c8;
+                text-align: left;
+                white-space: nowrap;
+                font-size: 0.9rem;
+            }
+            .report-table-wrap td {
+                padding: 8px 12px;
+                border: 1px solid #c8d6da;
+                font-size: 0.9rem;
+            }
+            .report-table-wrap tr:hover { background-color: #f0f6f7; }
+            </style>""", unsafe_allow_html=True)
+
+            table_html = table_df.to_html(index=False, escape=True, border=0)
+            st.markdown(
+                f'<div class="report-table-wrap">{table_html}</div>',
+                unsafe_allow_html=True,
+            )
 
             st.markdown("---")
 
