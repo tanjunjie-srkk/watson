@@ -1,0 +1,166 @@
+{
+  "source": "azure_document_intelligence",
+  "file": "Inv_1.pdf",
+  "pages": [
+    {
+      "page_number": 1,
+      "file_name": "Inv_1_page_1",
+      "sections": [
+        {
+          "type": "key_value",
+          "content": "Attn : \nBusiness Unit : WATSON'S PERSONAL CARE STORES SDN BHD ARENA WATSONS LEVEL 7, THE EXCHANGE 106,LINGKARAN TRX, TUN RAZAK EXCHANGE, 55188 KUALA LUMPUR\nBill To : WATSON'S PERSONAL CARE STORES SDN BHD ARENA WATSONS LEVEL 7, THE EXCHANGE 106,LINGKARAN TRX, TUN RAZAK EXCHANGE, 55188 KUALA LUMPUR\nMALAYSIA\nCI Number : : 26001099\nCI Date : : 28-JAN-2026\nPO Number : MY2501539\nBU PO Number : 18082166\nPayment Terms : : TT 30 DAYS\nTrade Terms : : CFR PORT KLANG\nBill Of Lading: : CNSHA0001548220\nTel : : \nTel : : MALAYSIA\nDeparture Date : : 25-JAN-2026\nFax : : \nFax : : \nCountry Of Origin : : CHINA\nOuter Barcode : \nBatch No. : \nProduct Description : WATSONS SIDE SEALED COTTON PUFFS\nWATSONS SIDE SEALED COTTON PUFFS 189S SEA AW2022\nWATSONS OOB COTTON RELAUNCH\nWATSONS SIDE SEALED COTTON PUFFS\nCOTTON\nQuantity\nSKU : 6864\n168\nUnit Price : 0.970\n0.970\nAmount : 6,658.08\n162.96\nInner Barcode : 04894532992539\nProduct Barcode\nColor - Size\nRatio / Assortment : ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_header",
+          "content": "Outer Barcode | Batch No. | Product Description Quantity | Unit Price | Amount",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Inner Barcode |  |  |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Product Barcode | Color - Size | SKU |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": " | Ratio / Assortment |  |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "04894532992539 |  | WATSONS SIDE SEALED COTTON PUFFS 6864 WATSONS SIDE SEALED COTTON PUFFS 189S SEA AW2022 | 0.970 | 6,658.08",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": " |  | WATSONS OOB COTTON RELAUNCH |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "04894532992539 |  | WATSONS SIDE SEALED COTTON PUFFS 168 WATSONS SIDE SEALED COTTON PUFFS 189S SEA AW2022 WATSONS OOB COTTON RELAUNCH | 0.970 | 162.96",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "4894532992539 4894532992539 | - - | 64850 64850 WATSONS X BT21 SIDE SEALED COTTON PUFFS 17760 WATSONS X BT21 SIDE SEALED COTTON PUFFS 189S SEA AW2025 | 0.970 | 17,227.20",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "04894819901315 |  |  |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "paragraph",
+          "content": "Page 1 of 3\nAS WATSON RETAIL (HK) LIMITED\nCOMMERCIAL INVOICE\nAttn :\nBill To : WATSON'S PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\nBusiness Unit :\nWATSON'S PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\nCI Number : 26001099\nCI Date : 28-JAN-2026\nPO Number : MY2501539\nBU PO Number : 18082166\nPayment Terms : TT 30 DAYS\nTrade Terms : CFR PORT KLANG\nMALAYSIA\nMALAYSIA\nBill Of Lading: CNSHA0001548220\nTel :\nTel :\nDeparture Date : 25-JAN-2026\nFax :\nFax :\nCountry Of Origin : CHINA\nOuter Barcode\nBatch No.\nProduct Description\nQuantity\nUnit Price\nAmount\nInner Barcode\nProduct Barcode\nColor - Size\nSKU\nRatio / Assortment\n04894532992539\nWATSONS SIDE SEALED COTTON PUFFS\n6864\nWATSONS SIDE SEALED COTTON PUFFS 189S SEA AW2022\n0.970\n6,658.08\nWATSONS OOB COTTON RELAUNCH\n04894532992539\nWATSONS SIDE SEALED COTTON PUFFS\n168\nWATSONS SIDE SEALED COTTON PUFFS 189S SEA AW2022\nWATSONS OOB COTTON RELAUNCH\n0.970\n162.96\n4894532992539\n4894532992539\n-\n-\n64850\n64850\nWATSONS X BT21 SIDE SEALED COTTON PUFFS\n17760\nWATSONS X BT21 SIDE SEALED COTTON PUFFS 189S SEA AW2025\n0.970\n17,227.20\n04894819901315\nWATSONS WATSONS X BT21 SIDE SEALED COTTON PUFFS\nPlease direct all correspondence to :\n15/F TWO HARBOURFRONT, 22 TAK FUNG STREET, HUNG HOM, KOWLOON, HONG KONG",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "file_name": "Inv_1_page_2",
+      "sections": [
+        {
+          "type": "key_value",
+          "content": "Attn : : WATSON'S PERSONAL CARE STORES SDN BHD\nBusiness Unit : : WATSON'S PERSONAL CARE STORES SDN BHD ARENA WATSONS LEVEL 7, THE EXCHANGE 106,LINGKARAN TRX, TUN RAZAK EXCHANGE, 55188 KUALA LUMPUR\nBill To : : ARENA WATSONS LEVEL 7, THE EXCHANGE 106,LINGKARAN TRX, TUN RAZAK EXCHANGE, 55188 KUALA LUMPUR\nMALAYSIA\nCI Number : : 26001099\nCI Date : : 28-JAN-2026\nPO Number : MY2501539\nBU PO Number : : 18082166\nPayment Terms : : TT 30 DAYS\nTrade Terms : : CFR PORT KLANG\nBill Of Lading: : CNSHA0001548220\nTel : : \nTel : : MALAYSIA\nDeparture Date : : 25-JAN-2026\nFax : : \nFax : : \nCountry Of Origin : : CHINA\nOuter Barcode : \nBatch No. : \nProduct Description : WATSONS X BT21 SIDE SEALED COTTON PUFFS\nWATSONS X BT21 SIDE SEALED COTTON PUFFS 189S SEA AW2025 WATSONS WATSONS X BT21 SIDE SEALED COTTON PUFFS\nQuantity : 6912\nUnit Price : 0.970\nAmount : 6,704.64\nInner Barcode : \nProduct Barcode : 04894819901315\nColor - Size\nRatio / Assortment : \nSKU : \nPlease direct all correspondence to : : 15/F TWO HARBOURFRONT, 22 TAK FUNG STREET, HUNG HOM, KOWLOON, HONG KONG",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Outer Barcode | Batch No. |  | Product Description Quantity | Unit Price | Amount",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Inner Barcode |  |  |  |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Product Barcode | Color - Size |  | SKU |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": " | Ratio / Assortment |  |  |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "04894819901315 | WATSONS X BT21 SIDE SEALED COTTON PUFFS |  | 6912 | 0.970 | 6,704.64",
+          "confidence": 0.95
+        },
+        {
+          "type": "paragraph",
+          "content": "Page 2 of 3\nAS WATSON RETAIL (HK) LIMITED\nCOMMERCIAL INVOICE\nAttn :\nBill To : WATSON'S PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\nBusiness Unit :\nWATSON'S PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\nCI Number : 26001099\nCI Date : 28-JAN-2026\nPO Number : MY2501539\nBU PO Number : 18082166\nPayment Terms : TT 30 DAYS\nTrade Terms : CFR PORT KLANG\nMALAYSIA\nMALAYSIA\nBill Of Lading: CNSHA0001548220\nTel :\nTel :\nDeparture Date : 25-JAN-2026\nFax :\nFax :\nCountry Of Origin : CHINA\nOuter Barcode\nBatch No.\nProduct Description\nQuantity\nUnit Price\nAmount\nInner Barcode\nProduct Barcode\nColor - Size\nSKU\nRatio / Assortment\n04894819901315\nWATSONS X BT21 SIDE SEALED COTTON PUFFS\n6912\n0.970\n6,704.64\nWATSONS X BT21 SIDE SEALED COTTON PUFFS 189S SEA AW2025\nWATSONS WATSONS X BT21 SIDE SEALED COTTON PUFFS\n4894819901315\n-\n1024717\nPlease direct all correspondence to :\n15/F TWO HARBOURFRONT, 22 TAK FUNG STREET, HUNG HOM, KOWLOON, HONG KONG",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "file_name": "Inv_1_page_3",
+      "sections": [
+        {
+          "type": "key_value",
+          "content": "Attn : : WATSON'S PERSONAL CARE STORES SDN BHD\nBusiness Unit : : WATSON'S PERSONAL CARE STORES SDN BHD ARENA WATSONS LEVEL 7, THE EXCHANGE 106,LINGKARAN TRX, TUN RAZAK EXCHANGE, 55188 KUALA LUMPUR\nBill To : : ARENA WATSONS LEVEL 7, THE EXCHANGE 106,LINGKARAN TRX, TUN RAZAK EXCHANGE, 55188 KUALA LUMPUR\nMALAYSIA\nCI Number : : 26001099\nCI Date : : 28-JAN-2026\nPO Number : : MY2501539\nBU PO Number : : 18082166\nPayment Terms : : TT 30 DAYS\nTrade Terms : : CFR PORT KLANG\nBill Of Lading: : CNSHA0001548220\nTel : : \nTel : : MALAYSIA\nDeparture Date : : 25-JAN-2026\nFax : : \nFax : : \nCountry Of Origin : : CHINA\nOuter Barcode\nInner Barcode : \nBatch No. : \nProduct Description : \nQuantity : 1024717\nUnit Price : \nProduct Barcode : 4894819901315\nSubtotal : : USD\n30,752.88\nFreight Charges : : USD\n538.97\nGrand Total : : USD\n31,291.85\nBanker : : THE HONGKONG AND SHANGHAI BANKING CORPORATION LIMITED 1 QUEENS ROAD CENTRAL, CENTRAL AND WESTERN DISTRICT, CENTRAL, HONG KONG\nA/c Name : : INTERNATIONAL BUYING-A DIVISION OF AS WATSON RETAIL (HK) LIMITED\nA/c Number : : 808-480685-201\nPlease direct all correspondence to : : 15/F TWO HARBOURFRONT, 22 TAK FUNG STREET, HUNG HOM, KOWLOON, HONG KONG",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Outer Barcode | Batch No. Product Description Quantity | Unit Price | Amount",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Inner Barcode |  |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Product Barcode | Color - Size SKU Ratio / Assortment |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "4894819901315 | - 1024717 |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Subtotal : USD | 30,752.88",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Freight Charges : USD | 538.97",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Grand Total : USD | 31,291.85",
+          "confidence": 0.95
+        },
+        {
+          "type": "paragraph",
+          "content": "Page 3 of 3\nAS WATSON RETAIL (HK) LIMITED\nCOMMERCIAL INVOICE\nAttn :\nBill To : WATSON'S PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\nBusiness Unit :\nWATSON'S PERSONAL CARE STORES SDN BHD\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\nCI Number : 26001099\nCI Date : 28-JAN-2026\nPO Number : MY2501539\nBU PO Number : 18082166\nPayment Terms : TT 30 DAYS\nTrade Terms : CFR PORT KLANG\nMALAYSIA\nMALAYSIA\nBill Of Lading: CNSHA0001548220\nDeparture Date : 25-JAN-2026\nTel :\nTel :\nFax :\nFax :\nCountry Of Origin : CHINA\nOuter Barcode\nBatch No.\nProduct Description\nQuantity\nUnit Price\nAmount\nInner Barcode\nProduct Barcode\nColor - Size\nSKU\nRatio / Assortment\n4894819901315\n-\n1024717\nSubtotal : USD\n30,752.88\nFreight Charges : USD\n538.97\nGrand Total : USD\n31,291.85\nPayment Instructions :-\nBanker\n: THE HONGKONG AND SHANGHAI BANKING CORPORATION LIMITED\n1 QUEENS ROAD CENTRAL, CENTRAL AND WESTERN DISTRICT, CENTRAL, HONG KONG\nA/c Name : INTERNATIONAL BUYING-A DIVISION OF AS WATSON RETAIL (HK) LIMITED\nA/c Number : 808-480685-201\nAS Watson Retail (HK) Limited\nThis is a computer generated output and does not require signature\nPlease direct all correspondence to :\n15/F TWO HARBOURFRONT, 22 TAK FUNG STREET, HUNG HOM, KOWLOON, HONG KONG",
+          "confidence": 0.98
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_pages": 3,
+    "languages_detected": [
+      "en"
+    ],
+    "extraction_method": "azure_doc_intel_prebuilt_layout"
+  }
+}

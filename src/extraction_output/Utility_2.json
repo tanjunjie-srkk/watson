@@ -1,0 +1,67 @@
+{
+  "document_type": "Utility Bill",
+  "vendor_name": "Sabah Electricity",
+  "invoice_number": "169323237",
+  "invoice_date": "02.01.26",
+  "due_date": "01.02.26",
+  "currency": "RM",
+  "currency_note": "All monetary values are in RM",
+  "bill_to": "WATSONS PERSONAL CARE STORES SDN.BH\nLOT 2A-0\nKEDAI PEKAN PAPAR\nJLN BUNGA RAYA\n89600, PAPAR",
+  "account_number": "10673366",
+  "billing_period_from": "02.12.2025",
+  "billing_period_to": "02.01.2026",
+  "service_address": null,
+  "line_items": [
+    {
+      "description": "Unit Penggunaan",
+      "quantity": "213.00",
+      "unit_rate": "0.385",
+      "tax": null,
+      "amount": "82.01",
+      "low_confidence": false
+    },
+    {
+      "description": "Unit Penggunaan",
+      "quantity": "6,667.00",
+      "unit_rate": "0.395",
+      "tax": null,
+      "amount": "2,633.47",
+      "low_confidence": false
+    }
+  ],
+  "subtotal": "2,715.48",
+  "tax_total": "0.00",
+  "surcharges": [
+    {
+      "label": "KWTBB (1.6%)",
+      "amount": "43.45"
+    },
+    {
+      "label": "Penggenapan",
+      "amount": "0.02"
+    }
+  ],
+  "previous_balance": "2,318.80",
+  "payment_received": "2,318.80",
+  "adjustments": "0.00",
+  "current_charges": "2,758.93",
+  "grand_total": "2,758.95",
+  "amount_in_words": null,
+  "payment_info": {
+    "bank_name": null,
+    "account_name": null,
+    "account_number": null
+  },
+  "additional_fields": {
+    "Kod Stesen": "3121",
+    "Amaun Cagaran": "7,700.00",
+    "Kod Cagaran": "C",
+    "Tarif": "CM1 (PERDAGANGAN KELAS 1)",
+    "MRU": "12A",
+    "No SSM": "199801006745",
+    "Pendaftaran ST": "S10-1808-31039497",
+    "Tarikh Dicetak": "07.01.26",
+    "Jumlah bil tanpa subsidi": "2,758.93",
+    "Subsidi ditanggung oleh kerajaan": "0.00"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "source": "azure_document_intelligence",
+  "file": "LL_1.pdf",
+  "pages": [
+    {
+      "page_number": 1,
+      "file_name": "LL_1_page_1",
+      "sections": [
+        {
+          "type": "key_value",
+          "content": "Invoice No\n: : RD 25005442\nInvoice Date\n: : 02 Apr 2025\nDue Date\n: : 07 May 2025\nCurrency Code\n: : MYR\nPage\n: : 1\nTenancy Period: : 01 Sep 2022 - 31 Aug 2025\nItem Description : 1 Base Rent\nUnit No: LG-242, The Gardens Mall\nTrade Name: WATSONS\n2 Service Charge\nUnit No: LG-242, The Gardens Mall\nTrade Name: WATSONS\nPeriod : May\nMay\nYear : 2025\n2025\nAmount : 30,685.00\n6,702.25\nTOTAL : 37,387.25",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Invoice No | : RD 25005442",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Invoice Date | : 02 Apr 2025",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Due Date | : 07 May 2025",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Currency Code | : MYR",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Page | : 1",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_header",
+          "content": "Item | Description | Period | Year | Amount",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "1 | Base Rent | May | 2025 | 30,685.00",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Unit | No: LG-242, The Gardens Mall |  |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": " | Trade Name: WATSONS |  |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "2 | Service Charge | May | 2025 | 6,702.25",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Unit | No: LG-242, The Gardens Mall |  |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": " | Trade Name: WATSONS |  |  | ",
+          "confidence": 0.95
+        },
+        {
+          "type": "paragraph",
+          "content": "MTRUSTEE BHD AS TRUSTEE FOR IGB REIT\nManaged by\nIGB REIT MANAGEMENT SDN BHD (908168-A)\nLevel 31, The Gardens South Tower, Mid Valley City\nLingkaran Syed Putra, 59200 Kuala Lumpur\nINVOICE\nWATSON'S PERSONAL CARE STORES SDN BHD\nLevel 7, Menara Exchange 106,\nLingkaran TRX,\nTun Razak Exchange,\n55188, Kuala Lumpur, Wilayah Persekutuan\nMalaysia\nInvoice No\n: RD 25005442\nInvoice Date\n: 02 Apr 2025\nDue Date\n: 07 May 2025\nCurrency Code\n: MYR\nPage\n: 1\nAttention:\nTenancy Period: 01 Sep 2022 - 31 Aug 2025\nItem Description\nPeriod\nYear\nAmount\n1 Base Rent\nMay\n2025\n30,685.00\nUnit No:\nLG-242, The Gardens Mall\nTrade Name:\nWATSONS\n2 Service Charge\nMay\n2025\n6,702.25\nUnit No:\nLG-242, The Gardens Mall\nTrade Name:\nWATSONS\nRINGGIT MALAYSIA THIRTY SEVEN THOUSAND THREE HUNDRED EIGHTY SEVEN AND TWENTY FIVE CENTS ONLY.\nTOTAL\n37,387.25\nE.&O.E.\nCheque should be crossed 'Account Payee Only' and made payable to MTrustee Bhd for IGB REIT TGM\nwithin THIRTY SIX (36) days from the date thereof.\nNote: This is a computer generated document. No signature is required.",
+          "confidence": 0.98
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_pages": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "extraction_method": "azure_doc_intel_prebuilt_layout"
+  }
+}

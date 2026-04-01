@@ -1,0 +1,65 @@
+{
+  "document_type": "Utility Bill",
+  "vendor_name": "SUNWAY DIGITAL WAVE SDN. BHD.",
+  "invoice_number": "BBMC26000032",
+  "invoice_date": "01/01/2026",
+  "due_date": "31/01/2026",
+  "currency": "RM",
+  "currency_note": "All monetary values are in RM",
+  "bill_to": "WATSON'S PERSONAL CARE STORES SDN BHD\nMR. KANG CHUNG FOO\n7 LINGKARAN TRX\nTUN RAZAK EXCHANGE\n55188 KUALA LUMPUR, KUALA LUMPUR, MALAYSIA.\nfinance-utilities@watsons.com.my",
+  "account_number": "C250451",
+  "billing_period_from": "01/12/2025",
+  "billing_period_to": "31/12/2025",
+  "service_address": null,
+  "line_items": [
+    {
+      "description": "SUNWAYNET FIBRE BROADBAND - C100 (2023)\nG06 & G07 PUSAT KOMERSIAL SUNWAY BIG BOX",
+      "quantity": null,
+      "unit_rate": null,
+      "tax": "0.00",
+      "amount": "139.00",
+      "low_confidence": false
+    },
+    {
+      "description": "COMMERCIAL-VOIP 1 WITHOUT REBATE\nCOMMERCIAL VOIP 1 WITHOUT REBATE\n6075326872",
+      "quantity": null,
+      "unit_rate": null,
+      "tax": "0.00",
+      "amount": "0.00",
+      "low_confidence": false
+    }
+  ],
+  "subtotal": "139.00",
+  "tax_total": "8.34",
+  "surcharges": [
+    {
+      "label": "6% Service Tax",
+      "amount": "8.34"
+    },
+    {
+      "label": "Rounding Adjustment",
+      "amount": "0.01"
+    }
+  ],
+  "previous_balance": "147.35",
+  "payment_received": "147.35",
+  "adjustments": "0.00",
+  "current_charges": "147.34",
+  "grand_total": "147.35",
+  "amount_in_words": null,
+  "payment_info": {
+    "bank_name": "Maybank",
+    "account_name": "Sunway Digital Wave Sdn Bhd",
+    "account_number": "512316-620738"
+  },
+  "additional_fields": {
+    "Billing Number": "BBMC26000032",
+    "Biller Code": "67546",
+    "REF-1": "C250451",
+    "Deposits": "0.00",
+    "Credit Limit": "0.00",
+    "Overdue Charges": "0.00",
+    "Total Bill Charges": "147.35",
+    "SST ID No": "B16-1808-3100829"
+  }
+}

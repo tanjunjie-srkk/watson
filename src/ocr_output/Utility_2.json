@@ -1,0 +1,222 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "file_name": "Utility_2_page_1.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "BIL ELEKTRIK DAN INVOIS CUKAI        NO. PENDAFTARAN ST : S10-1808-31039497",
+          "confidence": 0.95
+        },
+        {
+          "type": "header",
+          "content": "Sabah Electricity\nPower Your Future\nSESB Careline 15444\nNO SSM : 199801006745",
+          "confidence": 0.95
+        },
+        {
+          "type": "key_value",
+          "content": "Kod Stesen        : 3121\nNo. Akaun         : 10673366\nAmaun Cagaran    : RM 7,700.00\nKod Cagaran      : C\nTarif            : CM1 (PERDAGANGAN KELAS 1)\nMRU              : 12A",
+          "confidence": 0.95
+        },
+        {
+          "type": "key_value",
+          "content": "No. Invois Cukai: 169323237",
+          "confidence": 0.95
+        },
+        {
+          "type": "address",
+          "content": "WATSONS PERSONAL CARE STORES SDN.BH\nLOT 2A-0\nKEDAI PEKAN PAPAR\nJLN BUNGA RAYA\n89600, PAPAR",
+          "confidence": 0.95
+        },
+        {
+          "type": "key_value",
+          "content": "Jumlah Perlu Dibayar : RM 2,758.95        Tarikh Invois : 02.01.26\nSILA BAYAR BIL SEMASA SEBELUM : 01.02.26",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_header",
+          "content": "Bil | Amaun | Tarikh | Jenis Bacaan",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Bil Terdahulu | RM 2,318.80 | 01.12.25 | 01        N",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Bayaran Akhir | RM 2,318.80 | 12.12.25 |",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Bil Semasa | RM 2,758.93 | 02.01.26 | 01        N",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_header",
+          "content": "Tarikh Bacaan | 02.12.2025 | 02.01.2026",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_header",
+          "content": "No. Jangka | Gdn | Tarikh | Dahulu | Semasa | Unit",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "98994085 | 1 | 02.12.25 | 02.01.26 | 1058,158.00 | 1065,038.00 | 6,880.00 kWh",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "98994085 | 1 | 02.01.26 | 303,671.00 | 306,361.00 | 2,690.00 kVArh",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_header",
+          "content": "Perihal Caj Penggunaan | Unit | Kadar (RM) | Amaun (RM)",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Unit Penggunaan | 213.00 | 0.385 | 82.01",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Unit Penggunaan | 6,667.00 | 0.395 | 2,633.47",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_header",
+          "content": "Keterangan | Caj Tidak Kena ST | Caj Kena ST | Jumlah",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Kegunaan (kWh) | kWh | 6,880.00 | 0.00 | 6,880.00",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Kegunaan (kWh) | kWh | 0.00 | 0.00 | 0.00",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Kegunaan (RM) | RM | 2,715.48 | 0.00 | 2,715.48",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "ICPT ( 6,880.00 kWh) | RM | 0.00 | 0.00 | 0.00",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Amaun Elektrik | RM | 2,715.48 | 0.00 | 2,715.48",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "0% SST (0% x RM 0.00 ) | RM |  |  | 0.00",
+          "confidence": 0.85
+        },
+        {
+          "type": "table_row",
+          "content": "KWTBB (1.6%) | RM |  |  | 43.45",
+          "confidence": 0.85
+        },
+        {
+          "type": "table_row",
+          "content": "Pelarasan Anggaran Amaun Elektrik | RM |  |  | 0.00",
+          "confidence": 0.85
+        },
+        {
+          "type": "table_row",
+          "content": "Pelarasan Anggaran Amaun ICPT | RM |  |  | 0.00",
+          "confidence": 0.85
+        },
+        {
+          "type": "table_row",
+          "content": "Pelarasan Anggaran Amaun SST | RM |  |  | 0.00",
+          "confidence": 0.85
+        },
+        {
+          "type": "table_row",
+          "content": "Amaun Bil Semasa | RM |  |  | 2,758.93",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Surcaj | RM |  |  | 0.00",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Caj Pelbagai | RM |  |  | 0.00",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Cagaran Tambahan | RM |  |  | 0.00",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Tunggakan | RM |  |  | 0.00",
+          "confidence": 0.9
+        },
+        {
+          "type": "table_row",
+          "content": "Dibiayai oleh Kerajaan Malaysia | RM |  |  | 0.00",
+          "confidence": 0.9
+        },
+        {
+          "type": "subtotal",
+          "content": "Jumlah | RM |  |  | 2,758.93",
+          "confidence": 0.9
+        },
+        {
+          "type": "subtotal",
+          "content": "Penggenapan | RM |  |  | 0.02",
+          "confidence": 0.9
+        },
+        {
+          "type": "subtotal",
+          "content": "Jumlah Perlu Dibayar | RM |  |  | 2,758.95",
+          "confidence": 0.95
+        },
+        {
+          "type": "paragraph",
+          "content": "*Untuk maklumat lanjut, sila layari laman web SESB.\nWisma SESB, Jln Tunka Abdul Rahman, 88673 Kota Kinabalu, Sabah\nPendaftaran ST S10-1808-31039497\nSurcaj ICPT RM 0.0000 /kWj dikenakan bagi penggunaan kWj bulanan untuk tempoh 6 bulan (1 Jan - 30 Jun 2026)\nJumlah bil tanpa subsidi adalah RM 2,758.93\nSubsidI yang di tanggung oleh kerajaan adalah RM 0.00",
+          "confidence": 0.85
+        },
+        {
+          "type": "footer",
+          "content": "Sabah Electricity",
+          "confidence": 0.95
+        },
+        {
+          "type": "address",
+          "content": "WATSONS PERSONAL CARE STORES SDN.BH\nLOT 2A-0\nKEDAI PEKAN PAPAR\nJLN BUNGA RAYA\n89600, PAPAR",
+          "confidence": 0.95
+        },
+        {
+          "type": "key_value",
+          "content": "Kod Stesen : 3121\nNombor Akaun : 10673366\nTarikh Dicetak : 07.01.26\nNombor Invois Cukai : 169323237\nJumlah Perlu Dibayar : RM 2,758.95",
+          "confidence": 0.95
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_pages": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "image_quality": "clear"
+  }
+}

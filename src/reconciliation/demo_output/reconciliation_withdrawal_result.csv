@@ -1,0 +1,6 @@
+withdrawal_id,withdrawal_date,withdrawal_net,matched_bank_date,matched_bank_amount,matched_description,match_score,status
+WD2001,2025-06-10,2207.67,2025-06-13,2207.67,Shopee Settlement,100,auto_match
+WD2002,2025-06-14,1854.24,2025-06-13,2207.67,Shopee Settlement,50,manual_review
+WD2003,2025-06-22,2094.44,2025-06-25,2094.44,E-Comm Settlement,90,auto_match
+WD2004,2025-06-29,1613.71,2025-06-30,1613.71,Shopee MY,100,auto_match
+WD2005,2025-07-06,2454.31,2025-06-13,2207.67,Shopee Settlement,20,manual_review

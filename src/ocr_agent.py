@@ -3,10 +3,13 @@ import argparse
 import json
 import mimetypes
 import os
+import io
 from pathlib import Path
 from datetime import datetime, timezone
+from collections import Counter
 
 from openai import AzureOpenAI, OpenAI
+from PIL import Image, ImageEnhance, ImageFilter
 
 def _get_config_value(name: str) -> str | None:
   value = os.getenv(name)
@@ -82,7 +85,7 @@ def _log_token_usage(completion: object, request_mode: str, file_names: list[str
 
 
 endpoint = _get_required_env("AZURE_OPENAI_ENDPOINT")
-model_name = "gpt-5.2-chat"
+model_name = "gpt-5-chat"
 deployment = _get_config_value("AZURE_OPENAI_DEPLOYMENT") or "gpt-5.2-chat"
 
 subscription_key = _get_required_env("AZURE_OPENAI_API_KEY")
@@ -95,11 +98,53 @@ client = AzureOpenAI(
 )
 
 
-def _image_file_to_data_url(image_path: Path) -> str:
-  mime_type, _ = mimetypes.guess_type(str(image_path))
-  if not mime_type:
-    mime_type = "application/octet-stream"
-  b64 = base64.b64encode(image_path.read_bytes()).decode("utf-8")
+def _preprocess_image(image_path: Path) -> bytes:
+  """Preprocess image to improve OCR accuracy.
+
+  Applies:
+  1. Sharpening to make text edges crisper
+  2. Contrast enhancement to make digits more distinct
+  3. Slight upscaling if image is small
+
+  Returns PNG bytes of the preprocessed image.
+  """
+  img = Image.open(image_path)
+
+  # Convert to RGB if needed (e.g. RGBA PNGs)
+  if img.mode != "RGB":
+    img = img.convert("RGB")
+
+  # Upscale small images (< 2000px on short side)
+  min_dim = min(img.size)
+  if min_dim < 2000:
+    scale = 2000 / min_dim
+    new_size = (int(img.width * scale), int(img.height * scale))
+    img = img.resize(new_size, Image.LANCZOS)
+
+  # Sharpen to make text edges crisper (helps distinguish 8 vs 5, 0 vs 6)
+  img = img.filter(ImageFilter.SHARPEN)
+
+  # Enhance contrast slightly (1.3x) to make dark text stand out
+  enhancer = ImageEnhance.Contrast(img)
+  img = enhancer.enhance(1.3)
+
+  # Encode as PNG
+  buf = io.BytesIO()
+  img.save(buf, format="PNG", optimize=True)
+  return buf.getvalue()
+
+
+def _image_file_to_data_url(image_path: Path, preprocess: bool = True) -> str:
+  """Convert image to base64 data URL, optionally with preprocessing."""
+  if preprocess:
+    img_bytes = _preprocess_image(image_path)
+    mime_type = "image/png"
+  else:
+    img_bytes = image_path.read_bytes()
+    mime_type, _ = mimetypes.guess_type(str(image_path))
+    if not mime_type:
+      mime_type = "application/octet-stream"
+  b64 = base64.b64encode(img_bytes).decode("utf-8")
   return f"data:{mime_type};base64,{b64}"
 
 SYSTEM_PROMPT = """
@@ -119,6 +164,17 @@ You are NOT an assistant, analyst, or calculator. You do NOT interpret, summariz
    - Addresses, notes, footers → keep as contiguous blocks.
 4. READ EVERY PAGE. Do NOT skip repeated headers, footers, or boilerplate.
 5. If multiple images are provided, treat them as pages of ONE document in the order given.
+
+═══ DIGIT ACCURACY — CRITICAL ═══
+
+Pay EXTREME attention to easily confused characters in reference numbers, account numbers, barcodes,
+and other numeric fields. Common confusions to watch for:
+- "8" vs "5" vs "6" vs "0" — zoom in mentally on each digit's shape
+- "0" (zero) vs "O" (letter O) vs "D"
+- "1" (one) vs "l" (lowercase L) vs "I" (uppercase i)
+- "9" vs "0" — check whether the top is closed (9) or open (0)
+- Do NOT insert or drop digits — count the digits carefully for long numbers
+- If a reference number appears on multiple pages, cross-check that your reading is consistent
 
 ═══ CONFIDENCE TAGGING ═══
 
@@ -207,11 +263,11 @@ def ocr_image_with_chat_model(image_path: Path, user_prompt: str) -> str:
           "role": "user",
           "content": [
             {"type": "text", "text": user_prompt},
-            {"type": "image_url", "image_url": {"url": data_url}},
+            {"type": "image_url", "image_url": {"url": data_url, "detail": "high"}},
           ],
         },
       ],
-      temperature=1.0,
+      temperature=0,
     )
     _log_token_usage(
       completion=completion,
@@ -230,6 +286,168 @@ def ocr_image_with_chat_model(image_path: Path, user_prompt: str) -> str:
     )
 
 
+# ── Multi-pass consensus OCR ─────────────────────────────────────────────────
+
+def _extract_key_values_from_page(page_data: dict) -> dict[str, str]:
+  """Extract key-value pairs from a page's sections for comparison."""
+  kv = {}
+  for section in page_data.get("sections", []):
+    if section.get("type") == "key_value":
+      for line in section["content"].split("\n"):
+        if " : " in line:
+          key, _, val = line.partition(" : ")
+          kv[key.strip()] = val.strip()
+  return kv
+
+
+def _majority_vote(values: list[str]) -> tuple[str, float]:
+  """Return the most common value and its agreement ratio."""
+  if not values:
+    return "", 0.0
+  counts = Counter(values)
+  winner, count = counts.most_common(1)[0]
+  return winner, count / len(values)
+
+
+def _merge_consensus_kv(all_pass_kvs: list[dict[str, str]]) -> dict[str, tuple[str, float]]:
+  """Merge key-value dicts from multiple passes using majority voting.
+
+  Returns dict mapping key -> (consensus_value, agreement_ratio).
+  """
+  all_keys = set()
+  for kv in all_pass_kvs:
+    all_keys.update(kv.keys())
+
+  result = {}
+  for key in all_keys:
+    values = [kv[key] for kv in all_pass_kvs if key in kv]
+    consensus_val, agreement = _majority_vote(values)
+    result[key] = (consensus_val, agreement)
+  return result
+
+
+def _apply_consensus_to_page(page_data: dict, consensus_kv: dict[str, tuple[str, float]]) -> dict:
+  """Replace key-value content in the page with consensus values and add confidence."""
+  import copy
+  page = copy.deepcopy(page_data)
+
+  for section in page.get("sections", []):
+    if section.get("type") != "key_value":
+      continue
+
+    new_lines = []
+    min_confidence = 1.0
+    for line in section["content"].split("\n"):
+      if " : " in line:
+        key, _, _ = line.partition(" : ")
+        key_s = key.strip()
+        if key_s in consensus_kv:
+          val, agreement = consensus_kv[key_s]
+          new_lines.append(f"{key_s} : {val}")
+          min_confidence = min(min_confidence, agreement)
+        else:
+          new_lines.append(line)
+      else:
+        new_lines.append(line)
+
+    section["content"] = "\n".join(new_lines)
+    section["confidence"] = round(min_confidence, 2)
+
+  return page
+
+
+def ocr_image_multipass(
+  image_path: Path,
+  user_prompt: str,
+  num_passes: int = 3,
+) -> str:
+  """Run OCR multiple times on the same image and merge via majority vote.
+
+  This dramatically reduces single-digit misreads (8→5, 0→6, etc.) by
+  running the model N times and keeping only values that agree across
+  the majority of passes.
+
+  Args:
+      image_path: Path to the image file.
+      user_prompt: The user prompt for OCR.
+      num_passes: Number of OCR passes (default 3). Higher = more accurate but costlier.
+
+  Returns:
+      JSON string with consensus-merged OCR output.
+  """
+  data_url = _image_file_to_data_url(image_path)
+
+  pass_results: list[str] = []
+  for i in range(num_passes):
+    try:
+      # Use temperature=0.3 for slight variation between passes
+      # (temperature=0 would give identical results)
+      completion = client.chat.completions.create(
+        model=deployment,
+        messages=[
+          {"role": "system", "content": SYSTEM_PROMPT},
+          {
+            "role": "user",
+            "content": [
+              {"type": "text", "text": user_prompt},
+              {"type": "image_url", "image_url": {"url": data_url, "detail": "high"}},
+            ],
+          },
+        ],
+        temperature=0.3,
+      )
+      _log_token_usage(
+        completion=completion,
+        request_mode=f"multipass_{i+1}_of_{num_passes}",
+        file_names=[image_path.name],
+      )
+      pass_results.append(completion.choices[0].message.content or "")
+    except Exception as e:
+      print(f"  WARNING: Pass {i+1} failed: {e}")
+      continue
+
+  if not pass_results:
+    return json.dumps({"error": "all_passes_failed"}, ensure_ascii=False)
+
+  # Parse all pass results
+  parsed_passes = []
+  for raw in pass_results:
+    try:
+      parsed_passes.append(json.loads(raw))
+    except Exception:
+      continue
+
+  if not parsed_passes:
+    # If none parsed, return the first raw result
+    return pass_results[0]
+
+  if len(parsed_passes) == 1:
+    return json.dumps(parsed_passes[0], ensure_ascii=False)
+
+  # Use the first pass as the base structure, then apply consensus to key-value fields
+  base = parsed_passes[0]
+
+  # Collect KV pairs from each pass for each page
+  for page_idx, page in enumerate(base.get("pages", [])):
+    all_pass_kvs = []
+    for parsed in parsed_passes:
+      pages = parsed.get("pages", [])
+      if page_idx < len(pages):
+        all_pass_kvs.append(_extract_key_values_from_page(pages[page_idx]))
+
+    if all_pass_kvs:
+      consensus_kv = _merge_consensus_kv(all_pass_kvs)
+      base["pages"][page_idx] = _apply_consensus_to_page(page, consensus_kv)
+
+      # Log any disagreements
+      for key, (val, agreement) in consensus_kv.items():
+        if agreement < 1.0:
+          all_vals = [kv.get(key, "<missing>") for kv in all_pass_kvs]
+          print(f"  CONSENSUS [{agreement:.0%}] {key}: {val}  (all readings: {all_vals})")
+
+  return json.dumps(base, ensure_ascii=False)
+
+
 def ocr_images_with_chat_model(image_paths: list[Path], user_prompt: str) -> str:
   content: list[dict] = [
     {
@@ -246,7 +464,7 @@ def ocr_images_with_chat_model(image_paths: list[Path], user_prompt: str) -> str
 
   for idx, image_path in enumerate(image_paths, start=1):
     content.append({"type": "text", "text": f"Image {idx} filename: {image_path.name}"})
-    content.append({"type": "image_url", "image_url": {"url": _image_file_to_data_url(image_path)}})
+    content.append({"type": "image_url", "image_url": {"url": _image_file_to_data_url(image_path), "detail": "high"}})
 
   try:
     completion = client.chat.completions.create(
@@ -255,7 +473,7 @@ def ocr_images_with_chat_model(image_paths: list[Path], user_prompt: str) -> str
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": content},
       ],
-      temperature=1.0,
+      temperature=0,
     )
     _log_token_usage(
       completion=completion,
@@ -287,9 +505,22 @@ def main() -> None:
     action="store_true",
     help="Send all images in ONE request (may hit context limits for many/large images).",
   )
+  parser.add_argument(
+    "--multipass",
+    type=int,
+    default=0,
+    metavar="N",
+    help="Run each image N times and merge via majority vote (e.g. --multipass 3). "
+         "Improves accuracy for digits/numbers at the cost of N× API calls.",
+  )
+  parser.add_argument(
+    "--no-preprocess",
+    action="store_true",
+    help="Skip image preprocessing (sharpening + contrast). Useful if images are already clean.",
+  )
   args = parser.parse_args()
 
-  memo_dir = Path(__file__).resolve().parents[1] / "src/docs/Utility_5_images"
+  memo_dir = Path(__file__).resolve().parents[1] / "src/docs/Inv_1_images"
   image_paths = sorted(
     [p for p in memo_dir.iterdir() if p.is_file() and p.suffix.lower() in {".jpg", ".jpeg", ".png"}]
   )
@@ -314,7 +545,16 @@ def main() -> None:
   else:
     outputs: list[dict] = []
     for idx, image_path in enumerate(image_paths, start=1):
-      content = ocr_image_with_chat_model(image_path=image_path, user_prompt=user_prompt)
+      print(f"  Processing page {idx}/{len(image_paths)}: {image_path.name}")
+      if args.multipass > 1:
+        print(f"    Running {args.multipass}-pass consensus OCR...")
+        content = ocr_image_multipass(
+          image_path=image_path,
+          user_prompt=user_prompt,
+          num_passes=args.multipass,
+        )
+      else:
+        content = ocr_image_with_chat_model(image_path=image_path, user_prompt=user_prompt)
       outputs.append(
         {
           "page_number": idx,
@@ -322,9 +562,10 @@ def main() -> None:
           "model_output": _maybe_parse_json(content),
         }
       )
-    output_obj = {"mode": "per_image", "results": outputs}
+    mode = f"per_image_multipass_{args.multipass}" if args.multipass > 1 else "per_image"
+    output_obj = {"mode": mode, "results": outputs}
 
-  with open("./ocr_output/Utility5.json", "w", encoding="utf-8") as f:
+  with open("./ocr_output/Inv_1.json", "w", encoding="utf-8") as f:
     json.dump(output_obj, f, ensure_ascii=False, indent=2)
 
   print(json.dumps({"results": outputs}, ensure_ascii=False, indent=2))

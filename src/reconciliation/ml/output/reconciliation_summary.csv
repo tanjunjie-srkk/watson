@@ -1,0 +1,4 @@
+match_status,count,avg_confidence,total_bank_amount
+auto_match,63,0.98882324,4614303.23
+review,4,0.8309469,257398.97
+unmatched,135,0.008080889,10509710.11

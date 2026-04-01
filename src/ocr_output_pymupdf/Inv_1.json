@@ -1,0 +1,46 @@
+{
+  "source": "pymupdf",
+  "file": "Inv_1.pdf",
+  "pages": [
+    {
+      "page_number": 1,
+      "file_name": "Inv_1_page_1",
+      "sections": [
+        {
+          "type": "paragraph",
+          "content": "Page 1 of 3\nAS  WATSON RETAIL (HK) LIMITED\nCOMMERCIAL INVOICE\nOuter Barcode\nBatch No.\nProduct Description\nQuantity\nUnit Price\nAmount\nProduct Barcode\nColor - Size\nRatio / Assortment\nAttn :\nBill To : WATSON'S PERSONAL CARE STORES SDN BHD\nTrade Terms :\nPayment Terms :\nBU PO Number :\nCI Number :\nCI Date :\nPO Number :\nMALAYSIA\nTel :\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\nMALAYSIA\nTel :\nFax :\nFax :\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\nBill Of Lading\n \n:\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\nBusiness Unit :\nWATSON'S PERSONAL CARE STORES SDN BHD\nCountry Of Origin :\nDeparture Date :\nTT 30 DAYS\n26001099\nMY2501539\nCNSHA0001548220\nCFR PORT KLANG\n28-JAN-2026\n18082166\nCHINA\n25-JAN-2026\nInner Barcode\nSKU\n04894532992539\n6864\n0.970\n6,658.08\nWATSONS SIDE SEALED COTTON PUFFS\nWATSONS SIDE SEALED COTTON PUFFS 189S SEA AW2022\nWATSONS OOB COTTON RELAUNCH\n04894532992539\n168\n0.970\n162.96\nWATSONS SIDE SEALED COTTON PUFFS\nWATSONS SIDE SEALED COTTON PUFFS 189S SEA AW2022\nWATSONS OOB COTTON RELAUNCH\n4894532992539\n - \n64850\n4894532992539\n - \n64850\n04894819901315\n17760\n0.970\n17,227.20\nWATSONS X BT21 SIDE SEALED COTTON PUFFS\nWATSONS X BT21 SIDE SEALED COTTON PUFFS  189S SEA AW2025\nWATSONS WATSONS X BT21 SIDE SEALED COTTON PUFFS\nPlease direct all correspondence to :\n \n15/F TWO HARBOURFRONT, 22 TAK FUNG STREET, HUNG HOM, KOWLOON, HONG KONG",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "file_name": "Inv_1_page_2",
+      "sections": [
+        {
+          "type": "paragraph",
+          "content": "Page 2 of 3\nAS  WATSON RETAIL (HK) LIMITED\nCOMMERCIAL INVOICE\nOuter Barcode\nBatch No.\nProduct Description\nQuantity\nUnit Price\nAmount\nProduct Barcode\nColor - Size\nRatio / Assortment\nAttn :\nBill To : WATSON'S PERSONAL CARE STORES SDN BHD\nTrade Terms :\nPayment Terms :\nBU PO Number :\nCI Number :\nCI Date :\nPO Number :\nMALAYSIA\nTel :\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\nMALAYSIA\nTel :\nFax :\nFax :\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\nBill Of Lading\n \n:\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\nBusiness Unit :\nWATSON'S PERSONAL CARE STORES SDN BHD\nCountry Of Origin :\nDeparture Date :\nTT 30 DAYS\n26001099\nMY2501539\nCNSHA0001548220\nCFR PORT KLANG\n28-JAN-2026\n18082166\nCHINA\n25-JAN-2026\nInner Barcode\nSKU\n04894819901315\n6912\n0.970\n6,704.64\nWATSONS X BT21 SIDE SEALED COTTON PUFFS\nWATSONS X BT21 SIDE SEALED COTTON PUFFS  189S SEA AW2025\nWATSONS WATSONS X BT21 SIDE SEALED COTTON PUFFS\n4894819901315\n - \n1024717\nPlease direct all correspondence to :\n \n15/F TWO HARBOURFRONT, 22 TAK FUNG STREET, HUNG HOM, KOWLOON, HONG KONG",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "file_name": "Inv_1_page_3",
+      "sections": [
+        {
+          "type": "paragraph",
+          "content": "Page 3 of 3\nAS  WATSON RETAIL (HK) LIMITED\nCOMMERCIAL INVOICE\nOuter Barcode\nBatch No.\nProduct Description\nQuantity\nUnit Price\nAmount\nProduct Barcode\nColor - Size\nRatio / Assortment\nAttn :\nBill To : WATSON'S PERSONAL CARE STORES SDN BHD\nTrade Terms :\nPayment Terms :\nBU PO Number :\nCI Number :\nCI Date :\nPO Number :\nMALAYSIA\nTel :\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\nMALAYSIA\nTel :\nFax :\nFax :\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\nBill Of Lading\n \n:\nARENA WATSONS LEVEL 7,\nTHE EXCHANGE 106,LINGKARAN TRX, TUN\nRAZAK EXCHANGE, 55188 KUALA LUMPUR\nBusiness Unit :\nWATSON'S PERSONAL CARE STORES SDN BHD\nCountry Of Origin :\nDeparture Date :\nTT 30 DAYS\n26001099\nMY2501539\nCNSHA0001548220\nCFR PORT KLANG\n28-JAN-2026\n18082166\nCHINA\n25-JAN-2026\nInner Barcode\nSKU\n4894819901315\n - \n1024717\nSubtotal : USD                                 30,752.88\nFreight Charges : USD                         538.97\nGrand Total : USD                     31,291.85\n Payment Instructions :-\nAS  Watson Retail (HK) Limited\nThis is a computer generated output and does not require signature\nA/c Number  :\nA/c Name      :\nBanker          :\nTHE HONGKONG AND SHANGHAI BANKING  CORPORATION LIMITED\n1 QUEENS ROAD CENTRAL, CENTRAL AND WESTERN DISTRICT,  CENTRAL, HONG KONG\nINTERNATIONAL BUYING-A DIVISION OF AS WATSON RETAIL (HK) LIMITED\n808-480685-201\nPlease direct all correspondence to :\n \n15/F TWO HARBOURFRONT, 22 TAK FUNG STREET, HUNG HOM, KOWLOON, HONG KONG",
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_pages": 3,
+    "languages_detected": [
+      "en"
+    ],
+    "extraction_method": "pymupdf_text"
+  }
+}

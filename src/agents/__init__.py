@@ -51,7 +51,7 @@ def call_extraction_agent(system_prompt: str, user_prompt: str, ocr_json_str: st
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt + ocr_json_str},
             ],
-            temperature=1.0,
+            temperature=0,
         )
         return completion.choices[0].message.content or ""
     except Exception as e:

@@ -1,0 +1,224 @@
+{
+  "pages": [
+    {
+      "page_number": 1,
+      "file_name": "Tel_5_page_1.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "SUNWAY®\nDIGITAL WAVE\n\nINVOICE",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "WATSON'S PERSONAL CARE STORES SDN\nBHD",
+          "confidence": 1.0
+        },
+        {
+          "type": "address",
+          "content": "MR. KANG CHUNG FOO\n7 LINGKARAN TRX\nTUN RAZAK EXCHANGE\n55188 KUALA LUMPUR, KUALA LUMPUR, MALAYSIA.\nfinance-utilities@watsons.com.my",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "BILLER CODE : 67546\nREF-1 : C250451",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "JomPAY online at internet and Mobile Banking with your\nCurrent or Savings account",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "Account Number : C250451\nBilling Number : BBMC26000032\nBilling Date : 01/01/2026\nBilling Period : 01/12/2025 - 31/12/2025\nDue Date : 31/01/2026\nDeposits : RM 0.00\nCredit Limit : RM 0.00",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "ACCOUNT SUMMARY",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Previous Charges | RM | Current Charges | RM",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Previous Balance | : | 147.35 | Monthly Charges | : | 139.00",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Payment Received - Thank You | : | 147.35 | 6% Service Tax | : | 8.34",
+          "confidence": 0.95
+        },
+        {
+          "type": "table_row",
+          "content": "Adjustments | : | 0.00 | Rounding Adjustment | : | 0.01",
+          "confidence": 0.95
+        },
+        {
+          "type": "subtotal",
+          "content": "Overdue Charges ( RM ) : 0.00\nTotal Bill Charges : 147.35\nTotal Amount Payable ( RM ) : 147.35",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "ACCOUNT STATEMENT",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "BROADBAND SERVICE",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Billing Date | Remarks | Gross Charges ( RM ) | Tax Charges ( RM ) | Net Charges ( RM )",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "01/12/2025 - 31/12/2025 | SUNWAYNET FIBRE BROADBAND - C100 (2023)\nG06 & G07 PUSAT KOMERSIAL SUNWAY BIG BOX | 139.00 | 0.00 | 139.00",
+          "confidence": 0.95
+        },
+        {
+          "type": "subtotal",
+          "content": "Grand Total : 139.00 | 0.00 | 139.00",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "VOIP SERVICE",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_header",
+          "content": "Billing Date | Remarks | Gross Charges ( RM ) | Tax Charges ( RM ) | Net Charges ( RM )",
+          "confidence": 1.0
+        },
+        {
+          "type": "table_row",
+          "content": "01/12/2025 - 31/12/2025 | COMMERCIAL-VOIP 1 WITHOUT REBATE\nCOMMERCIAL VOIP 1 WITHOUT REBATE\n6075326872 | 0.00 | 0.00 | 0.00",
+          "confidence": 0.95
+        },
+        {
+          "type": "subtotal",
+          "content": "Grand Total : 0.00 | 0.00 | 0.00",
+          "confidence": 1.0
+        },
+        {
+          "type": "subtotal",
+          "content": "Sub Total RM 139.00\n6% Service Tax RM 8.34\nCurrent Charges RM 147.34",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "Page 1 of 3\n\nSUNWAY DIGITAL WAVE SDN. BHD.  •  OUR CUSTOMER SERVICES\nLEVEL 12, MENARA SUNWAY JALAN LAGOON TIMUR, BANDAR SUNWAY 47500 BANDAR\nSUNWAY, SELANGOR, MALAYSIA\nSST ID No : B16-1808-3100829\nVisit our website at www.sunwaydigitalwave.com.my or email us to noc@sunway.com.my\nor call to our helpdesk / technical support\n+603-5021 4500, +603-5021 4688 or +6019-217 6167",
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "file_name": "Tel_5_page_2.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "SUNWAY®\nDIGITAL WAVE\n\nINVOICE",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "WATSON'S PERSONAL CARE STORES SDN\nBHD",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "USAGE / CALL CHARGES",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "There's no usage / call charges on statement.",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "Page 2 of 3\n\nSUNWAY DIGITAL WAVE SDN. BHD.  •  OUR CUSTOMER SERVICES\nLEVEL 12, MENARA SUNWAY JALAN LAGOON TIMUR, BANDAR SUNWAY 47500 BANDAR\nSUNWAY, SELANGOR, MALAYSIA\nSST ID No : B16-1808-3100829\nVisit our website at www.sunwaydigitalwave.com.my or email us to noc@sunway.com.my\nor call to our helpdesk / technical support\n+603-5021 4500, +603-5021 4688 or +6019-217 6167",
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "file_name": "Tel_5_page_3.png",
+      "sections": [
+        {
+          "type": "header",
+          "content": "SUNWAY®\nDIGITAL WAVE\n\nINVOICE",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "WATSON'S PERSONAL CARE STORES SDN\nBHD",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "GENERAL INFORMATION",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "FOR ENQUIRIES / HELPDESK / TECHNICAL SUPPORT:\n\nCall : +603-5021 4500, +603-5021 4688 or +6019-217 6167\nFax : +603-5639 9515\nEmail : noc@sunway.com.my\nWebsite : www.sunwaydigitalwave.com.my",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "Please be informed as announced by the Ministry of Finance, all provision of telecommunication services are subjected to Service Tax of 6%. You will be billed with 6% Service Tax for usage of services effective 1st Sept onwards.",
+          "confidence": 1.0
+        },
+        {
+          "type": "header",
+          "content": "PAYMENT CHANNELS",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "PAYMENT VIA JomPAY\n- Customers can now pay your bills via JomPAY channel available at internet, mobile banking and ATM of 42 banks.",
+          "confidence": 1.0
+        },
+        {
+          "type": "key_value",
+          "content": "BILLER CODE : 67546\nREF-1 : C250451",
+          "confidence": 1.0
+        },
+        {
+          "type": "paragraph",
+          "content": "PAYMENT BY CHEQUE OR DEPOSIT TRANSFER\n- Deposit to \"Sunway Digital Wave Sdn Bhd\" (Maybank A/C No: 512316-620738).\n- Cheque must be crossed and made payable to \"Sunway Digital Wave Sdn Bhd\" (Maybank A/C No: 512316-620738).\n- Please send the bank-in slip with your account number \" C250451 \" indication by email to sdwave@sunway.com.my or whatsapp to 019-2710012.",
+          "confidence": 0.95
+        },
+        {
+          "type": "paragraph",
+          "content": "BILL PAYMENT\nPayment made later than the due date will result in temporary service disconnection and reconnection Fee of RM 10.00 (residential) / RM 50.00 (commercial) will be charged for each account.\n\nIf you have any enquiries regarding your account or wish to change your contact details, please send email to:\nnoc@sunway.com.my",
+          "confidence": 1.0
+        },
+        {
+          "type": "footer",
+          "content": "Page 3 of 3\n\nSUNWAY DIGITAL WAVE SDN. BHD.  •  OUR CUSTOMER SERVICES\nLEVEL 12, MENARA SUNWAY JALAN LAGOON TIMUR, BANDAR SUNWAY 47500 BANDAR\nSUNWAY, SELANGOR, MALAYSIA\nSST ID No : B16-1808-3100829\nVisit our website at www.sunwaydigitalwave.com.my or email us to noc@sunway.com.my\nor call to our helpdesk / technical support\n+603-5021 4500, +603-5021 4688 or +6019-217 6167",
+          "confidence": 0.95
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_pages": 3,
+    "languages_detected": [
+      "en"
+    ],
+    "image_quality": "clear"
+  }
+}
